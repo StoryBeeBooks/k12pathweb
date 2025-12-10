@@ -1,0 +1,254 @@
+{
+  "hero": {
+    "en": {
+      "badge": "Your Family's Education Partner",
+      "title": "Your Family's 24/7 Education Consultant",
+      "titleHighlight": "24/7",
+      "subtitle": "From your child's first reading habit (age 5) to your career advancement (age 50+)—K12Path guides every step of the American education journey.",
+      "cta": {
+        "primary": "Start Your Journey",
+        "secondary": "Watch Demo"
+      },
+      "stats": [
+        { "value": "10K+", "label": "Families Helped" },
+        { "value": "500+", "label": "Schools Covered" },
+        { "value": "98%", "label": "Satisfaction Rate" }
+      ],
+      "trustedBy": "Trusted by families from"
+    },
+    "zh": {
+      "badge": "您家庭的教育伙伴",
+      "title": "您家庭的全天候教育顾问",
+      "titleHighlight": "全天候",
+      "subtitle": "从孩子5岁培养阅读习惯，到您50岁后的职业发展——K12Path陪伴您走好美国教育之路的每一步。",
+      "cta": {
+        "primary": "开始您的旅程",
+        "secondary": "观看演示"
+      },
+      "stats": [
+        { "value": "10K+", "label": "受助家庭" },
+        { "value": "500+", "label": "覆盖学校" },
+        { "value": "98%", "label": "满意率" }
+      ],
+      "trustedBy": "来自以下地区家庭的信赖"
+    }
+  },
+  "painPoints": {
+    "en": {
+      "title": "The Challenges You Face",
+      "subtitle": "We understand the unique struggles of navigating a foreign education system",
+      "items": [
+        {
+          "icon": "MessageCircleQuestion",
+          "title": "Language Barriers",
+          "description": "Struggling to communicate with teachers, understand report cards, or help with homework in English."
+        },
+        {
+          "icon": "Compass",
+          "title": "System Confusion",
+          "description": "The American K-12 system is vastly different from what you knew. GPA? AP classes? College apps? It's overwhelming."
+        },
+        {
+          "icon": "Clock",
+          "title": "Time Constraints",
+          "description": "Working long hours leaves little time to research schools, programs, and educational opportunities."
+        },
+        {
+          "icon": "Users",
+          "title": "Cultural Gap",
+          "description": "Different expectations, parenting styles, and educational values can create friction at home and school."
+        }
+      ]
+    },
+    "zh": {
+      "title": "您面临的挑战",
+      "subtitle": "我们理解在陌生教育系统中摸索的独特困难",
+      "items": [
+        {
+          "icon": "MessageCircleQuestion",
+          "title": "语言障碍",
+          "description": "难以用英语与老师沟通、理解成绩单或辅导孩子作业。"
+        },
+        {
+          "icon": "Compass",
+          "title": "系统困惑",
+          "description": "美国K-12系统与您熟悉的完全不同。GPA是什么？AP课程？大学申请？让人不知所措。"
+        },
+        {
+          "icon": "Clock",
+          "title": "时间紧张",
+          "description": "长时间工作让您很难有时间研究学校、课程和教育机会。"
+        },
+        {
+          "icon": "Users",
+          "title": "文化差异",
+          "description": "不同的期望、育儿方式和教育理念可能在家庭和学校产生摩擦。"
+        }
+      ]
+    }
+  },
+  "features": {
+    "en": {
+      "title": "Everything You Need to Succeed",
+      "subtitle": "Comprehensive tools designed specifically for immigrant families",
+      "items": [
+        {
+          "icon": "GraduationCap",
+          "title": "School Navigator",
+          "description": "Compare schools, understand ratings, and find the perfect fit for your child's needs and your family's values.",
+          "badge": "Popular"
+        },
+        {
+          "icon": "BookOpen",
+          "title": "Word Quest",
+          "description": "Fun vocabulary builder for SSAT prep. Your child learns 500+ words through gamified challenges and earns rewards.",
+          "badge": "New"
+        },
+        {
+          "icon": "Languages",
+          "title": "Bilingual Resources",
+          "description": "All content available in English and Chinese. Understand everything without language barriers.",
+          "badge": null
+        },
+        {
+          "icon": "Calendar",
+          "title": "Education Timeline",
+          "description": "Never miss important deadlines. From kindergarten registration to college applications, we keep you on track.",
+          "badge": null
+        },
+        {
+          "icon": "MessageSquare",
+          "title": "AI Education Advisor",
+          "description": "Get instant answers to your education questions. Our AI understands both American education and immigrant family needs.",
+          "badge": "Coming Soon"
+        },
+        {
+          "icon": "Users",
+          "title": "Parent Community",
+          "description": "Connect with other immigrant parents. Share experiences, ask questions, and support each other.",
+          "badge": null
+        }
+      ]
+    },
+    "zh": {
+      "title": "成功所需的一切",
+      "subtitle": "专为移民家庭设计的全面工具",
+      "items": [
+        {
+          "icon": "GraduationCap",
+          "title": "学校导航",
+          "description": "比较学校、了解评分，找到最适合您孩子需求和家庭价值观的学校。",
+          "badge": "热门"
+        },
+        {
+          "icon": "BookOpen",
+          "title": "单词探险",
+          "description": "趣味SSAT词汇训练。孩子通过游戏化挑战学习500+单词并赚取奖励。",
+          "badge": "新功能"
+        },
+        {
+          "icon": "Languages",
+          "title": "双语资源",
+          "description": "所有内容提供中英文版本。无语言障碍，轻松理解一切。",
+          "badge": null
+        },
+        {
+          "icon": "Calendar",
+          "title": "教育时间线",
+          "description": "不错过重要截止日期。从幼儿园注册到大学申请，我们帮您把握进度。",
+          "badge": null
+        },
+        {
+          "icon": "MessageSquare",
+          "title": "AI教育顾问",
+          "description": "即时解答您的教育问题。我们的AI既了解美国教育，也理解移民家庭的需求。",
+          "badge": "即将推出"
+        },
+        {
+          "icon": "Users",
+          "title": "家长社区",
+          "description": "与其他移民家长建立联系。分享经验、提出问题、互相支持。",
+          "badge": null
+        }
+      ]
+    }
+  },
+  "testimonials": {
+    "en": {
+      "title": "What Families Say",
+      "subtitle": "Real stories from parents who transformed their children's education journey",
+      "items": [
+        {
+          "quote": "K12Path helped us understand the gifted program application process. My daughter is now thriving in a program we didn't even know existed!",
+          "author": "Wei Chen",
+          "role": "Parent of 3rd grader",
+          "location": "San Francisco, CA",
+          "avatar": "/avatars/parent1.jpg",
+          "rating": 5
+        },
+        {
+          "quote": "The Word Quest game made my son actually excited about learning vocabulary. His SSAT scores improved by 200 points!",
+          "author": "Linda Zhang",
+          "role": "Parent of 6th grader",
+          "location": "New York, NY",
+          "avatar": "/avatars/parent2.jpg",
+          "rating": 5
+        },
+        {
+          "quote": "Finally, a resource that speaks our language—literally! The Chinese translations helped my parents understand their grandchildren's education too.",
+          "author": "Michael Liu",
+          "role": "Parent of 5th grader",
+          "location": "Seattle, WA",
+          "avatar": "/avatars/parent3.jpg",
+          "rating": 5
+        }
+      ]
+    },
+    "zh": {
+      "title": "家长心声",
+      "subtitle": "来自改变孩子教育历程的家长们的真实故事",
+      "items": [
+        {
+          "quote": "K12Path帮助我们了解了资优生项目的申请流程。我女儿现在在一个我们之前根本不知道的项目里茁壮成长！",
+          "author": "陈伟",
+          "role": "三年级学生家长",
+          "location": "加州旧金山",
+          "avatar": "/avatars/parent1.jpg",
+          "rating": 5
+        },
+        {
+          "quote": "单词探险游戏让我儿子真正对学习词汇产生了兴趣。他的SSAT成绩提高了200分！",
+          "author": "张琳达",
+          "role": "六年级学生家长",
+          "location": "纽约",
+          "avatar": "/avatars/parent2.jpg",
+          "rating": 5
+        },
+        {
+          "quote": "终于有一个真正说我们语言的资源了！中文翻译还帮助我父母了解了孙辈的教育情况。",
+          "author": "刘明",
+          "role": "五年级学生家长",
+          "location": "华盛顿州西雅图",
+          "avatar": "/avatars/parent3.jpg",
+          "rating": 5
+        }
+      ]
+    }
+  },
+  "cta": {
+    "en": {
+      "title": "Ready to Transform Your Family's Education Journey?",
+      "subtitle": "Join thousands of immigrant families who are navigating the K-12 system with confidence.",
+      "primaryButton": "Get Started Free",
+      "secondaryButton": "Schedule a Demo",
+      "note": "No credit card required • Free forever plan available"
+    },
+    "zh": {
+      "title": "准备好改变您家庭的教育之旅了吗？",
+      "subtitle": "加入数千个正在自信应对K-12系统的移民家庭。",
+      "primaryButton": "免费开始",
+      "secondaryButton": "预约演示",
+      "note": "无需信用卡 • 永久免费计划可用"
+    }
+  }
+}

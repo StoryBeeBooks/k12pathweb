@@ -1,0 +1,138 @@
+{
+  "header": {
+    "en": {
+      "links": [
+        { "label": "Features", "href": "#features" },
+        { "label": "How It Works", "href": "#how-it-works" },
+        { "label": "Testimonials", "href": "#testimonials" },
+        { "label": "Pricing", "href": "#pricing" },
+        { "label": "Resources", "href": "#resources" }
+      ],
+      "cta": {
+        "login": "Log In",
+        "getStarted": "Get Started"
+      }
+    },
+    "zh": {
+      "links": [
+        { "label": "功能特点", "href": "#features" },
+        { "label": "使用方法", "href": "#how-it-works" },
+        { "label": "用户评价", "href": "#testimonials" },
+        { "label": "价格方案", "href": "#pricing" },
+        { "label": "学习资源", "href": "#resources" }
+      ],
+      "cta": {
+        "login": "登录",
+        "getStarted": "立即开始"
+      }
+    }
+  },
+  "footer": {
+    "en": {
+      "description": "Empowering immigrant families to navigate the K-12 education system with confidence.",
+      "columns": [
+        {
+          "title": "Product",
+          "links": [
+            { "label": "Features", "href": "#features" },
+            { "label": "Pricing", "href": "#pricing" },
+            { "label": "Word Quest", "href": "/word-quest" },
+            { "label": "School Finder", "href": "/schools" }
+          ]
+        },
+        {
+          "title": "Resources",
+          "links": [
+            { "label": "Blog", "href": "/blog" },
+            { "label": "Guides", "href": "/guides" },
+            { "label": "FAQ", "href": "/faq" },
+            { "label": "Glossary", "href": "/glossary" }
+          ]
+        },
+        {
+          "title": "Company",
+          "links": [
+            { "label": "About Us", "href": "/about" },
+            { "label": "Contact", "href": "/contact" },
+            { "label": "Careers", "href": "/careers" },
+            { "label": "Press", "href": "/press" }
+          ]
+        },
+        {
+          "title": "Legal",
+          "links": [
+            { "label": "Privacy Policy", "href": "/privacy" },
+            { "label": "Terms of Service", "href": "/terms" },
+            { "label": "Cookie Policy", "href": "/cookies" }
+          ]
+        }
+      ],
+      "social": [
+        { "platform": "twitter", "href": "https://twitter.com/k12path", "label": "Twitter" },
+        { "platform": "facebook", "href": "https://facebook.com/k12path", "label": "Facebook" },
+        { "platform": "linkedin", "href": "https://linkedin.com/company/k12path", "label": "LinkedIn" },
+        { "platform": "youtube", "href": "https://youtube.com/@k12path", "label": "YouTube" }
+      ],
+      "newsletter": {
+        "title": "Stay Updated",
+        "subtitle": "Get the latest tips and resources delivered to your inbox.",
+        "placeholder": "Enter your email",
+        "button": "Subscribe"
+      },
+      "copyright": "K12Path. All rights reserved."
+    },
+    "zh": {
+      "description": "帮助移民家庭自信地应对K-12教育系统的挑战。",
+      "columns": [
+        {
+          "title": "产品",
+          "links": [
+            { "label": "功能特点", "href": "#features" },
+            { "label": "价格方案", "href": "#pricing" },
+            { "label": "单词探险", "href": "/word-quest" },
+            { "label": "学校查找", "href": "/schools" }
+          ]
+        },
+        {
+          "title": "资源",
+          "links": [
+            { "label": "博客", "href": "/blog" },
+            { "label": "指南", "href": "/guides" },
+            { "label": "常见问题", "href": "/faq" },
+            { "label": "术语表", "href": "/glossary" }
+          ]
+        },
+        {
+          "title": "公司",
+          "links": [
+            { "label": "关于我们", "href": "/about" },
+            { "label": "联系我们", "href": "/contact" },
+            { "label": "加入我们", "href": "/careers" },
+            { "label": "新闻报道", "href": "/press" }
+          ]
+        },
+        {
+          "title": "法律",
+          "links": [
+            { "label": "隐私政策", "href": "/privacy" },
+            { "label": "服务条款", "href": "/terms" },
+            { "label": "Cookie政策", "href": "/cookies" }
+          ]
+        }
+      ],
+      "social": [
+        { "platform": "twitter", "href": "https://twitter.com/k12path", "label": "推特" },
+        { "platform": "facebook", "href": "https://facebook.com/k12path", "label": "脸书" },
+        { "platform": "linkedin", "href": "https://linkedin.com/company/k12path", "label": "领英" },
+        { "platform": "youtube", "href": "https://youtube.com/@k12path", "label": "油管" }
+      ],
+      "newsletter": {
+        "title": "订阅更新",
+        "subtitle": "获取最新的教育资讯和资源。",
+        "placeholder": "输入您的邮箱",
+        "button": "订阅"
+      },
+      "copyright": "K12Path. 版权所有。"
+    }
+  }
+}
