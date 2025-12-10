@@ -36,7 +36,7 @@
           "links": [
             { "label": "Features", "href": "#features" },
             { "label": "Pricing", "href": "#pricing" },
-            { "label": "Word Quest", "href": "/word-quest" },
+            { "label": "Word Quest", "href": "/word-quest/index.html" },
             { "label": "School Finder", "href": "/schools" }
           ]
         },
@@ -89,7 +89,7 @@
           "links": [
             { "label": "功能特点", "href": "#features" },
             { "label": "价格方案", "href": "#pricing" },
-            { "label": "单词探险", "href": "/word-quest" },
+            { "label": "单词探险", "href": "/word-quest/index.html" },
             { "label": "学校查找", "href": "/schools" }
           ]
         },

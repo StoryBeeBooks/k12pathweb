@@ -6,8 +6,7 @@ const nextConfig = {
     unoptimized: true,
     domains: ["images.unsplash.com"],
   },
-  basePath: '/k12pathweb',
-  assetPrefix: '/k12pathweb/',
+  // No basePath needed when using custom domain (k12path.com)
 };
 
 export default nextConfig;
