@@ -1,6 +1,4 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.GITHUB_ACTIONS === 'true';
-
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
@@ -8,8 +6,8 @@ const nextConfig = {
     unoptimized: true,
     domains: ["images.unsplash.com"],
   },
-  basePath: isProd ? '/k12pathweb' : '',
-  assetPrefix: isProd ? '/k12pathweb/' : '',
+  basePath: '/k12pathweb',
+  assetPrefix: '/k12pathweb/',
 };
 
 export default nextConfig;
