@@ -1643,9 +1643,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Legend Section - UserType & Info */}
+      {/* Legend Section - UserType & Categories */}
       <div className="bg-white border-b border-slate-100 py-4 px-4">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {/* Target Audience Info */}
           <div className="text-center mb-4">
             <p className="text-sm text-slate-600">
@@ -1654,8 +1654,8 @@ export default function Home() {
           </div>
           
           {/* UserType Legend */}
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-            <span className="text-xs text-slate-500 font-medium">图标说明：</span>
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mb-4">
+            <span className="text-xs text-slate-500 font-medium">用户类型：</span>
             <div className="flex items-center gap-1.5">
               <span className="w-5 h-5 rounded-full bg-rose-400 flex items-center justify-center text-[10px] text-white font-bold">P</span>
               <span className="text-sm text-slate-600">家长专用</span>
@@ -1667,6 +1667,60 @@ export default function Home() {
             <div className="flex items-center gap-1.5">
               <span className="w-5 h-5 rounded-full bg-violet-400 flex items-center justify-center text-[10px] text-white font-bold">♥</span>
               <span className="text-sm text-slate-600">亲子共用</span>
+            </div>
+          </div>
+
+          {/* Category Colors Legend */}
+          <div className="border-t border-slate-100 pt-4">
+            <div className="text-center mb-3">
+              <span className="text-xs text-slate-500 font-medium">资源类别颜色：</span>
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3">
+              {/* 西方教育核心类别 */}
+              <div className="flex items-center gap-1">
+                <span className="w-4 h-4 rounded bg-green-100 border border-green-300"></span>
+                <span className="text-xs text-slate-600">ESL英语</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="w-4 h-4 rounded bg-blue-100 border border-blue-300"></span>
+                <span className="text-xs text-slate-600">本地课程</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="w-4 h-4 rounded bg-indigo-100 border border-indigo-300"></span>
+                <span className="text-xs text-slate-600">西方教育</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="w-4 h-4 rounded bg-sky-100 border border-sky-300"></span>
+                <span className="text-xs text-slate-600">学校系统</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="w-4 h-4 rounded bg-rose-100 border border-rose-300"></span>
+                <span className="text-xs text-slate-600">升学准备</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="w-4 h-4 rounded bg-red-100 border border-red-300"></span>
+                <span className="text-xs text-slate-600">标化考试</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="w-4 h-4 rounded bg-violet-100 border border-violet-300"></span>
+                <span className="text-xs text-slate-600">大学申请</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="w-4 h-4 rounded bg-amber-100 border border-amber-300"></span>
+                <span className="text-xs text-slate-600">中文传承</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="w-4 h-4 rounded bg-slate-100 border border-slate-300"></span>
+                <span className="text-xs text-slate-600">家长指南</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="w-4 h-4 rounded bg-pink-50 border border-pink-200"></span>
+                <span className="text-xs text-slate-600">心理健康</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="w-4 h-4 rounded bg-lime-50 border border-lime-200"></span>
+                <span className="text-xs text-slate-600">习惯品格</span>
+              </div>
             </div>
           </div>
         </div>
