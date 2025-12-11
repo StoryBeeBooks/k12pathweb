@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2025-12-11T18:19:35.066Z",
+  "generatedAt": "2025-12-11T18:40:15.814Z",
   "summary": {
-    "totalResources": 599,
+    "totalResources": 639,
     "totalStages": 18,
-    "totalCategories": 14,
-    "freeResources": 581,
+    "totalCategories": 15,
+    "freeResources": 621,
     "paidResources": 18
   },
   "userTypes": {
-    "parent": 244,
-    "child": 109,
-    "both": 246
+    "parent": 265,
+    "child": 112,
+    "both": 262
   },
   "categories": [
     {
       "name": "西方教育",
-      "count": 167,
-      "percentage": "27.9%",
+      "count": 154,
+      "percentage": "24.1%",
       "resources": [
         {
           "id": "r2-39",
@@ -385,24 +385,6 @@
           "userType": "parent"
         },
         {
-          "id": "r9-14",
-          "name": "私校了解",
-          "icon": "🏫",
-          "userType": "parent"
-        },
-        {
-          "id": "r9-15",
-          "name": "SSAT了解",
-          "icon": "📝",
-          "userType": "parent"
-        },
-        {
-          "id": "r9-16",
-          "name": "活动规划",
-          "icon": "🎯",
-          "userType": "parent"
-        },
-        {
           "id": "r9-21",
           "name": "打字技能",
           "icon": "⌨️",
@@ -473,36 +455,6 @@
           "name": "科学方法",
           "icon": "🔬",
           "userType": "both"
-        },
-        {
-          "id": "r10-10",
-          "name": "SSAT准备",
-          "icon": "📝",
-          "userType": "parent"
-        },
-        {
-          "id": "r10-11",
-          "name": "SSAT词汇",
-          "icon": "📚",
-          "userType": "both"
-        },
-        {
-          "id": "r10-13",
-          "name": "私校文书",
-          "icon": "✏️",
-          "userType": "parent"
-        },
-        {
-          "id": "r10-14",
-          "name": "面试准备",
-          "icon": "🎤",
-          "userType": "both"
-        },
-        {
-          "id": "r10-15",
-          "name": "活动简历",
-          "icon": "📋",
-          "userType": "parent"
         },
         {
           "id": "r10-16",
@@ -817,36 +769,6 @@
           "userType": "parent"
         },
         {
-          "id": "r13-7",
-          "name": "私高申请",
-          "icon": "🏫",
-          "userType": "parent"
-        },
-        {
-          "id": "r13-8",
-          "name": "SSAT/ISEE",
-          "icon": "📝",
-          "userType": "both"
-        },
-        {
-          "id": "r13-10",
-          "name": "申请文书",
-          "icon": "✏️",
-          "userType": "both"
-        },
-        {
-          "id": "r13-11",
-          "name": "面试技巧",
-          "icon": "🎤",
-          "userType": "both"
-        },
-        {
-          "id": "r13-12",
-          "name": "推荐信",
-          "icon": "📧",
-          "userType": "parent"
-        },
-        {
           "id": "r13-13",
           "name": "Algebra掌握",
           "icon": "🔢",
@@ -1025,7 +947,7 @@
     {
       "name": "升学规划",
       "count": 62,
-      "percentage": "10.4%",
+      "percentage": "9.7%",
       "resources": [
         {
           "id": "r5-1",
@@ -1404,7 +1326,7 @@
     {
       "name": "习惯品格",
       "count": 61,
-      "percentage": "10.2%",
+      "percentage": "9.5%",
       "resources": [
         {
           "id": "r1-18",
@@ -1775,9 +1697,352 @@
       ]
     },
     {
+      "name": "顶私教育",
+      "count": 56,
+      "percentage": "8.8%",
+      "resources": [
+        {
+          "id": "r4-39",
+          "name": "了解顶私",
+          "icon": "🏛️",
+          "userType": "parent"
+        },
+        {
+          "id": "r4-40",
+          "name": "私校幼儿园",
+          "icon": "🎒",
+          "userType": "parent"
+        },
+        {
+          "id": "r5-49",
+          "name": "私校vs公校",
+          "icon": "⚖️",
+          "userType": "parent"
+        },
+        {
+          "id": "r5-50",
+          "name": "私校JK/SK",
+          "icon": "🎒",
+          "userType": "parent"
+        },
+        {
+          "id": "r5-51",
+          "name": "私校费用",
+          "icon": "💰",
+          "userType": "parent"
+        },
+        {
+          "id": "r6-37",
+          "name": "私校Grade 1",
+          "icon": "🏛️",
+          "userType": "parent"
+        },
+        {
+          "id": "r6-38",
+          "name": "私校面试",
+          "icon": "🎤",
+          "userType": "parent"
+        },
+        {
+          "id": "r6-39",
+          "name": "私校适应",
+          "icon": "🌟",
+          "userType": "parent"
+        },
+        {
+          "id": "r7-34",
+          "name": "私校准备",
+          "icon": "🏛️",
+          "userType": "parent"
+        },
+        {
+          "id": "r7-35",
+          "name": "词汇积累",
+          "icon": "📚",
+          "userType": "both"
+        },
+        {
+          "id": "r8-33",
+          "name": "私校4年级入学",
+          "icon": "🏛️",
+          "userType": "parent"
+        },
+        {
+          "id": "r8-34",
+          "name": "入学评估准备",
+          "icon": "📝",
+          "userType": "both"
+        },
+        {
+          "id": "r8-35",
+          "name": "Word Quest",
+          "icon": "🎮",
+          "userType": "child"
+        },
+        {
+          "id": "r9-14",
+          "name": "私校了解",
+          "icon": "🏫",
+          "userType": "parent"
+        },
+        {
+          "id": "r9-15",
+          "name": "SSAT了解",
+          "icon": "📝",
+          "userType": "parent"
+        },
+        {
+          "id": "r9-16",
+          "name": "活动规划",
+          "icon": "🎯",
+          "userType": "parent"
+        },
+        {
+          "id": "r9-17",
+          "name": "Word Quest",
+          "icon": "🎮",
+          "userType": "child"
+        },
+        {
+          "id": "r9-33",
+          "name": "私校5年级入学",
+          "icon": "🏛️",
+          "userType": "parent"
+        },
+        {
+          "id": "r9-34",
+          "name": "SSAT Elementary",
+          "icon": "📚",
+          "userType": "both"
+        },
+        {
+          "id": "r10-10",
+          "name": "SSAT准备",
+          "icon": "📝",
+          "userType": "parent"
+        },
+        {
+          "id": "r10-11",
+          "name": "SSAT词汇",
+          "icon": "📚",
+          "userType": "both"
+        },
+        {
+          "id": "r10-12",
+          "name": "Word Quest",
+          "icon": "🎮",
+          "userType": "child"
+        },
+        {
+          "id": "r10-13",
+          "name": "私校文书",
+          "icon": "✏️",
+          "userType": "parent"
+        },
+        {
+          "id": "r10-14",
+          "name": "面试准备",
+          "icon": "🎤",
+          "userType": "both"
+        },
+        {
+          "id": "r10-15",
+          "name": "活动简历",
+          "icon": "📋",
+          "userType": "parent"
+        },
+        {
+          "id": "r10-34",
+          "name": "顶私6年级入学",
+          "icon": "🏛️",
+          "userType": "parent"
+        },
+        {
+          "id": "r10-35",
+          "name": "私校排名",
+          "icon": "📊",
+          "userType": "parent"
+        },
+        {
+          "id": "r10-36",
+          "name": "私校访校",
+          "icon": "🏫",
+          "userType": "parent"
+        },
+        {
+          "id": "r11-36",
+          "name": "私校新生适应",
+          "icon": "🏛️",
+          "userType": "parent"
+        },
+        {
+          "id": "r11-37",
+          "name": "私校学术要求",
+          "icon": "📚",
+          "userType": "both"
+        },
+        {
+          "id": "r11-38",
+          "name": "私校社交",
+          "icon": "👥",
+          "userType": "both"
+        },
+        {
+          "id": "r11-39",
+          "name": "7年级转私校",
+          "icon": "🔄",
+          "userType": "parent"
+        },
+        {
+          "id": "r13-7",
+          "name": "私高申请",
+          "icon": "🏫",
+          "userType": "parent"
+        },
+        {
+          "id": "r13-8",
+          "name": "SSAT Upper",
+          "icon": "📝",
+          "userType": "both"
+        },
+        {
+          "id": "r13-9",
+          "name": "Word Quest",
+          "icon": "🎮",
+          "userType": "child"
+        },
+        {
+          "id": "r13-10",
+          "name": "申请文书",
+          "icon": "✏️",
+          "userType": "both"
+        },
+        {
+          "id": "r13-11",
+          "name": "面试技巧",
+          "icon": "🎤",
+          "userType": "both"
+        },
+        {
+          "id": "r13-12",
+          "name": "推荐信",
+          "icon": "📧",
+          "userType": "parent"
+        },
+        {
+          "id": "r13-37",
+          "name": "寄宿私校",
+          "icon": "🏠",
+          "userType": "parent"
+        },
+        {
+          "id": "r13-38",
+          "name": "私校奖学金",
+          "icon": "💰",
+          "userType": "parent"
+        },
+        {
+          "id": "r14-22",
+          "name": "私校新生",
+          "icon": "🏛️",
+          "userType": "both"
+        },
+        {
+          "id": "r14-23",
+          "name": "Pre-AP准备",
+          "icon": "📚",
+          "userType": "both"
+        },
+        {
+          "id": "r14-24",
+          "name": "私校活动",
+          "icon": "🎭",
+          "userType": "both"
+        },
+        {
+          "id": "r14-25",
+          "name": "IB预备",
+          "icon": "🌏",
+          "userType": "both"
+        },
+        {
+          "id": "r15-23",
+          "name": "AP课程选择",
+          "icon": "📚",
+          "userType": "both"
+        },
+        {
+          "id": "r15-24",
+          "name": "IB选课",
+          "icon": "🌏",
+          "userType": "both"
+        },
+        {
+          "id": "r15-25",
+          "name": "私校升学",
+          "icon": "🎓",
+          "userType": "parent"
+        },
+        {
+          "id": "r15-26",
+          "name": "私校竞赛",
+          "icon": "🏆",
+          "userType": "both"
+        },
+        {
+          "id": "r16-25",
+          "name": "AP考试规划",
+          "icon": "📚",
+          "userType": "both"
+        },
+        {
+          "id": "r16-26",
+          "name": "IB DP",
+          "icon": "🌏",
+          "userType": "both"
+        },
+        {
+          "id": "r16-27",
+          "name": "私校推荐信",
+          "icon": "📧",
+          "userType": "both"
+        },
+        {
+          "id": "r16-28",
+          "name": "私校升学指导",
+          "icon": "🎓",
+          "userType": "parent"
+        },
+        {
+          "id": "r17-26",
+          "name": "IB考试",
+          "icon": "🌏",
+          "userType": "child"
+        },
+        {
+          "id": "r17-27",
+          "name": "A-Level考试",
+          "icon": "🇬🇧",
+          "userType": "child"
+        },
+        {
+          "id": "r17-28",
+          "name": "私校校友网络",
+          "icon": "🤝",
+          "userType": "both"
+        },
+        {
+          "id": "r17-29",
+          "name": "顶私毕业后",
+          "icon": "🎓",
+          "userType": "parent"
+        }
+      ]
+    },
+    {
       "name": "心理社交",
       "count": 51,
-      "percentage": "8.5%",
+      "percentage": "8.0%",
       "resources": [
         {
           "id": "r2-15",
@@ -2090,7 +2355,7 @@
     {
       "name": "家长指南",
       "count": 46,
-      "percentage": "7.7%",
+      "percentage": "7.2%",
       "resources": [
         {
           "id": "r0-24",
@@ -2373,7 +2638,7 @@
     {
       "name": "早期发育",
       "count": 38,
-      "percentage": "6.3%",
+      "percentage": "5.9%",
       "resources": [
         {
           "id": "r0-15",
@@ -2606,220 +2871,9 @@
       ]
     },
     {
-      "name": "英语学习",
-      "count": 34,
-      "percentage": "5.7%",
-      "resources": [
-        {
-          "id": "r3-45",
-          "name": "英语社交",
-          "icon": "👋",
-          "userType": "both"
-        },
-        {
-          "id": "r5-47",
-          "name": "英语日常会话",
-          "icon": "🗣️",
-          "userType": "both"
-        },
-        {
-          "id": "r6-7",
-          "name": "了解ESL/ELL",
-          "icon": "🗣️",
-          "userType": "parent"
-        },
-        {
-          "id": "r6-8",
-          "name": "Phonics基础",
-          "icon": "🔤",
-          "userType": "both"
-        },
-        {
-          "id": "r6-9",
-          "name": "Sight Words",
-          "icon": "👀",
-          "userType": "both"
-        },
-        {
-          "id": "r6-10",
-          "name": "英语阅读分级",
-          "icon": "📚",
-          "userType": "parent"
-        },
-        {
-          "id": "r6-11",
-          "name": "家庭英语环境",
-          "icon": "🏠",
-          "userType": "parent"
-        },
-        {
-          "id": "r6-12",
-          "name": "图书馆利用",
-          "icon": "📖",
-          "userType": "parent"
-        },
-        {
-          "id": "r7-1",
-          "name": "阅读流利度",
-          "icon": "📖",
-          "userType": "parent"
-        },
-        {
-          "id": "r7-2",
-          "name": "Reading Level追踪",
-          "icon": "📊",
-          "userType": "parent"
-        },
-        {
-          "id": "r7-3",
-          "name": "选书技巧",
-          "icon": "📚",
-          "userType": "both"
-        },
-        {
-          "id": "r7-4",
-          "name": "阅读理解",
-          "icon": "🧠",
-          "userType": "parent"
-        },
-        {
-          "id": "r7-5",
-          "name": "图书馆活动",
-          "icon": "📖",
-          "userType": "parent"
-        },
-        {
-          "id": "r7-12",
-          "name": "ESL进展评估",
-          "icon": "📈",
-          "userType": "parent"
-        },
-        {
-          "id": "r7-13",
-          "name": "词汇积累",
-          "icon": "📚",
-          "userType": "both"
-        },
-        {
-          "id": "r7-14",
-          "name": "口语表达",
-          "icon": "🗣️",
-          "userType": "both"
-        },
-        {
-          "id": "r7-15",
-          "name": "听力理解",
-          "icon": "👂",
-          "userType": "both"
-        },
-        {
-          "id": "r8-5",
-          "name": "阅读理解策略",
-          "icon": "🧠",
-          "userType": "both"
-        },
-        {
-          "id": "r8-6",
-          "name": "非虚构阅读",
-          "icon": "📰",
-          "userType": "both"
-        },
-        {
-          "id": "r8-7",
-          "name": "词汇发展",
-          "icon": "📚",
-          "userType": "both"
-        },
-        {
-          "id": "r8-8",
-          "name": "阅读流利度",
-          "icon": "🎯",
-          "userType": "both"
-        },
-        {
-          "id": "r8-32",
-          "name": "Word Quest",
-          "icon": "🎮",
-          "userType": "child"
-        },
-        {
-          "id": "r9-3",
-          "name": "阅读深度",
-          "icon": "📚",
-          "userType": "both"
-        },
-        {
-          "id": "r9-4",
-          "name": "阅读量",
-          "icon": "📊",
-          "userType": "parent"
-        },
-        {
-          "id": "r9-17",
-          "name": "Word Quest",
-          "icon": "🎮",
-          "userType": "child"
-        },
-        {
-          "id": "r10-7",
-          "name": "阅读分析",
-          "icon": "📚",
-          "userType": "both"
-        },
-        {
-          "id": "r10-12",
-          "name": "Word Quest",
-          "icon": "🎮",
-          "userType": "child"
-        },
-        {
-          "id": "r10-17",
-          "name": "拼写比赛",
-          "icon": "🔤",
-          "userType": "both"
-        },
-        {
-          "id": "r11-8",
-          "name": "阅读深度",
-          "icon": "📚",
-          "userType": "both"
-        },
-        {
-          "id": "r11-12",
-          "name": "Word Quest",
-          "icon": "🎮",
-          "userType": "child"
-        },
-        {
-          "id": "r12-9",
-          "name": "阅读深度",
-          "icon": "📚",
-          "userType": "both"
-        },
-        {
-          "id": "r12-11",
-          "name": "Word Quest",
-          "icon": "🎮",
-          "userType": "child"
-        },
-        {
-          "id": "r13-9",
-          "name": "Word Quest",
-          "icon": "🎮",
-          "userType": "child"
-        },
-        {
-          "id": "r13-15",
-          "name": "阅读水平",
-          "icon": "📚",
-          "userType": "both"
-        }
-      ]
-    },
-    {
       "name": "艺术音乐",
       "count": 32,
-      "percentage": "5.3%",
+      "percentage": "5.0%",
       "resources": [
         {
           "id": "r3-31",
@@ -3016,9 +3070,202 @@
       ]
     },
     {
+      "name": "英语学习",
+      "count": 31,
+      "percentage": "4.9%",
+      "resources": [
+        {
+          "id": "r3-45",
+          "name": "英语社交",
+          "icon": "👋",
+          "userType": "both"
+        },
+        {
+          "id": "r5-47",
+          "name": "英语日常会话",
+          "icon": "🗣️",
+          "userType": "both"
+        },
+        {
+          "id": "r6-7",
+          "name": "了解ESL/ELL",
+          "icon": "🗣️",
+          "userType": "parent"
+        },
+        {
+          "id": "r6-8",
+          "name": "Phonics基础",
+          "icon": "🔤",
+          "userType": "both"
+        },
+        {
+          "id": "r6-9",
+          "name": "Sight Words",
+          "icon": "👀",
+          "userType": "both"
+        },
+        {
+          "id": "r6-10",
+          "name": "英语阅读分级",
+          "icon": "📚",
+          "userType": "parent"
+        },
+        {
+          "id": "r6-11",
+          "name": "家庭英语环境",
+          "icon": "🏠",
+          "userType": "parent"
+        },
+        {
+          "id": "r6-12",
+          "name": "图书馆利用",
+          "icon": "📖",
+          "userType": "parent"
+        },
+        {
+          "id": "r7-1",
+          "name": "阅读流利度",
+          "icon": "📖",
+          "userType": "parent"
+        },
+        {
+          "id": "r7-2",
+          "name": "Reading Level追踪",
+          "icon": "📊",
+          "userType": "parent"
+        },
+        {
+          "id": "r7-3",
+          "name": "选书技巧",
+          "icon": "📚",
+          "userType": "both"
+        },
+        {
+          "id": "r7-4",
+          "name": "阅读理解",
+          "icon": "🧠",
+          "userType": "parent"
+        },
+        {
+          "id": "r7-5",
+          "name": "图书馆活动",
+          "icon": "📖",
+          "userType": "parent"
+        },
+        {
+          "id": "r7-12",
+          "name": "ESL进展评估",
+          "icon": "📈",
+          "userType": "parent"
+        },
+        {
+          "id": "r7-13",
+          "name": "词汇积累",
+          "icon": "📚",
+          "userType": "both"
+        },
+        {
+          "id": "r7-14",
+          "name": "口语表达",
+          "icon": "🗣️",
+          "userType": "both"
+        },
+        {
+          "id": "r7-15",
+          "name": "听力理解",
+          "icon": "👂",
+          "userType": "both"
+        },
+        {
+          "id": "r8-5",
+          "name": "阅读理解策略",
+          "icon": "🧠",
+          "userType": "both"
+        },
+        {
+          "id": "r8-6",
+          "name": "非虚构阅读",
+          "icon": "📰",
+          "userType": "both"
+        },
+        {
+          "id": "r8-7",
+          "name": "词汇发展",
+          "icon": "📚",
+          "userType": "both"
+        },
+        {
+          "id": "r8-8",
+          "name": "阅读流利度",
+          "icon": "🎯",
+          "userType": "both"
+        },
+        {
+          "id": "r8-32",
+          "name": "Word Quest",
+          "icon": "🎮",
+          "userType": "child"
+        },
+        {
+          "id": "r9-3",
+          "name": "阅读深度",
+          "icon": "📚",
+          "userType": "both"
+        },
+        {
+          "id": "r9-4",
+          "name": "阅读量",
+          "icon": "📊",
+          "userType": "parent"
+        },
+        {
+          "id": "r10-7",
+          "name": "阅读分析",
+          "icon": "📚",
+          "userType": "both"
+        },
+        {
+          "id": "r10-17",
+          "name": "拼写比赛",
+          "icon": "🔤",
+          "userType": "both"
+        },
+        {
+          "id": "r11-8",
+          "name": "阅读深度",
+          "icon": "📚",
+          "userType": "both"
+        },
+        {
+          "id": "r11-12",
+          "name": "Word Quest",
+          "icon": "🎮",
+          "userType": "child"
+        },
+        {
+          "id": "r12-9",
+          "name": "阅读深度",
+          "icon": "📚",
+          "userType": "both"
+        },
+        {
+          "id": "r12-11",
+          "name": "Word Quest",
+          "icon": "🎮",
+          "userType": "child"
+        },
+        {
+          "id": "r13-15",
+          "name": "阅读水平",
+          "icon": "📚",
+          "userType": "both"
+        }
+      ]
+    },
+    {
       "name": "学习启蒙",
       "count": 29,
-      "percentage": "4.8%",
+      "percentage": "4.5%",
       "resources": [
         {
           "id": "r2-22",
@@ -3199,7 +3446,7 @@
     {
       "name": "中文传承",
       "count": 27,
-      "percentage": "4.5%",
+      "percentage": "4.2%",
       "resources": [
         {
           "id": "r5-48",
@@ -3368,7 +3615,7 @@
     {
       "name": "婴幼护理",
       "count": 20,
-      "percentage": "3.3%",
+      "percentage": "3.1%",
       "resources": [
         {
           "id": "r0-1",
@@ -3495,7 +3742,7 @@
     {
       "name": "体育运动",
       "count": 19,
-      "percentage": "3.2%",
+      "percentage": "3.0%",
       "resources": [
         {
           "id": "r3-34",
@@ -3616,7 +3863,7 @@
     {
       "name": "阅读培养",
       "count": 12,
-      "percentage": "2.0%",
+      "percentage": "1.9%",
       "resources": [
         {
           "id": "r3-27",
@@ -5670,6 +5917,26 @@
       "userType": "parent"
     },
     {
+      "id": "r4-39",
+      "name": "了解顶私",
+      "icon": "🏛️",
+      "description": "什么是顶尖私立学校？从幼儿园就开始的私校路径",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "parent"
+    },
+    {
+      "id": "r4-40",
+      "name": "私校幼儿园",
+      "icon": "🎒",
+      "description": "顶私幼儿园的特点、申请流程和时间线",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "parent"
+    },
+    {
       "id": "r5-1",
       "name": "拼音入门",
       "icon": "🅰️",
@@ -6150,6 +6417,36 @@
       "userType": "parent"
     },
     {
+      "id": "r5-49",
+      "name": "私校vs公校",
+      "icon": "⚖️",
+      "description": "顶级私立学校与公立学校的区别和选择考量",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "parent"
+    },
+    {
+      "id": "r5-50",
+      "name": "私校JK/SK",
+      "icon": "🎒",
+      "description": "顶私Junior Kindergarten/Senior Kindergarten申请攻略",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "parent"
+    },
+    {
+      "id": "r5-51",
+      "name": "私校费用",
+      "icon": "💰",
+      "description": "顶私学费、奖学金、助学金全解析",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "parent"
+    },
+    {
       "id": "r6-1",
       "name": "了解Report Card",
       "icon": "📊",
@@ -6510,6 +6807,36 @@
       "userType": "parent"
     },
     {
+      "id": "r6-37",
+      "name": "私校Grade 1",
+      "icon": "🏛️",
+      "description": "顶私一年级入学申请时间线和要求",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "parent"
+    },
+    {
+      "id": "r6-38",
+      "name": "私校面试",
+      "icon": "🎤",
+      "description": "低年级私校面试常见问题和准备",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "parent"
+    },
+    {
+      "id": "r6-39",
+      "name": "私校适应",
+      "icon": "🌟",
+      "description": "已入读私校：如何帮助孩子适应私校环境",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "parent"
+    },
+    {
       "id": "r7-1",
       "name": "阅读流利度",
       "icon": "📖",
@@ -6840,6 +7167,26 @@
       "userType": "parent"
     },
     {
+      "id": "r7-34",
+      "name": "私校准备",
+      "icon": "🏛️",
+      "description": "顶私3-4年级入学点：何时开始准备？",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "parent"
+    },
+    {
+      "id": "r7-35",
+      "name": "词汇积累",
+      "icon": "📚",
+      "description": "私校入学评估需要的词汇水平",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "both"
+    },
+    {
       "id": "r8-1",
       "name": "了解三年级滑坡",
       "icon": "📉",
@@ -7160,6 +7507,36 @@
       "userType": "child"
     },
     {
+      "id": "r8-33",
+      "name": "私校4年级入学",
+      "icon": "🏛️",
+      "description": "顶私4年级入学点：申请时间线和要求",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "parent"
+    },
+    {
+      "id": "r8-34",
+      "name": "入学评估准备",
+      "icon": "📝",
+      "description": "私校入学评估（阅读、数学、写作）准备",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "both"
+    },
+    {
+      "id": "r8-35",
+      "name": "Word Quest",
+      "icon": "🎮",
+      "description": "K12Path词汇游戏：私校入学词汇准备",
+      "link": "/word-quest/",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "child"
+    },
+    {
       "id": "r9-1",
       "name": "Essay写作",
       "icon": "✏️",
@@ -7296,7 +7673,7 @@
       "description": "西方私立学校概览和选择",
       "link": "#",
       "type": "free",
-      "category": "西方教育",
+      "category": "顶私教育",
       "userType": "parent"
     },
     {
@@ -7306,7 +7683,7 @@
       "description": "了解SSAT考试（如果考虑私校）",
       "link": "#",
       "type": "free",
-      "category": "西方教育",
+      "category": "顶私教育",
       "userType": "parent"
     },
     {
@@ -7316,7 +7693,7 @@
       "description": "课外活动的长期规划思路",
       "link": "#",
       "type": "free",
-      "category": "西方教育",
+      "category": "顶私教育",
       "userType": "parent"
     },
     {
@@ -7326,7 +7703,7 @@
       "description": "K12Path原创SSAT词汇游戏！趣味学习SSAT Elementary词汇",
       "link": "/word-quest/",
       "type": "free",
-      "category": "英语学习",
+      "category": "顶私教育",
       "userType": "child"
     },
     {
@@ -7480,6 +7857,26 @@
       "userType": "parent"
     },
     {
+      "id": "r9-33",
+      "name": "私校5年级入学",
+      "icon": "🏛️",
+      "description": "准备5年级私校入学的时间线",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "parent"
+    },
+    {
+      "id": "r9-34",
+      "name": "SSAT Elementary",
+      "icon": "📚",
+      "description": "SSAT Elementary Level备考策略",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "both"
+    },
+    {
       "id": "r10-1",
       "name": "中学制度了解",
       "icon": "🏫",
@@ -7573,10 +7970,10 @@
       "id": "r10-10",
       "name": "SSAT准备",
       "icon": "📝",
-      "description": "SSAT考试结构和准备策略",
+      "description": "SSAT Middle Level考试结构和准备策略",
       "link": "#",
       "type": "free",
-      "category": "西方教育",
+      "category": "顶私教育",
       "userType": "parent"
     },
     {
@@ -7586,7 +7983,7 @@
       "description": "SSAT Middle Level词汇学习方法",
       "link": "#",
       "type": "free",
-      "category": "西方教育",
+      "category": "顶私教育",
       "userType": "both"
     },
     {
@@ -7596,7 +7993,7 @@
       "description": "K12Path原创SSAT词汇游戏！趣味学习SSAT Middle词汇",
       "link": "/word-quest/",
       "type": "free",
-      "category": "英语学习",
+      "category": "顶私教育",
       "userType": "child"
     },
     {
@@ -7606,7 +8003,7 @@
       "description": "私校申请Essay写作指导",
       "link": "#",
       "type": "free",
-      "category": "西方教育",
+      "category": "顶私教育",
       "userType": "parent"
     },
     {
@@ -7616,7 +8013,7 @@
       "description": "私校面试准备和技巧",
       "link": "#",
       "type": "free",
-      "category": "西方教育",
+      "category": "顶私教育",
       "userType": "both"
     },
     {
@@ -7626,7 +8023,37 @@
       "description": "如何整理和呈现课外活动",
       "link": "#",
       "type": "free",
-      "category": "西方教育",
+      "category": "顶私教育",
+      "userType": "parent"
+    },
+    {
+      "id": "r10-34",
+      "name": "顶私6年级入学",
+      "icon": "🏛️",
+      "description": "6年级是多数顶私的主要入学点",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "parent"
+    },
+    {
+      "id": "r10-35",
+      "name": "私校排名",
+      "icon": "📊",
+      "description": "如何看待私校排名和选校策略",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "parent"
+    },
+    {
+      "id": "r10-36",
+      "name": "私校访校",
+      "icon": "🏫",
+      "description": "私校Open House和访校攻略",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
       "userType": "parent"
     },
     {
@@ -8160,6 +8587,46 @@
       "userType": "parent"
     },
     {
+      "id": "r11-36",
+      "name": "私校新生适应",
+      "icon": "🏛️",
+      "description": "刚入读顶私：如何快速适应私校节奏",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "parent"
+    },
+    {
+      "id": "r11-37",
+      "name": "私校学术要求",
+      "icon": "📚",
+      "description": "顶私的学术标准和期望",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "both"
+    },
+    {
+      "id": "r11-38",
+      "name": "私校社交",
+      "icon": "👥",
+      "description": "在私校环境中的社交和人际关系",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "both"
+    },
+    {
+      "id": "r11-39",
+      "name": "7年级转私校",
+      "icon": "🔄",
+      "description": "7年级转入私校的准备和申请",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "parent"
+    },
+    {
       "id": "r12-1",
       "name": "AP课程详解",
       "icon": "📚",
@@ -8586,17 +9053,17 @@
       "description": "私立高中申请时间线和流程",
       "link": "#",
       "type": "free",
-      "category": "西方教育",
+      "category": "顶私教育",
       "userType": "parent"
     },
     {
       "id": "r13-8",
-      "name": "SSAT/ISEE",
+      "name": "SSAT Upper",
       "icon": "📝",
-      "description": "SSAT/ISEE考试准备",
+      "description": "SSAT Upper Level考试准备策略",
       "link": "#",
       "type": "free",
-      "category": "西方教育",
+      "category": "顶私教育",
       "userType": "both"
     },
     {
@@ -8606,7 +9073,7 @@
       "description": "K12Path原创SSAT词汇游戏！Upper Level冲刺",
       "link": "/word-quest/",
       "type": "free",
-      "category": "英语学习",
+      "category": "顶私教育",
       "userType": "child"
     },
     {
@@ -8616,7 +9083,7 @@
       "description": "私高申请Essay写作指导",
       "link": "#",
       "type": "free",
-      "category": "西方教育",
+      "category": "顶私教育",
       "userType": "both"
     },
     {
@@ -8626,7 +9093,7 @@
       "description": "私高面试准备和模拟",
       "link": "#",
       "type": "free",
-      "category": "西方教育",
+      "category": "顶私教育",
       "userType": "both"
     },
     {
@@ -8636,7 +9103,27 @@
       "description": "如何获得有力的推荐信",
       "link": "#",
       "type": "free",
-      "category": "西方教育",
+      "category": "顶私教育",
+      "userType": "parent"
+    },
+    {
+      "id": "r13-37",
+      "name": "寄宿私校",
+      "icon": "🏠",
+      "description": "北美顶级寄宿学校申请指南",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "parent"
+    },
+    {
+      "id": "r13-38",
+      "name": "私校奖学金",
+      "icon": "💰",
+      "description": "私校Merit Aid和Need-based Aid",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
       "userType": "parent"
     },
     {
@@ -9080,6 +9567,46 @@
       "userType": "parent"
     },
     {
+      "id": "r14-22",
+      "name": "私校新生",
+      "icon": "🏛️",
+      "description": "顶私高中新生：适应私校高中的节奏",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "both"
+    },
+    {
+      "id": "r14-23",
+      "name": "Pre-AP准备",
+      "icon": "📚",
+      "description": "私校Pre-AP课程：为AP打基础",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "both"
+    },
+    {
+      "id": "r14-24",
+      "name": "私校活动",
+      "icon": "🎭",
+      "description": "私校的课外活动和社团选择",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "both"
+    },
+    {
+      "id": "r14-25",
+      "name": "IB预备",
+      "icon": "🌏",
+      "description": "Pre-IB课程和IB Diploma准备",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "both"
+    },
+    {
       "id": "r15-1",
       "name": "PSAT是什么",
       "icon": "📝",
@@ -9298,6 +9825,46 @@
       "type": "free",
       "category": "家长指南",
       "userType": "parent"
+    },
+    {
+      "id": "r15-23",
+      "name": "AP课程选择",
+      "icon": "📚",
+      "description": "私校AP课程：哪些AP最值得选",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "both"
+    },
+    {
+      "id": "r15-24",
+      "name": "IB选课",
+      "icon": "🌏",
+      "description": "IB课程选择：HL vs SL科目搭配策略",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "both"
+    },
+    {
+      "id": "r15-25",
+      "name": "私校升学",
+      "icon": "🎓",
+      "description": "顶私的大学升学率和录取优势",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "parent"
+    },
+    {
+      "id": "r15-26",
+      "name": "私校竞赛",
+      "icon": "🏆",
+      "description": "私校学生参与学术竞赛的优势和资源",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "both"
     },
     {
       "id": "r16-1",
@@ -9537,6 +10104,46 @@
       "link": "#",
       "type": "free",
       "category": "家长指南",
+      "userType": "parent"
+    },
+    {
+      "id": "r16-25",
+      "name": "AP考试规划",
+      "icon": "📚",
+      "description": "私校学生AP考试策略：考几门、如何平衡",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "both"
+    },
+    {
+      "id": "r16-26",
+      "name": "IB DP",
+      "icon": "🌏",
+      "description": "IB Diploma Program详解：EE、TOK、CAS要求",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "both"
+    },
+    {
+      "id": "r16-27",
+      "name": "私校推荐信",
+      "icon": "📧",
+      "description": "顶私的推荐信优势和如何最大化利用",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "both"
+    },
+    {
+      "id": "r16-28",
+      "name": "私校升学指导",
+      "icon": "🎓",
+      "description": "利用私校的大学升学指导资源",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
       "userType": "parent"
     },
     {
@@ -9787,6 +10394,46 @@
       "link": "#",
       "type": "free",
       "category": "家长指南",
+      "userType": "parent"
+    },
+    {
+      "id": "r17-26",
+      "name": "IB考试",
+      "icon": "🌏",
+      "description": "IB DP最终考试准备和分数预测",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "child"
+    },
+    {
+      "id": "r17-27",
+      "name": "A-Level考试",
+      "icon": "🇬🇧",
+      "description": "A-Level最终考试准备和UCAS申请",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "child"
+    },
+    {
+      "id": "r17-28",
+      "name": "私校校友网络",
+      "icon": "🤝",
+      "description": "利用顶私校友资源和网络",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
+      "userType": "both"
+    },
+    {
+      "id": "r17-29",
+      "name": "顶私毕业后",
+      "icon": "🎓",
+      "description": "顶私毕业生的大学适应和优势",
+      "link": "#",
+      "type": "free",
+      "category": "顶私教育",
       "userType": "parent"
     }
   ]

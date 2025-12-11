@@ -365,6 +365,10 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r4-36', name: '正面管教', icon: '💡', description: '应对"为什么"阶段的沟通技巧', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r4-37', name: '屏幕时间', icon: '📵', description: '如何合理管理孩子的屏幕时间', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r4-38', name: '择校准备', icon: '🏫', description: '了解幼升小准备时间线', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      
+      // ========== 🏛️ 顶私教育 ==========
+      { id: 'r4-39', name: '了解顶私', icon: '🏛️', description: '什么是顶尖私立学校？从幼儿园就开始的私校路径', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r4-40', name: '私校幼儿园', icon: '🎒', description: '顶私幼儿园的特点、申请流程和时间线', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
     ]
   },
   {
@@ -443,6 +447,11 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r5-46', name: 'IEP/504计划', icon: '📋', description: '了解特殊教育支持计划（如需要）', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
       { id: 'r5-47', name: '英语日常会话', icon: '🗣️', description: '帮孩子适应英语课堂的常用表达', link: '#', type: 'free', category: '英语学习', userType: 'both' },
       { id: 'r5-48', name: '中文传承', icon: '🏮', description: '在西方保持中文能力的方法', link: '#', type: 'free', category: '中文传承', userType: 'parent' },
+      
+      // ========== 🏛️ 顶私教育 ==========
+      { id: 'r5-49', name: '私校vs公校', icon: '⚖️', description: '顶级私立学校与公立学校的区别和选择考量', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r5-50', name: '私校JK/SK', icon: '🎒', description: '顶私Junior Kindergarten/Senior Kindergarten申请攻略', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r5-51', name: '私校费用', icon: '💰', description: '顶私学费、奖学金、助学金全解析', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
     ]
   },
   {
@@ -505,6 +514,11 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r6-34', name: '阅读能力', icon: '📚', description: '为什么阅读能力是一切学习的基础', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
       { id: 'r6-35', name: '数学基础', icon: '🔢', description: '一年级数学概念的重要性', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
       { id: 'r6-36', name: '习惯vs成绩', icon: '💡', description: '为什么习惯比成绩更重要', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
+      
+      // ========== 🏛️ 顶私教育 ==========
+      { id: 'r6-37', name: '私校Grade 1', icon: '🏛️', description: '顶私一年级入学申请时间线和要求', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r6-38', name: '私校面试', icon: '🎤', description: '低年级私校面试常见问题和准备', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r6-39', name: '私校适应', icon: '🌟', description: '已入读私校：如何帮助孩子适应私校环境', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
     ]
   },
   {
@@ -564,6 +578,10 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r7-31', name: '阅读vs成绩', icon: '📚', description: '为什么二年级阅读习惯决定未来学业', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
       { id: 'r7-32', name: '数学基础', icon: '🔢', description: '确保数学基础扎实（乘法表等）', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
       { id: 'r7-33', name: 'Gifted筛查', icon: '⭐', description: '了解Gifted Program筛选和申请', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
+      
+      // ========== 🏛️ 顶私教育 ==========
+      { id: 'r7-34', name: '私校准备', icon: '🏛️', description: '顶私3-4年级入学点：何时开始准备？', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r7-35', name: '词汇积累', icon: '📚', description: '私校入学评估需要的词汇水平', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
     ]
   },
   {
@@ -624,6 +642,11 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r8-30', name: '4-5年级预备', icon: '📈', description: '为高年级做准备应该关注什么', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
       { id: 'r8-31', name: '学习自主性', icon: '🎯', description: '从三年级开始培养学习自主性', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
       { id: 'r8-32', name: 'Word Quest', icon: '🎮', description: 'K12Path原创SSAT词汇游戏！通过闯关趣味学习SSAT Elementary词汇', link: '/word-quest/', type: 'free', category: '英语学习', userType: 'child' },
+      
+      // ========== 🏛️ 顶私教育 ==========
+      { id: 'r8-33', name: '私校4年级入学', icon: '🏛️', description: '顶私4年级入学点：申请时间线和要求', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r8-34', name: '入学评估准备', icon: '📝', description: '私校入学评估（阅读、数学、写作）准备', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
+      { id: 'r8-35', name: 'Word Quest', icon: '🎮', description: 'K12Path词汇游戏：私校入学词汇准备', link: '/word-quest/', type: 'free', category: '顶私教育', userType: 'child' },
     ]
   },
   {
@@ -655,10 +678,10 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r9-13', name: '测试准备', icon: '📝', description: '标准化测试策略和准备', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
       
       // ========== 🎯 私校申请准备（如有需要）==========
-      { id: 'r9-14', name: '私校了解', icon: '🏫', description: '西方私立学校概览和选择', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
-      { id: 'r9-15', name: 'SSAT了解', icon: '📝', description: '了解SSAT考试（如果考虑私校）', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
-      { id: 'r9-16', name: '活动规划', icon: '🎯', description: '课外活动的长期规划思路', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
-      { id: 'r9-17', name: 'Word Quest', icon: '🎮', description: 'K12Path原创SSAT词汇游戏！趣味学习SSAT Elementary词汇', link: '/word-quest/', type: 'free', category: '英语学习', userType: 'child' },
+      { id: 'r9-14', name: '私校了解', icon: '🏫', description: '西方私立学校概览和选择', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r9-15', name: 'SSAT了解', icon: '📝', description: '了解SSAT考试（如果考虑私校）', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r9-16', name: '活动规划', icon: '🎯', description: '课外活动的长期规划思路', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r9-17', name: 'Word Quest', icon: '🎮', description: 'K12Path原创SSAT词汇游戏！趣味学习SSAT Elementary词汇', link: '/word-quest/', type: 'free', category: '顶私教育', userType: 'child' },
       
       // ========== 🏮 中文传承 ==========
       { id: 'r9-18', name: '中文阅读', icon: '📚', description: '适合9岁的中文章节书推荐', link: '#', type: 'free', category: '中文传承', userType: 'parent' },
@@ -684,6 +707,10 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r9-30', name: '中学准备', icon: '📈', description: '从四年级开始的中学准备', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
       { id: 'r9-31', name: '学习类型', icon: '🧠', description: '了解孩子的学习类型和优势', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
       { id: 'r9-32', name: '青春期预备', icon: '💡', description: '为即将到来的青春期做准备', link: '#', type: 'free', category: '心理社交', userType: 'parent' },
+      
+      // ========== 🏛️ 顶私教育（扩展）==========
+      { id: 'r9-33', name: '私校5年级入学', icon: '🏛️', description: '准备5年级私校入学的时间线', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r9-34', name: 'SSAT Elementary', icon: '📚', description: 'SSAT Elementary Level备考策略', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
     ]
   },
   {
@@ -708,13 +735,16 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r10-8', name: '数学概念', icon: '🔢', description: '代数预备概念（Pre-Algebra思维）', link: '#', type: 'free', category: '西方教育', userType: 'both' },
       { id: 'r10-9', name: '科学方法', icon: '🔬', description: '科学方法和实验设计', link: '#', type: 'free', category: '西方教育', userType: 'both' },
       
-      // ========== 🎯 私校申请（如有需要）==========
-      { id: 'r10-10', name: 'SSAT准备', icon: '📝', description: 'SSAT考试结构和准备策略', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
-      { id: 'r10-11', name: 'SSAT词汇', icon: '📚', description: 'SSAT Middle Level词汇学习方法', link: '#', type: 'free', category: '西方教育', userType: 'both' },
-      { id: 'r10-12', name: 'Word Quest', icon: '🎮', description: 'K12Path原创SSAT词汇游戏！趣味学习SSAT Middle词汇', link: '/word-quest/', type: 'free', category: '英语学习', userType: 'child' },
-      { id: 'r10-13', name: '私校文书', icon: '✏️', description: '私校申请Essay写作指导', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
-      { id: 'r10-14', name: '面试准备', icon: '🎤', description: '私校面试准备和技巧', link: '#', type: 'free', category: '西方教育', userType: 'both' },
-      { id: 'r10-15', name: '活动简历', icon: '📋', description: '如何整理和呈现课外活动', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
+      // ========== 🏛️ 顶私教育（5年级关键申请年）==========
+      { id: 'r10-10', name: 'SSAT准备', icon: '📝', description: 'SSAT Middle Level考试结构和准备策略', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r10-11', name: 'SSAT词汇', icon: '📚', description: 'SSAT Middle Level词汇学习方法', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
+      { id: 'r10-12', name: 'Word Quest', icon: '🎮', description: 'K12Path原创SSAT词汇游戏！趣味学习SSAT Middle词汇', link: '/word-quest/', type: 'free', category: '顶私教育', userType: 'child' },
+      { id: 'r10-13', name: '私校文书', icon: '✏️', description: '私校申请Essay写作指导', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r10-14', name: '面试准备', icon: '🎤', description: '私校面试准备和技巧', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
+      { id: 'r10-15', name: '活动简历', icon: '📋', description: '如何整理和呈现课外活动', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r10-34', name: '顶私6年级入学', icon: '🏛️', description: '6年级是多数顶私的主要入学点', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r10-35', name: '私校排名', icon: '📊', description: '如何看待私校排名和选校策略', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r10-36', name: '私校访校', icon: '🏫', description: '私校Open House和访校攻略', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
       
       // ========== 🏆 学术竞赛 ==========
       { id: 'r10-16', name: '数学竞赛', icon: '🏆', description: 'AMC 8, Math League等数学竞赛了解', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
@@ -808,6 +838,12 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r11-33', name: '7-8年级规划', icon: '📈', description: '初中阶段整体规划', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
       { id: 'r11-34', name: '高中预备', icon: '🛤️', description: '为高中选课和路径做准备', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
       { id: 'r11-35', name: '亲子沟通', icon: '💬', description: '与青春期孩子的有效沟通', link: '#', type: 'free', category: '心理社交', userType: 'parent' },
+      
+      // ========== 🏛️ 顶私教育 ==========
+      { id: 'r11-36', name: '私校新生适应', icon: '🏛️', description: '刚入读顶私：如何快速适应私校节奏', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r11-37', name: '私校学术要求', icon: '📚', description: '顶私的学术标准和期望', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
+      { id: 'r11-38', name: '私校社交', icon: '👥', description: '在私校环境中的社交和人际关系', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
+      { id: 'r11-39', name: '7年级转私校', icon: '🔄', description: '7年级转入私校的准备和申请', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
     ]
   },
   {
@@ -892,12 +928,14 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r13-6', name: 'A-Level准备', icon: '🇬🇧', description: 'A-Level路径的早期规划', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
       
       // ========== 🏫 私立高中申请（如有需要）==========
-      { id: 'r13-7', name: '私高申请', icon: '🏫', description: '私立高中申请时间线和流程', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
-      { id: 'r13-8', name: 'SSAT/ISEE', icon: '📝', description: 'SSAT/ISEE考试准备', link: '#', type: 'free', category: '西方教育', userType: 'both' },
-      { id: 'r13-9', name: 'Word Quest', icon: '🎮', description: 'K12Path原创SSAT词汇游戏！Upper Level冲刺', link: '/word-quest/', type: 'free', category: '英语学习', userType: 'child' },
-      { id: 'r13-10', name: '申请文书', icon: '✏️', description: '私高申请Essay写作指导', link: '#', type: 'free', category: '西方教育', userType: 'both' },
-      { id: 'r13-11', name: '面试技巧', icon: '🎤', description: '私高面试准备和模拟', link: '#', type: 'free', category: '西方教育', userType: 'both' },
-      { id: 'r13-12', name: '推荐信', icon: '📧', description: '如何获得有力的推荐信', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
+      { id: 'r13-7', name: '私高申请', icon: '🏫', description: '私立高中申请时间线和流程', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r13-8', name: 'SSAT Upper', icon: '📝', description: 'SSAT Upper Level考试准备策略', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
+      { id: 'r13-9', name: 'Word Quest', icon: '🎮', description: 'K12Path原创SSAT词汇游戏！Upper Level冲刺', link: '/word-quest/', type: 'free', category: '顶私教育', userType: 'child' },
+      { id: 'r13-10', name: '申请文书', icon: '✏️', description: '私高申请Essay写作指导', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
+      { id: 'r13-11', name: '面试技巧', icon: '🎤', description: '私高面试准备和模拟', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
+      { id: 'r13-12', name: '推荐信', icon: '📧', description: '如何获得有力的推荐信', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r13-37', name: '寄宿私校', icon: '🏠', description: '北美顶级寄宿学校申请指南', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r13-38', name: '私校奖学金', icon: '💰', description: '私校Merit Aid和Need-based Aid', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
       
       // ========== 📖 学术提升 ==========
       { id: 'r13-13', name: 'Algebra掌握', icon: '🔢', description: '代数1/Algebra 1掌握', link: '#', type: 'free', category: '西方教育', userType: 'both' },
@@ -980,6 +1018,12 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r14-19', name: '9年级陷阱', icon: '⚠️', description: '9年级常见错误：太放松、或太紧张都不对', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r14-20', name: '家长角色转变', icon: '👨‍👩‍👧', description: '高中阶段家长要学会放手，但要保持参与', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r14-21', name: '9年级检查清单', icon: '✅', description: '9年级结束前应该完成的事项清单', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      
+      // ========== 🏛️ 顶私教育（私校9年级）==========
+      { id: 'r14-22', name: '私校新生', icon: '🏛️', description: '顶私高中新生：适应私校高中的节奏', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
+      { id: 'r14-23', name: 'Pre-AP准备', icon: '📚', description: '私校Pre-AP课程：为AP打基础', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
+      { id: 'r14-24', name: '私校活动', icon: '🎭', description: '私校的课外活动和社团选择', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
+      { id: 'r14-25', name: 'IB预备', icon: '🌏', description: 'Pre-IB课程和IB Diploma准备', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
     ]
   },
   {
@@ -1024,6 +1068,12 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r15-20', name: '大学费用初了解', icon: '💰', description: '美国大学费用：公立vs私立、州内vs州外、助学金', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
       { id: 'r15-21', name: '升学顾问', icon: '🧭', description: '是否需要升学顾问？学校counselor vs 私人顾问', link: '#', type: 'free', category: '升学规划', userType: 'parent' },
       { id: 'r15-22', name: '10年级检查清单', icon: '✅', description: '10年级结束前应该完成的事项清单', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      
+      // ========== 🏛️ 顶私教育（私校10年级）==========
+      { id: 'r15-23', name: 'AP课程选择', icon: '📚', description: '私校AP课程：哪些AP最值得选', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
+      { id: 'r15-24', name: 'IB选课', icon: '🌏', description: 'IB课程选择：HL vs SL科目搭配策略', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
+      { id: 'r15-25', name: '私校升学', icon: '🎓', description: '顶私的大学升学率和录取优势', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r15-26', name: '私校竞赛', icon: '🏆', description: '私校学生参与学术竞赛的优势和资源', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
     ]
   },
   {
@@ -1072,6 +1122,12 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r16-22', name: '家长的角色', icon: '👨‍👩‍👧', description: '11年级家长应该做什么vs不应该做什么', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r16-23', name: '探校规划', icon: '🚗', description: '11年级暑假探校：如何安排高效的校园参观行程', link: '#', type: 'free', category: '升学规划', userType: 'parent' },
       { id: 'r16-24', name: '11年级检查清单', icon: '✅', description: '11年级结束前必须完成的事项清单', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      
+      // ========== 🏛️ 顶私教育（私校11年级）==========
+      { id: 'r16-25', name: 'AP考试规划', icon: '📚', description: '私校学生AP考试策略：考几门、如何平衡', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
+      { id: 'r16-26', name: 'IB DP', icon: '🌏', description: 'IB Diploma Program详解：EE、TOK、CAS要求', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
+      { id: 'r16-27', name: '私校推荐信', icon: '📧', description: '顶私的推荐信优势和如何最大化利用', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
+      { id: 'r16-28', name: '私校升学指导', icon: '🎓', description: '利用私校的大学升学指导资源', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
     ]
   },
   {
@@ -1121,6 +1177,12 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r17-23', name: '放手的艺术', icon: '🦋', description: '让孩子独立：从高中生到大学生的角色转变', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r17-24', name: 'Aid Appeal', icon: '💬', description: '如何与大学沟通争取更多财务援助', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r17-25', name: '回顾与祝福', icon: '🌟', description: 'K-12结束：回顾旅程，展望未来', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      
+      // ========== 🏛️ 顶私教育（私校12年级）==========
+      { id: 'r17-26', name: 'IB考试', icon: '🌏', description: 'IB DP最终考试准备和分数预测', link: '#', type: 'free', category: '顶私教育', userType: 'child' },
+      { id: 'r17-27', name: 'A-Level考试', icon: '🇬🇧', description: 'A-Level最终考试准备和UCAS申请', link: '#', type: 'free', category: '顶私教育', userType: 'child' },
+      { id: 'r17-28', name: '私校校友网络', icon: '🤝', description: '利用顶私校友资源和网络', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
+      { id: 'r17-29', name: '顶私毕业后', icon: '🎓', description: '顶私毕业生的大学适应和优势', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
     ]
   },
 ];
@@ -1218,8 +1280,9 @@ function ResourceCard({ resource }: { resource: Resource }) {
 
 // Category colors mapping - pastel backgrounds
 const categoryColors: { [key: string]: { bg: string; border: string; text: string } } = {
-  // === 合并后的15个主要类别 ===
+  // === 合并后的16个主要类别 ===
   '西方教育': { bg: 'bg-indigo-100', border: 'border-indigo-300', text: 'text-indigo-700' },
+  '顶私教育': { bg: 'bg-purple-100', border: 'border-purple-300', text: 'text-purple-700' },
   '升学规划': { bg: 'bg-rose-100', border: 'border-rose-300', text: 'text-rose-700' },
   '家长指南': { bg: 'bg-slate-100', border: 'border-slate-300', text: 'text-slate-600' },
   '英语学习': { bg: 'bg-green-100', border: 'border-green-300', text: 'text-green-700' },
