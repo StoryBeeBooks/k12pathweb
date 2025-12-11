@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useMemo } from 'react';
 
 // Types
 interface Resource {
@@ -23,6 +23,17 @@ interface AgeStage {
   emoji: string;
   color: string;
   resources: Resource[];
+}
+
+// Resource Statistics Helper - Automatically calculates all stats from data
+interface ResourceStats {
+  totalResources: number;
+  totalStages: number;
+  ageRange: string;
+  categoryCounts: { [key: string]: number };
+  userTypeCounts: { parent: number; child: number; both: number };
+  typeCounts: { free: number; paid: number };
+  topCategories: { name: string; count: number; color: { bg: string; border: string } }[];
 }
 
 // Life journey data - from birth to grade 12
@@ -1310,6 +1321,65 @@ const categoryColors: { [key: string]: { bg: string; border: string; text: strin
   '其他资源': { bg: 'bg-gray-50', border: 'border-gray-200', text: 'text-gray-600' },
 };
 
+// ============================================
+// Resource Statistics Calculator
+// Automatically computes stats from lifeJourneyData
+// ============================================
+function calculateResourceStats(data: AgeStage[]): ResourceStats {
+  const categoryCounts: { [key: string]: number } = {};
+  const userTypeCounts = { parent: 0, child: 0, both: 0 };
+  const typeCounts = { free: 0, paid: 0 };
+  let totalResources = 0;
+
+  // Count all resources and categorize
+  data.forEach(stage => {
+    stage.resources.forEach(resource => {
+      totalResources++;
+      
+      // Count by category
+      const category = resource.category || '其他资源';
+      categoryCounts[category] = (categoryCounts[category] || 0) + 1;
+      
+      // Count by userType
+      if (resource.userType === 'parent') userTypeCounts.parent++;
+      else if (resource.userType === 'child') userTypeCounts.child++;
+      else userTypeCounts.both++;
+      
+      // Count by type (free/paid)
+      if (resource.type === 'paid') typeCounts.paid++;
+      else typeCounts.free++;
+    });
+  });
+
+  // Get top categories (sorted by count, with colors)
+  const topCategories = Object.entries(categoryCounts)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 15) // Top 15 categories
+    .map(([name, count]) => {
+      const colorInfo = categoryColors[name] || categoryColors['其他资源'];
+      return {
+        name,
+        count,
+        color: { bg: colorInfo.bg, border: colorInfo.border }
+      };
+    });
+
+  // Calculate age range
+  const ages = data.map(stage => parseInt(stage.age) || 0);
+  const minAge = Math.min(...ages);
+  const maxAge = Math.max(...ages);
+
+  return {
+    totalResources,
+    totalStages: data.length,
+    ageRange: `${minAge}-${maxAge}`,
+    categoryCounts,
+    userTypeCounts,
+    typeCounts,
+    topCategories
+  };
+}
+
 // Age Section Component - All icons visible with category colors
 function AgeSection({ stage, index }: { stage: AgeStage; index: number }) {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -1557,6 +1627,9 @@ function ResourceCardWithCategory({ resource, categoryColor }: { resource: Resou
 export default function Home() {
   const [scrollProgress, setScrollProgress] = useState(0);
 
+  // Calculate stats dynamically from data
+  const stats = useMemo(() => calculateResourceStats(lifeJourneyData), []);
+
   useEffect(() => {
     const handleScroll = () => {
       const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -1615,8 +1688,8 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Interactive Stats Bar */}
-      <div className="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-sm">
+      {/* Stats Bar - NOT sticky, scrolls with page */}
+      <div className="bg-white border-b border-slate-200 shadow-sm">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex items-center justify-between py-3">
             {/* Logo */}
@@ -1624,103 +1697,66 @@ export default function Home() {
               <span className="text-lg font-semibold text-slate-800">K12Path</span>
             </div>
             
-            {/* Stats - Clickable/Interactive */}
-            <div className="flex items-center gap-6 md:gap-10">
-              <button className="group flex items-center gap-2 px-3 py-1.5 rounded-full hover:bg-slate-100 transition-colors">
-                <span className="text-lg font-bold text-slate-800">18</span>
-                <span className="text-sm text-slate-500 group-hover:text-slate-700">成长阶段</span>
-              </button>
-              <button className="group flex items-center gap-2 px-3 py-1.5 rounded-full hover:bg-slate-100 transition-colors">
-                <span className="text-lg font-bold text-emerald-600">120+</span>
-                <span className="text-sm text-slate-500 group-hover:text-slate-700">精选资源</span>
-              </button>
-              <button className="group flex items-center gap-2 px-3 py-1.5 rounded-full hover:bg-slate-100 transition-colors hidden sm:flex">
-                <span className="text-lg font-bold text-slate-800">0-17</span>
-                <span className="text-sm text-slate-500 group-hover:text-slate-700">岁全覆盖</span>
-              </button>
+            {/* Stats - Dynamic from data */}
+            <div className="flex items-center gap-4 md:gap-8">
+              <div className="flex items-center gap-2 px-3 py-1.5">
+                <span className="text-lg font-bold text-slate-800">{stats.totalStages}</span>
+                <span className="text-sm text-slate-500">成长阶段</span>
+              </div>
+              <div className="flex items-center gap-2 px-3 py-1.5">
+                <span className="text-lg font-bold text-emerald-600">{stats.totalResources}</span>
+                <span className="text-sm text-slate-500">精选资源</span>
+              </div>
+              <div className="flex items-center gap-2 px-3 py-1.5 hidden sm:flex">
+                <span className="text-lg font-bold text-slate-800">{stats.ageRange}</span>
+                <span className="text-sm text-slate-500">岁全覆盖</span>
+              </div>
+              <div className="flex items-center gap-2 px-3 py-1.5 hidden md:flex">
+                <span className="text-lg font-bold text-blue-600">{Object.keys(stats.categoryCounts).length}</span>
+                <span className="text-sm text-slate-500">资源类别</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Legend Section - UserType & Categories */}
-      <div className="bg-white border-b border-slate-100 py-4 px-4">
-        <div className="max-w-4xl mx-auto">
+      {/* Legend Section - STICKY, stays at top when scrolling */}
+      <div className="sticky top-1 z-40 bg-white/95 backdrop-blur-sm border-b border-slate-100 py-3 px-4 shadow-sm">
+        <div className="max-w-5xl mx-auto">
           {/* Target Audience Info */}
-          <div className="text-center mb-4">
+          <div className="text-center mb-3">
             <p className="text-sm text-slate-600">
               🌏 专为<span className="font-semibold text-slate-800">海外华人家庭</span>设计 · 适用于加拿大、美国、英国、澳洲等西方国家
             </p>
           </div>
           
           {/* UserType Legend */}
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mb-4">
+          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-5 mb-3">
             <span className="text-xs text-slate-500 font-medium">用户类型：</span>
             <div className="flex items-center gap-1.5">
-              <span className="w-5 h-5 rounded-full bg-rose-400 flex items-center justify-center text-[10px] text-white font-bold">P</span>
-              <span className="text-sm text-slate-600">家长专用</span>
+              <span className="w-4 h-4 rounded-full bg-rose-400 flex items-center justify-center text-[9px] text-white font-bold">P</span>
+              <span className="text-xs text-slate-600">家长 ({stats.userTypeCounts.parent})</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <span className="w-5 h-5 rounded-full bg-sky-400 flex items-center justify-center text-[10px] text-white font-bold">S</span>
-              <span className="text-sm text-slate-600">学生专用</span>
+              <span className="w-4 h-4 rounded-full bg-sky-400 flex items-center justify-center text-[9px] text-white font-bold">S</span>
+              <span className="text-xs text-slate-600">学生 ({stats.userTypeCounts.child})</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <span className="w-5 h-5 rounded-full bg-violet-400 flex items-center justify-center text-[10px] text-white font-bold">♥</span>
-              <span className="text-sm text-slate-600">亲子共用</span>
+              <span className="w-4 h-4 rounded-full bg-violet-400 flex items-center justify-center text-[9px] text-white font-bold">♥</span>
+              <span className="text-xs text-slate-600">亲子 ({stats.userTypeCounts.both})</span>
             </div>
           </div>
 
-          {/* Category Colors Legend */}
-          <div className="border-t border-slate-100 pt-4">
-            <div className="text-center mb-3">
-              <span className="text-xs text-slate-500 font-medium">资源类别颜色：</span>
-            </div>
-            <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3">
-              {/* 西方教育核心类别 */}
-              <div className="flex items-center gap-1">
-                <span className="w-4 h-4 rounded bg-green-100 border border-green-300"></span>
-                <span className="text-xs text-slate-600">ESL英语</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="w-4 h-4 rounded bg-blue-100 border border-blue-300"></span>
-                <span className="text-xs text-slate-600">本地课程</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="w-4 h-4 rounded bg-indigo-100 border border-indigo-300"></span>
-                <span className="text-xs text-slate-600">西方教育</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="w-4 h-4 rounded bg-sky-100 border border-sky-300"></span>
-                <span className="text-xs text-slate-600">学校系统</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="w-4 h-4 rounded bg-rose-100 border border-rose-300"></span>
-                <span className="text-xs text-slate-600">升学准备</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="w-4 h-4 rounded bg-red-100 border border-red-300"></span>
-                <span className="text-xs text-slate-600">标化考试</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="w-4 h-4 rounded bg-violet-100 border border-violet-300"></span>
-                <span className="text-xs text-slate-600">大学申请</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="w-4 h-4 rounded bg-amber-100 border border-amber-300"></span>
-                <span className="text-xs text-slate-600">中文传承</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="w-4 h-4 rounded bg-slate-100 border border-slate-300"></span>
-                <span className="text-xs text-slate-600">家长指南</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="w-4 h-4 rounded bg-pink-50 border border-pink-200"></span>
-                <span className="text-xs text-slate-600">心理健康</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="w-4 h-4 rounded bg-lime-50 border border-lime-200"></span>
-                <span className="text-xs text-slate-600">习惯品格</span>
-              </div>
+          {/* Category Colors Legend - Dynamic from data */}
+          <div className="border-t border-slate-100 pt-3">
+            <div className="flex flex-wrap items-center justify-center gap-2 md:gap-2.5">
+              <span className="text-xs text-slate-500 font-medium mr-1">资源类别：</span>
+              {stats.topCategories.map(cat => (
+                <div key={cat.name} className="flex items-center gap-1">
+                  <span className={`w-3 h-3 rounded ${cat.color.bg} border ${cat.color.border}`}></span>
+                  <span className="text-[11px] text-slate-600">{cat.name} ({cat.count})</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
