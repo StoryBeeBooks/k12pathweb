@@ -1,26 +1,23 @@
 import type { Metadata } from "next";
-import { LanguageProvider } from "@/context/LanguageContext";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "K12Path - Your Family's 24/7 Education Consultant",
-  description: "Empowering immigrant families to navigate the K-12 education system with confidence. Bilingual resources, school finder, vocabulary builder, and more.",
-  keywords: ["K-12 education", "immigrant families", "Chinese education", "SSAT prep", "school finder", "bilingual education"],
+  title: "K12Path - 陪伴孩子成长的每一步",
+  description: "从出生到高中毕业，K12Path为您精选各年龄段的优质教育资源。陪伴移民家庭的K-12教育之路。",
+  keywords: ["K-12教育", "移民家庭", "教育资源", "SSAT准备", "择校", "双语教育", "幼小衔接", "升学规划"],
   authors: [{ name: "K12Path" }],
   openGraph: {
-    title: "K12Path - Your Family's 24/7 Education Consultant",
-    description: "Empowering immigrant families to navigate the K-12 education system with confidence.",
+    title: "K12Path - 陪伴孩子成长的每一步",
+    description: "从出生到高中毕业，K12Path为您精选各年龄段的优质教育资源。",
     url: "https://k12path.com",
     siteName: "K12Path",
-    locale: "en_US",
+    locale: "zh_CN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "K12Path - Your Family's 24/7 Education Consultant",
-    description: "Empowering immigrant families to navigate the K-12 education system with confidence.",
+    title: "K12Path - 陪伴孩子成长的每一步",
+    description: "从出生到高中毕业，K12Path为您精选各年龄段的优质教育资源。",
   },
 };
 
@@ -30,15 +27,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="zh-CN" suppressHydrationWarning>
       <body className="font-sans bg-white text-gray-900">
-        <LanguageProvider>
-          <Header />
-          <main className="min-h-screen">
-            {children}
-          </main>
-          <Footer />
-        </LanguageProvider>
+        {children}
       </body>
     </html>
   );
