@@ -476,6 +476,9 @@ const App = {
         const word = this.quizWords[this.quizIndex];
         const container = document.getElementById('quizContent');
         
+        // Clear any existing content and reset state to prevent visual carryover
+        container.innerHTML = '';
+        
         // Update progress bar
         const progress = ((this.quizIndex) / this.quizWords.length) * 100;
         document.getElementById('quizProgressFill').style.width = `${progress}%`;
@@ -484,11 +487,14 @@ const App = {
         // Randomly choose question type
         const questionType = Math.random() > 0.5 ? 'definition' : 'cloze';
         
-        if (questionType === 'definition') {
-            this.renderDefinitionQuestion(container, word);
-        } else {
-            this.renderClozeQuestion(container, word);
-        }
+        // Small delay to ensure DOM is cleared before rendering new question
+        requestAnimationFrame(() => {
+            if (questionType === 'definition') {
+                this.renderDefinitionQuestion(container, word);
+            } else {
+                this.renderClozeQuestion(container, word);
+            }
+        });
     },
 
     /**

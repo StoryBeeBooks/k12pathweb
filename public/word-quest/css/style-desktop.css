@@ -2977,3 +2977,86 @@ body {
         font-size: 1.25rem;
     }
 }
+
+/* ================================
+   MOBILE/TABLET QUIZ FIXES
+   ================================ */
+
+/* Fix 1: Cloze answer container - ensure submit button stays inside card */
+@media (max-width: 768px) {
+    .cloze-answer {
+        flex-direction: column;
+        gap: var(--space-md);
+        max-width: 100%;
+        padding: 0 var(--space-sm);
+    }
+    
+    .cloze-input {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+    
+    .cloze-submit-btn {
+        width: 100%;
+        padding: var(--space-md);
+    }
+    
+    .quiz-content {
+        padding: var(--space-lg);
+        overflow: visible;
+    }
+    
+    .cloze-sentence {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        padding: 0 var(--space-xs);
+    }
+}
+
+@media (max-width: 480px) {
+    .cloze-answer {
+        padding: 0;
+    }
+    
+    .quiz-content {
+        padding: var(--space-md);
+    }
+    
+    .cloze-sentence {
+        font-size: 1rem;
+    }
+    
+    .cloze-input {
+        font-size: 1rem;
+        padding: var(--space-sm) var(--space-md);
+    }
+}
+
+/* Fix 2: Clear answer button styles immediately to prevent visual carryover */
+.answer-btn {
+    /* Reset any potential lingering styles */
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+/* Ensure clean state for new questions */
+.answer-btn:not(.correct):not(.incorrect) {
+    background: var(--bg-subtle);
+    border-color: var(--border-light);
+}
+
+/* Force immediate visual reset when button is re-enabled */
+.answer-btn:not(:disabled):not(.correct):not(.incorrect) {
+    background: var(--bg-subtle) !important;
+    border-color: var(--border-light) !important;
+}
+
+/* Ensure correct/incorrect states are visually distinct */
+.answer-btn.correct {
+    background: rgba(16, 185, 129, 0.2) !important;
+    border-color: var(--success) !important;
+}
+
+.answer-btn.incorrect {
+    background: rgba(239, 68, 68, 0.2) !important;
+    border-color: var(--danger) !important;
+}
