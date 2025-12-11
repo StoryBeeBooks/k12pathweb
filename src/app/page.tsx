@@ -210,9 +210,9 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r2-37', name: '双语发展', icon: '🗣️', description: '2岁双语儿童语言发展特点和支持', link: '#', type: 'free', category: '移民指南', userType: 'parent' },
       { id: 'r2-38', name: 'Playdate文化', icon: '👫', description: '如何融入本地社区、安排playdate', link: '#', type: 'free', category: '移民指南', userType: 'parent' },
       
-      // ========== 📚 本地课程 (新增) ==========
-      { id: 'r2-39', name: 'PBS Kids', icon: '📺', description: '美国公共电视台优质儿童教育节目', link: 'https://pbskids.org', type: 'free', category: '本地课程', userType: 'child' },
-      { id: 'r2-40', name: 'Super Simple', icon: '🎵', description: '英语启蒙儿歌和动画，适合双语家庭', link: 'https://supersimple.com', type: 'free', category: '本地课程', userType: 'both' },
+      // ========== 📚 英语启蒙资源 (技能型) ==========
+      { id: 'r2-39', name: '英语启蒙节目', icon: '📺', description: '适合2岁的英语启蒙动画类型和选择建议', link: '#', type: 'free', category: '本地课程', userType: 'parent' },
+      { id: 'r2-40', name: '英语儿歌', icon: '🎵', description: '通过儿歌启蒙英语：Nursery Rhymes的作用', link: '#', type: 'free', category: '本地课程', userType: 'both' },
     ]
   },
   {
@@ -284,9 +284,9 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r3-39', name: '作息安排', icon: '⏰', description: '幼儿园作息与家庭作息衔接', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r3-40', name: '兴趣发现', icon: '🔍', description: '观察和发现孩子的兴趣', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       
-      // ========== 🌏 西方教育适应 (新增) ==========
-      { id: 'r3-41', name: 'Starfall', icon: '⭐', description: '美国经典英语阅读启蒙，适合ESL儿童', link: 'https://starfall.com', type: 'free', category: '本地课程', userType: 'child' },
-      { id: 'r3-42', name: 'ABCmouse', icon: '🐭', description: '美国幼儿在线学习平台，涵盖各学科', link: 'https://abcmouse.com', type: 'paid', category: '本地课程', userType: 'child' },
+      // ========== 🌏 西方教育适应 (技能型) ==========
+      { id: 'r3-41', name: '英语阅读启蒙', icon: '⭐', description: '学龄前英语阅读启蒙的方法和资源类型', link: '#', type: 'free', category: '本地课程', userType: 'parent' },
+      { id: 'r3-42', name: '在线学习平台', icon: '💻', description: '适合3岁的在线学习平台类型和选择建议', link: '#', type: 'free', category: '本地课程', userType: 'parent' },
       { id: 'r3-43', name: '西方幼儿园指南', icon: '🏫', description: '理解西方幼儿园教育理念（玩中学）', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
       { id: 'r3-44', name: '家长志愿者', icon: '🤝', description: '如何参与西方学校的家长志愿服务', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
       { id: 'r3-45', name: '英语社交', icon: '👋', description: '帮助孩子用英语交朋友的常用句型', link: '#', type: 'free', category: 'ESL英语', userType: 'both' },
@@ -425,9 +425,9 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r5-41', name: '学习习惯', icon: '📚', description: '帮助孩子建立良好学习习惯', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r5-42', name: '分离焦虑', icon: '🤗', description: '应对入学分离焦虑的方法', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       
-      // ========== 🌏 西方教育适应 (新增) ==========
-      { id: 'r5-43', name: 'Khan Academy Kids', icon: '🎓', description: '可汗学院儿童版，完全免费优质课程', link: 'https://learn.khanacademy.org/khan-academy-kids/', type: 'free', category: '本地课程', userType: 'child' },
-      { id: 'r5-44', name: 'Epic!阅读', icon: '📚', description: '西方最大儿童电子图书馆，4万+英文书', link: 'https://getepic.com', type: 'paid', category: '本地课程', userType: 'child' },
+      // ========== 🌏 西方教育适应 (技能型) ==========
+      { id: 'r5-43', name: '免费学习资源', icon: '🎓', description: '5岁儿童免费在线学习资源类型和推荐', link: '#', type: 'free', category: '本地课程', userType: 'parent' },
+      { id: 'r5-44', name: '英文电子图书', icon: '📚', description: '培养英语阅读习惯：电子图书馆和阅读平台选择', link: '#', type: 'free', category: '本地课程', userType: 'parent' },
       { id: 'r5-45', name: 'Kindergarten入学', icon: '🏫', description: '北美Kindergarten入学要求和准备', link: '#', type: 'free', category: '学校系统', userType: 'parent' },
       { id: 'r5-46', name: 'IEP/504计划', icon: '📋', description: '了解特殊教育支持计划（如需要）', link: '#', type: 'free', category: '学校系统', userType: 'parent' },
       { id: 'r5-47', name: '英语日常会话', icon: '🗣️', description: '帮孩子适应英语课堂的常用表达', link: '#', type: 'free', category: 'ESL英语', userType: 'both' },
@@ -935,27 +935,40 @@ const lifeJourneyData: AgeStage[] = [
     emoji: '🏫',
     color: 'from-red-400 to-rose-300',
     resources: [
-      // ========== 📚 学术学习 ==========
-      { id: 'r14-1', name: 'Algebra I', icon: '📊', description: '北美9年级数学核心内容', link: '#', type: 'free', category: '数学学习', userType: 'child' },
-      { id: 'r14-2', name: 'Biology', icon: '🧬', description: '9年级生物课程内容', link: '#', type: 'free', category: '理科学习', userType: 'child' },
-      { id: 'r14-3', name: 'English 9', icon: '📖', description: '9年级英语阅读写作要求', link: '#', type: 'free', category: '英语学习', userType: 'child' },
-      { id: 'r14-4', name: '世界历史', icon: '🌍', description: 'World History课程内容', link: '#', type: 'free', category: '文科学习', userType: 'child' },
+      // ========== 🎯 GPA与成绩：高中的第一门功课 ==========
+      { id: 'r14-1', name: 'GPA是什么', icon: '📊', description: '了解GPA计算方式：4.0制 vs 加权GPA，以及对大学申请的重要性', link: '#', type: 'free', category: '西方教育', userType: 'both' },
+      { id: 'r14-2', name: '成绩单解读', icon: '📋', description: '美国/加拿大高中成绩单（Transcript）的内容和重要性', link: '#', type: 'free', category: '学校系统', userType: 'parent' },
+      { id: 'r14-3', name: '第一学期策略', icon: '🎯', description: '9年级第一学期是适应期，如何平衡适应与成绩', link: '#', type: 'free', category: '升学准备', userType: 'both' },
       
-      // ========== 🎓 升学准备 ==========
-      { id: 'r14-5', name: 'GPA计算器', icon: '📊', description: '了解和计算GPA，维护好成绩', link: '#', type: 'free', category: '升学准备', userType: 'both' },
-      { id: 'r14-6', name: '4年规划', icon: '📅', description: '高中四年选课和活动规划', link: '#', type: 'free', category: '升学准备', userType: 'parent' },
-      { id: 'r14-7', name: 'Honors课程', icon: '⭐', description: '如何申请和应对Honors课程', link: '#', type: 'free', category: '学校系统', userType: 'both' },
+      // ========== 📚 高中选课：四年规划从现在开始 ==========
+      { id: 'r14-4', name: '选课制度', icon: '📝', description: '北美高中选课自由度大，理解必修课与选修课的区别', link: '#', type: 'free', category: '学校系统', userType: 'both' },
+      { id: 'r14-5', name: '课程级别', icon: '📈', description: 'Regular/Honors/AP/IB 不同级别的课程意味着什么', link: '#', type: 'free', category: '学校系统', userType: 'both' },
+      { id: 'r14-6', name: '4年选课地图', icon: '🗺️', description: '高中四年的课程规划：从9年级开始的长期规划', link: '#', type: 'free', category: '升学准备', userType: 'parent' },
+      { id: 'r14-7', name: 'Honors课程', icon: '⭐', description: '9年级是否选Honors？什么时候选、怎么选', link: '#', type: 'free', category: '学校系统', userType: 'both' },
       
-      // ========== 🌏 西方教育资源 ==========
-      { id: 'r14-8', name: 'Khan Academy', icon: '🎓', description: '免费全科学习，高中数学必备', link: 'https://khanacademy.org', type: 'free', category: '本地课程', userType: 'child' },
-      { id: 'r14-9', name: 'Desmos', icon: '📈', description: '图形计算器，数学课必备工具', link: 'https://desmos.com', type: 'free', category: '本地课程', userType: 'child' },
-      { id: 'r14-10', name: 'Grammarly', icon: '✍️', description: 'AI写作助手，提升英文写作', link: 'https://grammarly.com', type: 'free', category: '本地课程', userType: 'child' },
-      { id: 'r14-11', name: 'Extracurriculars', icon: '🎭', description: '课外活动选择策略', link: '#', type: 'free', category: '升学准备', userType: 'both' },
-      { id: 'r14-12', name: 'Summer Programs', icon: '☀️', description: '暑期项目和夏校选择', link: '#', type: 'free', category: '升学准备', userType: 'parent' },
+      // ========== 🏆 课外活动：质量比数量重要 ==========
+      { id: 'r14-8', name: '活动选择', icon: '🎭', description: '课外活动（Extracurriculars）的四种类型和选择策略', link: '#', type: 'free', category: '升学准备', userType: 'both' },
+      { id: 'r14-9', name: 'Spike理论', icon: '🎯', description: '大学喜欢什么样的申请者？深度 vs 广度的取舍', link: '#', type: 'free', category: '升学准备', userType: 'parent' },
+      { id: 'r14-10', name: '时间管理', icon: '⏰', description: '高中生如何平衡学习、活动和休息', link: '#', type: 'free', category: '习惯与品格', userType: 'both' },
       
-      // ========== 👨‍👩‍👧 家长指南 ==========
-      { id: 'r14-13', name: '9年级指南', icon: '📋', description: '高一家长全年规划要点', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
-      { id: 'r14-14', name: 'Counselor沟通', icon: '💬', description: '如何与学校counselor沟通', link: '#', type: 'free', category: '学校系统', userType: 'parent' },
+      // ========== 🏫 学校资源：Counselor是关键 ==========
+      { id: 'r14-11', name: 'Counselor', icon: '👨‍💼', description: '学校Counselor的作用：选课、升学、心理支持', link: '#', type: 'free', category: '学校系统', userType: 'parent' },
+      { id: 'r14-12', name: '建立关系', icon: '🤝', description: '家长如何与学校建立良好沟通：Counselor、老师、教练', link: '#', type: 'free', category: '学校系统', userType: 'parent' },
+      { id: 'r14-13', name: '请老师帮忙', icon: '✉️', description: '将来需要推荐信！从现在开始与老师建立关系', link: '#', type: 'free', category: '升学准备', userType: 'both' },
+      
+      // ========== 🌏 学习技能：高中不同于初中 ==========
+      { id: 'r14-14', name: '笔记方法', icon: '📝', description: '高中学习需要的笔记技巧：Cornell笔记法等', link: '#', type: 'free', category: '习惯与品格', userType: 'child' },
+      { id: 'r14-15', name: '考试策略', icon: '📋', description: '高中考试类型和应对策略：Quiz, Test, Final', link: '#', type: 'free', category: '习惯与品格', userType: 'child' },
+      { id: 'r14-16', name: '图形计算器', icon: '📈', description: '高中数学必备工具：图形计算器的使用（如TI-84）', link: '#', type: 'free', category: '数学学习', userType: 'child' },
+      
+      // ========== 🎓 暑期规划：9升10是关键暑假 ==========
+      { id: 'r14-17', name: '暑期选项', icon: '☀️', description: '暑假可以做什么：暑校、夏校、实习、志愿者', link: '#', type: 'free', category: '升学准备', userType: 'both' },
+      { id: 'r14-18', name: '夏校了解', icon: '🏫', description: '名校夏校（Summer Programs）是什么？值得参加吗？', link: '#', type: 'free', category: '升学准备', userType: 'parent' },
+      
+      // ========== 👨‍👩‍👧 家长视角：过来人的经验 ==========
+      { id: 'r14-19', name: '9年级陷阱', icon: '⚠️', description: '9年级常见错误：太放松、或太紧张都不对', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r14-20', name: '家长角色转变', icon: '👨‍👩‍👧', description: '高中阶段家长要学会放手，但要保持参与', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r14-21', name: '9年级检查清单', icon: '✅', description: '9年级结束前应该完成的事项清单', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
     ]
   },
   {
@@ -967,33 +980,39 @@ const lifeJourneyData: AgeStage[] = [
     emoji: '📈',
     color: 'from-emerald-400 to-teal-300',
     resources: [
-      // ========== 📚 学术学习 ==========
-      { id: 'r15-1', name: 'Geometry', icon: '📐', description: '几何课程学习', link: '#', type: 'free', category: '数学学习', userType: 'child' },
-      { id: 'r15-2', name: 'Chemistry', icon: '🧪', description: '化学课程内容和实验', link: '#', type: 'free', category: '理科学习', userType: 'child' },
-      { id: 'r15-3', name: 'World Literature', icon: '📖', description: '世界文学阅读和分析', link: '#', type: 'free', category: '文科学习', userType: 'child' },
+      // ========== 🎯 标化考试：了解游戏规则 ==========
+      { id: 'r15-1', name: 'PSAT是什么', icon: '📝', description: 'PSAT考试介绍：National Merit奖学金的敲门砖', link: '#', type: 'free', category: '标化考试', userType: 'both' },
+      { id: 'r15-2', name: 'SAT全面解读', icon: '📋', description: 'SAT考试结构、评分、和大学申请中的权重', link: '#', type: 'free', category: '标化考试', userType: 'both' },
+      { id: 'r15-3', name: 'ACT vs SAT', icon: '🎯', description: '两种考试的区别，如何选择适合自己的', link: '#', type: 'free', category: '标化考试', userType: 'both' },
+      { id: 'r15-4', name: '备考时间线', icon: '📅', description: '什么时候开始准备？10-11年级的标化考试时间规划', link: '#', type: 'free', category: '标化考试', userType: 'parent' },
       
-      // ========== 🎯 标化考试 ==========
-      { id: 'r15-4', name: 'PSAT准备', icon: '📝', description: 'PSAT考试介绍和备考', link: '#', type: 'free', category: '标化考试', userType: 'child' },
-      { id: 'r15-5', name: 'SAT入门', icon: '📋', description: 'SAT考试结构和备考开始', link: '#', type: 'free', category: '标化考试', userType: 'both' },
-      { id: 'r15-6', name: 'ACT vs SAT', icon: '🎯', description: '选择适合自己的标化考试', link: '#', type: 'free', category: '标化考试', userType: 'both' },
+      // ========== 📚 AP/IB课程：大学水平的挑战 ==========
+      { id: 'r15-5', name: 'AP课程详解', icon: '🎓', description: '38门AP课程介绍：难度、工作量、大学学分', link: '#', type: 'free', category: '学校系统', userType: 'both' },
+      { id: 'r15-6', name: 'AP选课策略', icon: '📊', description: '10年级选哪些AP？根据专业方向和能力选择', link: '#', type: 'free', category: '学校系统', userType: 'both' },
+      { id: 'r15-7', name: 'AP考试准备', icon: '📝', description: 'AP考试5分策略：如何有效备考', link: '#', type: 'free', category: '标化考试', userType: 'child' },
+      { id: 'r15-8', name: 'IB深入了解', icon: '🌍', description: 'IB Diploma的完整要求：HL/SL、EE、TOK、CAS', link: '#', type: 'free', category: '学校系统', userType: 'both' },
       
-      // ========== 🏫 AP/IB课程 ==========
-      { id: 'r15-7', name: 'AP课程介绍', icon: '🎓', description: '常见AP课程难度和选择', link: '#', type: 'free', category: '学校系统', userType: 'both' },
-      { id: 'r15-8', name: 'IB课程介绍', icon: '🌍', description: 'IB项目介绍和利弊分析', link: '#', type: 'free', category: '学校系统', userType: 'both' },
+      // ========== 🏆 课外活动：深度发展 ==========
+      { id: 'r15-9', name: '活动深度化', icon: '🎯', description: '从广度到深度：在1-2个领域建立真正影响力', link: '#', type: 'free', category: '升学准备', userType: 'both' },
+      { id: 'r15-10', name: '领导力展示', icon: '👑', description: '在社团中担任领导：如何有意义地展示leadership', link: '#', type: 'free', category: '升学准备', userType: 'child' },
+      { id: 'r15-11', name: '学术竞赛', icon: '🏆', description: '主要学术竞赛介绍：Math Olympiad、Science Olympiad等', link: '#', type: 'free', category: '升学准备', userType: 'both' },
+      { id: 'r15-12', name: '志愿服务', icon: '🤝', description: '有意义的志愿者活动 vs 打卡式服务的区别', link: '#', type: 'free', category: '升学准备', userType: 'both' },
       
-      // ========== 🌏 西方教育资源 ==========
-      { id: 'r15-9', name: 'College Board', icon: '📊', description: 'SAT/AP官方资源和练习', link: 'https://collegeboard.org', type: 'free', category: '本地课程', userType: 'child' },
-      { id: 'r15-10', name: 'AP Classroom', icon: '📚', description: 'AP官方学习平台', link: '#', type: 'free', category: '本地课程', userType: 'child' },
-      { id: 'r15-11', name: 'Naviance', icon: '🎓', description: '学校常用的升学规划平台', link: '#', type: 'free', category: '升学准备', userType: 'both' },
+      // ========== 🏫 大学方向探索 ==========
+      { id: 'r15-13', name: '大学类型', icon: '🏛️', description: '了解大学类型：Research University vs Liberal Arts College', link: '#', type: 'free', category: '西方教育', userType: 'both' },
+      { id: 'r15-14', name: '专业探索', icon: '🔍', description: '美国大学专业选择：Undeclared的灵活性 vs 提前规划', link: '#', type: 'free', category: '西方教育', userType: 'both' },
+      { id: 'r15-15', name: '探校参观', icon: '🚗', description: 'College Visit：什么时候去、怎么安排、看什么', link: '#', type: 'free', category: '升学准备', userType: 'parent' },
       
-      // ========== 💼 活动规划 ==========
-      { id: 'r15-12', name: '领导力培养', icon: '👑', description: '在社团中担任领导职位', link: '#', type: 'free', category: '升学准备', userType: 'child' },
-      { id: 'r15-13', name: '志愿服务', icon: '🤝', description: '有意义的志愿者活动选择', link: '#', type: 'free', category: '升学准备', userType: 'child' },
-      { id: 'r15-14', name: 'Summer Programs', icon: '☀️', description: '名校暑期项目申请', link: '#', type: 'free', category: '升学准备', userType: 'both' },
+      // ========== ☀️ 暑期关键：10升11的暑假 ==========
+      { id: 'r15-16', name: '暑期重要性', icon: '☀️', description: '10升11暑假是申请前最后完整暑假的重要性', link: '#', type: 'free', category: '升学准备', userType: 'both' },
+      { id: 'r15-17', name: '竞争性项目', icon: '🌟', description: '名校夏校、研究项目、实习的申请和选择', link: '#', type: 'free', category: '升学准备', userType: 'both' },
+      { id: 'r15-18', name: '个人项目', icon: '💡', description: '自主创建有意义的项目：passion project的重要性', link: '#', type: 'free', category: '升学准备', userType: 'child' },
       
-      // ========== 👨‍👩‍👧 家长指南 ==========
-      { id: 'r15-15', name: '10年级指南', icon: '📋', description: '高二家长关注要点', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
-      { id: 'r15-16', name: '大学探校', icon: '🏫', description: '开始了解和参观大学', link: '#', type: 'free', category: '升学准备', userType: 'parent' },
+      // ========== 👨‍👩‍👧 家长视角：过来人的经验 ==========
+      { id: 'r15-19', name: '10年级重点', icon: '📋', description: '10年级家长应该关注什么：成绩、标化、活动的平衡', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r15-20', name: '大学费用初了解', icon: '💰', description: '美国大学费用：公立vs私立、州内vs州外、助学金', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
+      { id: 'r15-21', name: '升学顾问', icon: '🧭', description: '是否需要升学顾问？学校counselor vs 私人顾问', link: '#', type: 'free', category: '升学准备', userType: 'parent' },
+      { id: 'r15-22', name: '10年级检查清单', icon: '✅', description: '10年级结束前应该完成的事项清单', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
     ]
   },
   {
@@ -1005,32 +1024,43 @@ const lifeJourneyData: AgeStage[] = [
     emoji: '🔥',
     color: 'from-sky-400 to-blue-300',
     resources: [
-      // ========== 🎯 标化考试 ==========
-      { id: 'r16-1', name: 'SAT备考', icon: '📝', description: 'SAT全面备考策略和资源', link: '#', type: 'free', category: '标化考试', userType: 'child' },
-      { id: 'r16-2', name: 'ACT备考', icon: '📋', description: 'ACT考试备考指南', link: '#', type: 'free', category: '标化考试', userType: 'child' },
-      { id: 'r16-3', name: 'SAT Subject', icon: '📚', description: 'SAT2科目考试选择', link: '#', type: 'free', category: '标化考试', userType: 'both' },
-      { id: 'r16-4', name: 'AP考试', icon: '🎓', description: 'AP考试5分备考攻略', link: '#', type: 'free', category: '标化考试', userType: 'child' },
+      // ========== 🎯 标化考试：关键时刻 ==========
+      { id: 'r16-1', name: 'SAT备考策略', icon: '📝', description: '11年级SAT备考时间线：何时考、考几次、目标分数', link: '#', type: 'free', category: '标化考试', userType: 'both' },
+      { id: 'r16-2', name: 'SAT考试结构', icon: '📊', description: 'Digital SAT的最新变化：阅读、写作、数学各部分详解', link: '#', type: 'free', category: '标化考试', userType: 'child' },
+      { id: 'r16-3', name: 'ACT备考策略', icon: '📋', description: 'ACT考试特点和备考方法：适合快节奏思考的学生', link: '#', type: 'free', category: '标化考试', userType: 'both' },
+      { id: 'r16-4', name: 'AP考试冲刺', icon: '🎓', description: 'AP考试5分策略：考前2个月的高效准备', link: '#', type: 'free', category: '标化考试', userType: 'child' },
       
-      // ========== 🏫 大学申请准备 ==========
-      { id: 'r16-5', name: '大学选校', icon: '🏫', description: '如何建立大学申请清单', link: '#', type: 'free', category: '大学申请', userType: 'both' },
-      { id: 'r16-6', name: 'Common App', icon: '💻', description: '了解Common App申请系统', link: 'https://commonapp.org', type: 'free', category: '大学申请', userType: 'both' },
-      { id: 'r16-7', name: 'UC Application', icon: '🐻', description: '加州大学申请系统介绍', link: '#', type: 'free', category: '大学申请', userType: 'both' },
-      { id: 'r16-8', name: '文书准备', icon: '✍️', description: '开始构思个人陈述主题', link: '#', type: 'free', category: '大学申请', userType: 'child' },
-      { id: 'r16-9', name: '推荐信', icon: '📧', description: '如何请老师写推荐信', link: '#', type: 'free', category: '大学申请', userType: 'child' },
+      // ========== 🏫 大学选校：建立名单 ==========
+      { id: 'r16-5', name: '选校策略', icon: '🎯', description: '如何建立大学清单：Dream/Match/Safety学校的搭配', link: '#', type: 'free', category: '大学申请', userType: 'both' },
+      { id: 'r16-6', name: '大学排名', icon: '📊', description: '美国大学排名解读：U.S. News、QS等排名的正确使用', link: '#', type: 'free', category: '西方教育', userType: 'both' },
+      { id: 'r16-7', name: '学校调研', icon: '🔍', description: '如何深入了解一所大学：官网、论坛、社交媒体', link: '#', type: 'free', category: '大学申请', userType: 'both' },
+      { id: 'r16-8', name: '申请系统', icon: '💻', description: '了解申请系统：Common App、Coalition、UC系统', link: '#', type: 'free', category: '大学申请', userType: 'both' },
       
-      // ========== 🌏 西方教育资源 ==========
-      { id: 'r16-10', name: 'Khan SAT', icon: '🎓', description: '可汗学院官方SAT免费备考', link: 'https://khanacademy.org/sat', type: 'free', category: '本地课程', userType: 'child' },
-      { id: 'r16-11', name: 'Niche', icon: '📊', description: '大学排名和真实评价', link: 'https://niche.com', type: 'free', category: '本地课程', userType: 'both' },
-      { id: 'r16-12', name: 'College Confidential', icon: '💬', description: '大学申请论坛和经验分享', link: '#', type: 'free', category: '大学申请', userType: 'both' },
+      // ========== ✍️ 申请文书：开始准备 ==========
+      { id: 'r16-9', name: '文书入门', icon: '✍️', description: 'Personal Statement写作入门：主题选择和故事讲述', link: '#', type: 'free', category: '大学申请', userType: 'child' },
+      { id: 'r16-10', name: '文书类型', icon: '📝', description: '各种申请文书类型：主文书、补充文书、活动描述', link: '#', type: 'free', category: '大学申请', userType: 'both' },
+      { id: 'r16-11', name: '推荐信', icon: '📧', description: '如何请老师写推荐信：时机、选择、沟通技巧', link: '#', type: 'free', category: '大学申请', userType: 'child' },
       
-      // ========== 💼 活动和成就 ==========
-      { id: 'r16-13', name: '活动清单', icon: '📋', description: '整理课外活动，准备申请', link: '#', type: 'free', category: '升学准备', userType: 'child' },
-      { id: 'r16-14', name: '竞赛成绩', icon: '🏆', description: '学术竞赛和奖项规划', link: '#', type: 'free', category: '升学准备', userType: 'both' },
+      // ========== 💰 大学费用：提前规划 ==========
+      { id: 'r16-12', name: '大学费用详解', icon: '💰', description: '美国大学真实费用：学费、住宿、生活费、隐藏成本', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
+      { id: 'r16-13', name: '助学金体系', icon: '💵', description: '美国大学财务援助：Need-based vs Merit-based', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
+      { id: 'r16-14', name: 'FAFSA入门', icon: '📋', description: 'FAFSA是什么？何时开始准备、需要什么材料', link: '#', type: 'free', category: '大学申请', userType: 'parent' },
+      { id: 'r16-15', name: 'CSS Profile', icon: '📊', description: 'CSS Profile详解：私立大学的助学金申请', link: '#', type: 'free', category: '大学申请', userType: 'parent' },
       
-      // ========== 👨‍👩‍👧 家长指南 ==========
-      { id: 'r16-15', name: '11年级指南', icon: '📋', description: '高三家长全年时间线', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
-      { id: 'r16-16', name: '大学费用', icon: '💰', description: '了解学费、助学金和贷款', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
-      { id: 'r16-17', name: 'FAFSA/CSS', icon: '📊', description: '助学金申请表格介绍', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      // ========== 🌏 英美加比较 ==========
+      { id: 'r16-16', name: '美国申请', icon: '🇺🇸', description: '美国大学申请全流程：EA/ED/RD时间线', link: '#', type: 'free', category: '西方教育', userType: 'both' },
+      { id: 'r16-17', name: '加拿大申请', icon: '🇨🇦', description: '加拿大大学申请：OUAC、各省系统、截止日期', link: '#', type: 'free', category: '西方教育', userType: 'both' },
+      { id: 'r16-18', name: '英国申请', icon: '🇬🇧', description: '英国大学UCAS申请：个人陈述、预测成绩、Oxbridge', link: '#', type: 'free', category: '西方教育', userType: 'both' },
+      
+      // ========== 📋 活动整理 ==========
+      { id: 'r16-19', name: '活动清单', icon: '📋', description: '整理课外活动：如何在150字内描述每个活动', link: '#', type: 'free', category: '升学准备', userType: 'child' },
+      { id: 'r16-20', name: '荣誉奖项', icon: '🏆', description: '整理荣誉奖项：如何呈现学术和非学术成就', link: '#', type: 'free', category: '升学准备', userType: 'child' },
+      
+      // ========== 👨‍👩‍👧 家长视角：关键年家长该做什么 ==========
+      { id: 'r16-21', name: '11年级时间线', icon: '📅', description: '11年级全年时间线：每月应该做什么', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r16-22', name: '家长的角色', icon: '👨‍👩‍👧', description: '11年级家长应该做什么vs不应该做什么', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r16-23', name: '探校规划', icon: '🚗', description: '11年级暑假探校：如何安排高效的校园参观行程', link: '#', type: 'free', category: '升学准备', userType: 'parent' },
+      { id: 'r16-24', name: '11年级检查清单', icon: '✅', description: '11年级结束前必须完成的事项清单', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
     ]
   },
   {
@@ -1042,37 +1072,44 @@ const lifeJourneyData: AgeStage[] = [
     emoji: '🎓',
     color: 'from-amber-500 to-yellow-400',
     resources: [
-      // ========== 📝 大学申请 ==========
-      { id: 'r17-1', name: 'EA/ED申请', icon: '⏰', description: 'Early Action/Decision策略', link: '#', type: 'free', category: '大学申请', userType: 'both' },
-      { id: 'r17-2', name: 'RD申请', icon: '📋', description: 'Regular Decision申请指南', link: '#', type: 'free', category: '大学申请', userType: 'both' },
-      { id: 'r17-3', name: '文书润色', icon: '✍️', description: '申请文书最终修改', link: '#', type: 'free', category: '大学申请', userType: 'child' },
-      { id: 'r17-4', name: '面试准备', icon: '🎤', description: '大学面试技巧和常见问题', link: '#', type: 'free', category: '大学申请', userType: 'child' },
-      { id: 'r17-5', name: '补充文书', icon: '📝', description: '各校Supplemental Essays', link: '#', type: 'free', category: '大学申请', userType: 'child' },
+      // ========== 📝 申请时间线：关键日期 ==========
+      { id: 'r17-1', name: 'EA/ED策略', icon: '⏰', description: 'Early Action vs Early Decision：区别、策略、如何选择', link: '#', type: 'free', category: '大学申请', userType: 'both' },
+      { id: 'r17-2', name: '申请截止日期', icon: '📅', description: '各类申请截止日期汇总：EA/ED/RD/Rolling', link: '#', type: 'free', category: '大学申请', userType: 'both' },
+      { id: 'r17-3', name: '申请提交', icon: '💻', description: '申请提交前的检查清单：不要犯这些低级错误', link: '#', type: 'free', category: '大学申请', userType: 'both' },
       
-      // ========== 💰 助学金申请 ==========
-      { id: 'r17-6', name: 'FAFSA填写', icon: '📊', description: '联邦助学金申请表填写', link: 'https://fafsa.gov', type: 'free', category: '大学申请', userType: 'parent' },
-      { id: 'r17-7', name: 'CSS Profile', icon: '💰', description: '私立大学助学金申请', link: '#', type: 'free', category: '大学申请', userType: 'parent' },
-      { id: 'r17-8', name: '奖学金搜索', icon: '🏆', description: '外部奖学金申请资源', link: '#', type: 'free', category: '大学申请', userType: 'both' },
+      // ========== ✍️ 文书最终阶段 ==========
+      { id: 'r17-4', name: '文书润色', icon: '✍️', description: '申请文书最终修改：如何polish而不over-edit', link: '#', type: 'free', category: '大学申请', userType: 'child' },
+      { id: 'r17-5', name: '补充文书', icon: '📝', description: '各校Supplemental Essays写作技巧：Why Us、活动、社区等', link: '#', type: 'free', category: '大学申请', userType: 'child' },
+      { id: 'r17-6', name: '活动描述', icon: '📋', description: '如何在150字内有效描述你的课外活动', link: '#', type: 'free', category: '大学申请', userType: 'child' },
       
-      // ========== 🎯 录取后 ==========
-      { id: 'r17-9', name: '比较Offer', icon: '⚖️', description: '如何比较不同大学录取', link: '#', type: 'free', category: '升学准备', userType: 'both' },
-      { id: 'r17-10', name: 'Waitlist策略', icon: '⏳', description: '候补名单应对策略', link: '#', type: 'free', category: '大学申请', userType: 'both' },
-      { id: 'r17-11', name: '选校决定', icon: '🎯', description: '做出最终入学决定', link: '#', type: 'free', category: '升学准备', userType: 'both' },
+      // ========== 🎤 面试准备 ==========
+      { id: 'r17-7', name: '面试概述', icon: '🎤', description: '大学面试类型：Alumni面试、Admissions面试的区别', link: '#', type: 'free', category: '大学申请', userType: 'both' },
+      { id: 'r17-8', name: '常见问题', icon: '❓', description: '大学面试最常见问题和回答策略', link: '#', type: 'free', category: '大学申请', userType: 'child' },
+      { id: 'r17-9', name: '面试礼仪', icon: '👔', description: '面试着装、礼仪、后续Thank You Note', link: '#', type: 'free', category: '大学申请', userType: 'child' },
       
-      // ========== 🌏 西方教育资源 ==========
-      { id: 'r17-12', name: 'Common App', icon: '💻', description: '正式提交Common App申请', link: 'https://commonapp.org', type: 'free', category: '本地课程', userType: 'child' },
-      { id: 'r17-13', name: 'Coalition App', icon: '📋', description: 'Coalition申请系统', link: 'https://coalitionforcollegeaccess.org', type: 'free', category: '本地课程', userType: 'child' },
-      { id: 'r17-14', name: 'r/ApplyingToCollege', icon: '💬', description: 'Reddit申请经验分享社区', link: 'https://reddit.com/r/ApplyingToCollege', type: 'free', category: '大学申请', userType: 'child' },
+      // ========== 💰 财务规划：关键步骤 ==========
+      { id: 'r17-10', name: 'FAFSA详解', icon: '📊', description: 'FAFSA填写指南：需要什么材料、常见错误避免', link: '#', type: 'free', category: '大学申请', userType: 'parent' },
+      { id: 'r17-11', name: 'CSS详解', icon: '💰', description: 'CSS Profile填写：私立大学助学金申请的关键', link: '#', type: 'free', category: '大学申请', userType: 'parent' },
+      { id: 'r17-12', name: '奖学金策略', icon: '🏆', description: '外部奖学金搜索和申请：不只是Need-based', link: '#', type: 'free', category: '大学申请', userType: 'both' },
+      { id: 'r17-13', name: 'Aid Package', icon: '📋', description: '如何读懂大学的Financial Aid Package', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
       
-      // ========== 🎓 大学准备 ==========
-      { id: 'r17-15', name: '宿舍申请', icon: '🏠', description: '大学宿舍申请流程', link: '#', type: 'free', category: '升学准备', userType: 'both' },
-      { id: 'r17-16', name: 'Orientation', icon: '🎉', description: '新生入学orientation准备', link: '#', type: 'free', category: '升学准备', userType: 'child' },
-      { id: 'r17-17', name: '大学过渡', icon: '🌟', description: '从高中到大学的心理准备', link: '#', type: 'free', category: '成长教育', userType: 'both' },
+      // ========== 📬 录取结果处理 ==========
+      { id: 'r17-14', name: '等待结果', icon: '⏳', description: '等待录取结果的心理调适：家长和学生都需要', link: '#', type: 'free', category: '心理健康', userType: 'both' },
+      { id: 'r17-15', name: '比较Offer', icon: '⚖️', description: '如何比较不同大学的录取：学术、财务、文化', link: '#', type: 'free', category: '升学准备', userType: 'both' },
+      { id: 'r17-16', name: 'Waitlist策略', icon: '📧', description: '候补名单怎么办？LOCI信怎么写', link: '#', type: 'free', category: '大学申请', userType: 'both' },
+      { id: 'r17-17', name: '最终决定', icon: '🎯', description: '5月1日前做出最终决定：Decision Day策略', link: '#', type: 'free', category: '升学准备', userType: 'both' },
       
-      // ========== 👨‍👩‍👧 家长指南 ==========
-      { id: 'r17-18', name: '12年级指南', icon: '📋', description: '高四家长全年时间线', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
-      { id: 'r17-19', name: '放手的艺术', icon: '🦋', description: '让孩子独立上大学的准备', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
-      { id: 'r17-20', name: 'Financial Aid比较', icon: '💰', description: '比较各校财务援助Package', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      // ========== 🎓 大学准备：入学前 ==========
+      { id: 'r17-18', name: '入学押金', icon: '💵', description: 'Enrollment Deposit和Housing Deposit的截止日期', link: '#', type: 'free', category: '升学准备', userType: 'both' },
+      { id: 'r17-19', name: '宿舍选择', icon: '🏠', description: '大学宿舍申请：类型、室友问卷、时间线', link: '#', type: 'free', category: '升学准备', userType: 'both' },
+      { id: 'r17-20', name: 'Orientation', icon: '🎉', description: '新生Orientation介绍：注册、选课、活动', link: '#', type: 'free', category: '升学准备', userType: 'child' },
+      { id: 'r17-21', name: 'AP成绩递送', icon: '📤', description: '如何递送AP成绩换大学学分', link: '#', type: 'free', category: '升学准备', userType: 'child' },
+      
+      // ========== 👨‍👩‍👧 家长视角：终点也是起点 ==========
+      { id: 'r17-22', name: '12年级时间线', icon: '📅', description: '12年级全年时间线：每月应该做什么', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r17-23', name: '放手的艺术', icon: '🦋', description: '让孩子独立：从高中生到大学生的角色转变', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r17-24', name: 'Aid Appeal', icon: '💬', description: '如何与大学沟通争取更多财务援助', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r17-25', name: '回顾与祝福', icon: '🌟', description: 'K-12结束：回顾旅程，展望未来', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
     ]
   },
 ];
