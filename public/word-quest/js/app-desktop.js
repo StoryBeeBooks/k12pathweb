@@ -278,28 +278,19 @@ const App = {
         const html = items.map(item => {
             const isOwned = owned.includes(item.id);
             const categoryData = COLLECTIBLES_DATA.categories.find(c => c.id === item.category);
+            const rarityData = COLLECTIBLES_DATA.rarities[item.rarity];
             
             return `
                 <div class="collection-item ${isOwned ? 'owned' : 'locked'}">
                     <div class="collection-item-glow"></div>
                     <div class="collection-item-emoji">${isOwned ? item.emoji : '❓'}</div>
                     <div class="collection-item-name">${isOwned ? item.name : '???'}</div>
-                    ${isOwned ? `<div class="collection-item-rarity">${categoryData?.emoji || ''} ${this.getRarityLabel(item.cost)}</div>` : ''}
+                    ${isOwned ? `<div class="collection-item-rarity" style="color: ${rarityData?.color || '#b2bec3'}">${rarityData?.label || item.rarity}</div>` : ''}
                 </div>
             `;
         }).join('');
         
         container.innerHTML = html;
-    },
-
-    /**
-     * Get rarity label based on cost
-     */
-    getRarityLabel(cost) {
-        if (cost >= 100) return 'Legendary';
-        if (cost >= 60) return 'Rare';
-        if (cost >= 30) return 'Uncommon';
-        return 'Common';
     },
 
     /**
