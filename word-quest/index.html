@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Quest - SSAT Vocabulary Trainer | K12Path</title>
+    <meta name="description" content="Master SSAT Elementary vocabulary with our fun, gamified learning app. Build your word power through interactive challenges!">
+    <link rel="stylesheet" href="css/style-desktop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Pattern -->
+    <div class="bg-pattern"></div>
+    
+    <!-- Floating Side Buttons (Right Side) -->
+    <div class="side-buttons">
+        <button class="side-btn" id="quickReviewBtn" title="Quick Review">
+            <span class="side-btn-icon">🔄</span>
+            <span class="side-btn-label">Review</span>
+        </button>
+        <button class="side-btn" id="skillGalaxyBtn" title="Skill Galaxy">
+            <span class="side-btn-icon">🌌</span>
+            <span class="side-btn-label">Galaxy</span>
+        </button>
+        <button class="side-btn" id="shopBtn" title="Shop">
+            <span class="side-btn-icon">🛒</span>
+            <span class="side-btn-label">Shop</span>
+        </button>
+        <button class="side-btn" id="rulesBtn" title="Game Rules">
+            <span class="side-btn-icon">📖</span>
+            <span class="side-btn-label">Rules</span>
+        </button>
+    </div>
+
+    <!-- Main App Container -->
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-brand">
+                <span class="brand-icon">📚</span>
+                <h1 class="brand-title">Word Quest</h1>
+                <span class="brand-tagline">SSAT Elementary Vocabulary - Build the Dream Home</span>
+            </div>
+            <div class="header-stats">
+                <div class="stat-badge xp-badge">
+                    <span class="badge-icon">⭐</span>
+                    <span class="badge-value" id="totalXP">0</span>
+                    <span class="badge-label">XP</span>
+                </div>
+                <div class="stat-badge streak-badge">
+                    <span class="badge-icon">🔥</span>
+                    <span class="badge-value" id="streak">0</span>
+                    <span class="badge-label">Streak</span>
+                </div>
+                <div class="stat-badge mastered-badge">
+                    <span class="badge-icon">✓</span>
+                    <span class="badge-value" id="wordsMastered">0</span>
+                    <span class="badge-label">Mastered</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            
+            <!-- ==================== DASHBOARD VIEW ==================== -->
+            <section class="view active" id="dashboardView">
+                <div class="dashboard-layout">
+                    
+                    <!-- Left Column - Progress & Stats -->
+                    <div class="dashboard-left">
+                        <!-- Progress Ring Card -->
+                        <div class="card progress-card">
+                            <div class="progress-display">
+                                <svg class="progress-ring" viewBox="0 0 120 120">
+                                    <circle class="progress-ring-bg" cx="60" cy="60" r="52"/>
+                                    <circle class="progress-ring-fill" cx="60" cy="60" r="52" id="progressRing"/>
+                                </svg>
+                                <div class="progress-center">
+                                    <span class="progress-percent" id="progressPercent">0%</span>
+                                    <span class="progress-label">Mastered</span>
+                                </div>
+                            </div>
+                            <div class="progress-stats">
+                                <div class="progress-stat">
+                                    <span class="ps-value" id="learnedCount">0</span>
+                                    <span class="ps-label">Learned</span>
+                                </div>
+                                <div class="progress-divider"></div>
+                                <div class="progress-stat">
+                                    <span class="ps-value" id="totalWords">500</span>
+                                    <span class="ps-label">Total</span>
+                                </div>
+                            </div>
+                            <!-- Milestone Track -->
+                            <div class="milestone-track">
+                                <div class="milestone-bar">
+                                    <div class="milestone-fill" id="milestoneFill"></div>
+                                </div>
+                                <div class="milestone-markers">
+                                    <div class="marker" data-value="25"><span>🌱</span></div>
+                                    <div class="marker" data-value="50"><span>⭐</span></div>
+                                    <div class="marker" data-value="75"><span>🏆</span></div>
+                                    <div class="marker" data-value="100"><span>👑</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Collection Preview -->
+                        <div class="card collection-card clickable" id="collectionCard">
+                            <div class="card-header">
+                                <h3>🎨 My Collection</h3>
+                                <span class="collection-count"><span id="collectionOwned">0</span> / 605</span>
+                            </div>
+                            <div class="collection-preview" id="collectionPreview">
+                                <p class="empty-collection">Start learning to earn XP and buy collectibles!</p>
+                            </div>
+                            <span class="card-action">View All →</span>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Learning Controls -->
+                    <div class="dashboard-right">
+                        
+                        <!-- Start Learning - Click a level to begin -->
+                        <div class="card start-learning-card">
+                            <div class="card-header">
+                                <h3>🚀 Start Learning</h3>
+                                <span class="card-hint">Click a level to begin!</span>
+                            </div>
+                            <p class="xp-reminder">💡 Score 80%+ on the quiz to earn XP</p>
+                            
+                            <div class="level-buttons">
+                                <button class="level-btn level-1" data-level="1">
+                                    <div class="level-icon">🌱</div>
+                                    <div class="level-info">
+                                        <span class="level-name">Explorer</span>
+                                        <span class="level-count"><span id="level1Count">144</span> words</span>
+                                        <span class="level-mastered"><span id="level1Mastered">0</span> mastered</span>
+                                    </div>
+                                    <div class="level-arrow">▶</div>
+                                </button>
+                                <button class="level-btn level-2" data-level="2">
+                                    <div class="level-icon">⚡</div>
+                                    <div class="level-info">
+                                        <span class="level-name">Adventurer</span>
+                                        <span class="level-count"><span id="level2Count">224</span> words</span>
+                                        <span class="level-mastered"><span id="level2Mastered">0</span> mastered</span>
+                                    </div>
+                                    <div class="level-arrow">▶</div>
+                                </button>
+                                <button class="level-btn level-3" data-level="3">
+                                    <div class="level-icon">🔥</div>
+                                    <div class="level-info">
+                                        <span class="level-name">Champion</span>
+                                        <span class="level-count"><span id="level3Count">132</span> words</span>
+                                        <span class="level-mastered"><span id="level3Mastered">0</span> mastered</span>
+                                    </div>
+                                    <div class="level-arrow">▶</div>
+                                </button>
+                            </div>
+
+                            <!-- Analogy Test Button -->
+                            <button class="analogy-test-btn" id="analogyTestBtnMain">
+                                <div class="analogy-btn-icon">🧩</div>
+                                <div class="analogy-btn-info">
+                                    <span class="analogy-btn-title">SSAT Analogy Test</span>
+                                    <span class="analogy-btn-desc">10 questions • 100 XP reward</span>
+                                    <span class="analogy-btn-lock" id="analogyLockStatus">🔒 Master 100 words to unlock</span>
+                                </div>
+                                <div class="analogy-btn-arrow">▶</div>
+                            </button>
+                        </div>
+
+                        <!-- Daily Tip -->
+                        <div class="tip-card">
+                            <span class="tip-icon">💡</span>
+                            <span class="tip-text" id="dailyTip">Learn 5 words a day = 150+ words in a month!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== DREAM HOME BUILDER SECTION ==================== -->
+                <div class="dream-home-section collapsed" id="dreamHomeSection">
+                    <div class="dream-home-header" id="dreamHomeToggle">
+                        <div class="dream-home-title-row">
+                            <h2 class="dream-home-title">🏠 Build Your Dream Home</h2>
+                            <div class="dream-home-header-right">
+                                <span class="dh-header-percent" id="dhHeaderPercent">0%</span>
+                                <span class="dh-toggle-icon">▼</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dream-home-content" id="dreamHomeContent">
+                        <p class="dream-home-subtitle">Master words to transform your view into your dream house!</p>
+                        <div class="dream-home-progress">
+                            <div class="dhp-bar">
+                                <div class="dhp-fill" id="dreamHomeFill"></div>
+                            </div>
+                            <span class="dhp-text"><span id="dreamHomePercent">0</span>% Complete</span>
+                        </div>
+                    
+                        <div class="image-comparison-container">
+                            <div class="image-comparison" id="imageComparison">
+                                <!-- After image (the view) - full width background -->
+                                <div class="comparison-after">
+                                    <img src="Images/The View.jpeg" alt="Your Dream View" draggable="false">
+                                    <div class="comparison-label after-label">
+                                        <span>🌅 Your Dream View</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Before image (the house) - clipped by slider -->
+                                <div class="comparison-before" id="comparisonBefore">
+                                    <img src="Images/The House.png" alt="Starting Point" draggable="false">
+                                    <div class="comparison-label before-label">
+                                        <span>🏠 Starting Point</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Slider handle -->
+                                <div class="comparison-slider" id="comparisonSlider">
+                                    <div class="slider-line"></div>
+                                    <div class="slider-handle">
+                                        <div class="slider-arrows">
+                                            <span>◀</span>
+                                            <span>▶</span>
+                                        </div>
+                                    </div>
+                                    <div class="slider-line"></div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="dream-home-stats">
+                            <div class="dh-stat">
+                                <span class="dh-stat-icon">📚</span>
+                                <span class="dh-stat-value" id="dhWordsLearned">0</span>
+                                <span class="dh-stat-label">Words Mastered</span>
+                            </div>
+                            <div class="dh-stat">
+                                <span class="dh-stat-icon">✨</span>
+                                <span class="dh-stat-value" id="dhElementsEarned">0</span>
+                                <span class="dh-stat-label">Elements Earned</span>
+                            </div>
+                            <div class="dh-stat">
+                                <span class="dh-stat-icon">🎯</span>
+                                <span class="dh-stat-value" id="dhWordsRemaining">500</span>
+                                <span class="dh-stat-label">Words to Go</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== LEARN SCREEN ==================== -->
+            <section class="view" id="learnScreen">
+                <div class="learn-layout">
+                    <div class="learn-header">
+                        <button class="back-btn" id="learnBackBtn">
+                            <span>←</span> Back to Dashboard
+                        </button>
+                        <div class="session-info">
+                            <span class="session-progress" id="sessionProgress">1 / 5</span>
+                            <span class="session-xp-note">Pass quiz with 80%+ to earn XP!</span>
+                        </div>
+                    </div>
+
+                    <div class="flashcard-container">
+                        <div class="flashcard" id="flashcard">
+                            <div class="flashcard-inner">
+                                <div class="flashcard-front">
+                                    <div class="word-display">
+                                        <span class="word-text" id="wordText">Word</span>
+                                        <button class="audio-btn" id="playAudio" title="Listen">🔊</button>
+                                    </div>
+                                    <p class="flashcard-hint">Click card to see definition</p>
+                                </div>
+                                <div class="flashcard-back">
+                                    <div class="definition-section">
+                                        <p class="definition-simple" id="definitionSimple">Simple definition</p>
+                                        <p class="definition-formal" id="definitionFormal">Formal definition</p>
+                                    </div>
+                                    <div class="word-details">
+                                        <div class="detail-row">
+                                            <span class="detail-label">Synonyms:</span>
+                                            <span class="detail-value" id="synonymsList">word1, word2</span>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="detail-label">Example:</span>
+                                            <span class="detail-value" id="exampleSentence">"Example sentence"</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="learn-actions">
+                        <button class="learn-btn need-practice" id="needPractice">
+                            <span class="btn-icon">📝</span>
+                            <span>Add to Review List</span>
+                        </button>
+                        <button class="learn-btn got-it" id="gotIt">
+                            <span class="btn-icon">✓</span>
+                            <span>Got It!</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== QUIZ SCREEN ==================== -->
+            <section class="view" id="quizScreen">
+                <div class="quiz-layout">
+                    <div class="quiz-header">
+                        <button class="back-btn" id="quizBackBtn">
+                            <span>←</span> Back
+                        </button>
+                        <div class="quiz-progress-bar">
+                            <div class="quiz-progress-fill" id="quizProgressFill"></div>
+                        </div>
+                        <div class="quiz-info">
+                            <span class="quiz-score">Score: <span id="quizScoreDisplay">0</span></span>
+                        </div>
+                    </div>
+
+                    <div class="quiz-content" id="quizContent">
+                        <!-- Quiz questions rendered here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== RESULTS SCREEN ==================== -->
+            <section class="view" id="resultsScreen">
+                <div class="results-layout">
+                    <div class="results-card">
+                        <div class="results-header">
+                            <span class="results-icon" id="resultsIcon">🎉</span>
+                            <h2 class="results-title" id="resultsTitle">Great Job!</h2>
+                        </div>
+                        
+                        <div class="results-stats">
+                            <div class="result-stat">
+                                <span class="result-value" id="resultScore">0/5</span>
+                                <span class="result-label">Score</span>
+                            </div>
+                            <div class="result-stat">
+                                <span class="result-value" id="resultXP">+0</span>
+                                <span class="result-label">XP Earned</span>
+                                <span class="xp-note" id="xpNote"></span>
+                            </div>
+                            <div class="result-stat">
+                                <span class="result-value" id="resultAccuracy">0%</span>
+                                <span class="result-label">Accuracy</span>
+                            </div>
+                        </div>
+
+                        <div class="words-review" id="wordsReview">
+                            <!-- Words to review rendered here -->
+                        </div>
+
+                        <div class="results-actions">
+                            <button class="btn btn-primary" id="continueBtn">Continue Learning</button>
+                            <button class="btn btn-secondary" id="homeBtn">Back to Dashboard</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== SKILL GALAXY SCREEN ==================== -->
+            <section class="view" id="skillGalaxyScreen">
+                <div class="galaxy-layout">
+                    <div class="galaxy-header">
+                        <button class="back-btn" id="galaxyBackBtn">
+                            <span>←</span> Back to Dashboard
+                        </button>
+                        <h2>🌌 Skill Galaxy</h2>
+                    </div>
+                    <div class="galaxy-content" id="skillGalaxyContainer">
+                        <!-- Skill galaxy rendered here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== ANALOGY TEST SCREEN ==================== -->
+            <section class="view" id="analogyScreen">
+                <div class="analogy-layout">
+                    <div class="analogy-header">
+                        <button class="back-btn" id="analogyBackBtn">
+                            <span>←</span> Back
+                        </button>
+                        <div class="analogy-progress-bar">
+                            <div class="analogy-progress-fill" id="analogyProgressFill"></div>
+                        </div>
+                        <div class="analogy-info">
+                            <span class="analogy-score">Score: <span id="analogyScoreDisplay">0</span>/10</span>
+                        </div>
+                    </div>
+
+                    <div class="analogy-content" id="analogyContent">
+                        <!-- Analogy questions rendered here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== ANALOGY RESULTS SCREEN ==================== -->
+            <section class="view" id="analogyResultsScreen">
+                <div class="results-layout">
+                    <div class="results-card">
+                        <div class="results-header">
+                            <span class="results-icon" id="analogyResultsIcon">🧩</span>
+                            <h2 class="results-title" id="analogyResultsTitle">Analogy Test Complete!</h2>
+                        </div>
+                        
+                        <div class="results-stats">
+                            <div class="result-stat">
+                                <span class="result-value" id="analogyResultScore">0/10</span>
+                                <span class="result-label">Score</span>
+                            </div>
+                            <div class="result-stat">
+                                <span class="result-value" id="analogyResultXP">+0</span>
+                                <span class="result-label">XP Earned</span>
+                                <span class="xp-note" id="analogyXpNote"></span>
+                            </div>
+                            <div class="result-stat">
+                                <span class="result-value" id="analogyResultAccuracy">0%</span>
+                                <span class="result-label">Accuracy</span>
+                            </div>
+                        </div>
+
+                        <div class="results-actions">
+                            <button class="btn-primary" id="analogyRetryBtn">
+                                <span>🔄</span> Try Again
+                            </button>
+                            <button class="btn-secondary" id="analogyHomeBtn">
+                                <span>🏠</span> Dashboard
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== COLLECTION SCREEN ==================== -->
+            <section class="view" id="collectionScreen">
+                <div class="collection-layout">
+                    <div class="collection-header">
+                        <button class="back-btn" id="collectionBackBtn">
+                            <span>←</span> Back to Dashboard
+                        </button>
+                        <h2>🎨 My Collection</h2>
+                        <span class="collection-stats">
+                            <span id="modalCollectionOwned">0</span> / <span id="modalCollectionTotal">605</span> items
+                        </span>
+                    </div>
+
+                    <!-- Mini Dream Home Preview (Collapsible) -->
+                    <div class="mini-dream-home collapsed" id="miniDreamHome">
+                        <div class="mini-dh-header" id="miniDreamHomeToggle">
+                            <div class="mini-dh-title">
+                                <span class="mini-dh-icon">🏠</span>
+                                <span>My Dream View Progress</span>
+                                <span class="mini-dh-percent" id="miniDhPercent">0%</span>
+                            </div>
+                            <span class="mini-dh-toggle-icon">▼</span>
+                        </div>
+                        <div class="mini-dh-content" id="miniDreamHomeContent">
+                            <div class="mini-image-comparison" id="miniImageComparison">
+                                <div class="mini-comparison-after">
+                                    <img src="Images/The View.jpeg" alt="Dream View" draggable="false">
+                                </div>
+                                <div class="mini-comparison-before" id="miniComparisonBefore">
+                                    <img src="Images/The House.png" alt="Starting Point" draggable="false">
+                                </div>
+                                <div class="mini-comparison-slider" id="miniComparisonSlider">
+                                    <div class="mini-slider-handle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collection-categories" id="collectionCategories">
+                        <!-- Category buttons -->
+                    </div>
+                    <div class="collection-items" id="collectionItems">
+                        <!-- Collection items -->
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- ==================== SHOP PANEL (Slide-in from right) ==================== -->
+    <div class="shop-panel" id="shopPanel">
+        <div class="shop-header">
+            <h2>🛒 Shop</h2>
+            <button class="shop-close" id="closeShop">×</button>
+        </div>
+        <div class="shop-xp-display">
+            <span>Your XP:</span>
+            <span class="shop-xp-value" id="shopXP">0 ⭐</span>
+        </div>
+        <div class="shop-message" id="shopMessage"></div>
+        <div class="shop-categories" id="shopCategories">
+            <!-- Category tabs rendered by JS -->
+        </div>
+        <div class="shop-items" id="shopItems">
+            <!-- Items rendered by JS -->
+        </div>
+    </div>
+    <div class="overlay" id="shopOverlay"></div>
+
+    <!-- ==================== GAME RULES MODAL ==================== -->
+    <div class="modal" id="rulesModal">
+        <div class="modal-content rules-modal">
+            <div class="modal-header">
+                <h2>📖 Game Rules & Tips</h2>
+                <button class="modal-close" data-close="rulesModal">×</button>
+            </div>
+            <div class="modal-body rules-body">
+                
+                <div class="rules-section">
+                    <h3>🎯 How to Play</h3>
+                    <ol>
+                        <li><strong>Choose Difficulty:</strong> Select Explorer (easy), Adventurer (medium), or Champion (hard)</li>
+                        <li><strong>Learn Words:</strong> Study 5 flashcards - click to flip and see definitions</li>
+                        <li><strong>Take the Quiz:</strong> Answer questions about the words you just learned</li>
+                        <li><strong>Earn XP:</strong> Score 80%+ on the quiz to earn XP rewards!</li>
+                    </ol>
+                </div>
+
+                <div class="rules-section">
+                    <h3>⭐ XP & Rewards System</h3>
+                    <table class="rewards-table">
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                <th>XP Earned</th>
+                                <th>Requirement</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Correct Quiz Answer</td>
+                                <td>+10 XP</td>
+                                <td>80%+ accuracy</td>
+                            </tr>
+                            <tr>
+                                <td>Perfect Score Bonus</td>
+                                <td>+25 XP</td>
+                                <td>100% accuracy</td>
+                            </tr>
+                            <tr>
+                                <td>Word Mastery</td>
+                                <td>+20 XP</td>
+                                <td>3+ correct, 80%+ accuracy</td>
+                            </tr>
+                            <tr>
+                                <td>🧩 Analogy Test</td>
+                                <td>+100 XP</td>
+                                <td>80%+ accuracy (unlock: 100 words mastered)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="rules-note">💡 <strong>Important:</strong> XP is only awarded when you score 80% or higher on the quiz!</p>
+                </div>
+
+                <div class="rules-section">
+                    <h3>🏆 Word Mastery</h3>
+                    <p>A word is considered "mastered" when you:</p>
+                    <ul>
+                        <li>Answer it correctly <strong>3 or more times</strong></li>
+                        <li>Maintain an <strong>80%+ accuracy rate</strong> for that word</li>
+                    </ul>
+                    <p>Mastered words won't appear in new learning sessions, but you can review them in Skill Galaxy!</p>
+                </div>
+
+                <div class="rules-section">
+                    <h3>🔥 Streak System</h3>
+                    <p>Keep your streak alive by learning every day!</p>
+                    <ul>
+                        <li>Complete at least one learning session per day</li>
+                        <li>Your streak resets if you miss a day</li>
+                        <li>Higher streaks = bragging rights!</li>
+                    </ul>
+                </div>
+
+                <div class="rules-section">
+                    <h3>🛒 Shop & Collectibles</h3>
+                    <p>Spend your hard-earned XP on fun collectibles!</p>
+                    <ul>
+                        <li><strong>605 unique items</strong> across 15 categories</li>
+                        <li>Categories include: Zoo Animals, Pets, Vehicles, Furniture, Clothing, Accessories, Food & Treats, Space, Fantasy, Sports, Music, Nature, Flowers, Jewelry, and Drinks</li>
+                        <li>Items have different rarities: Common, Uncommon, Rare, Epic, Legendary</li>
+                        <li>Rarer items cost more XP but look cooler!</li>
+                        <li>View your collection anytime from the dashboard</li>
+                    </ul>
+                </div>
+
+                <div class="rules-section">
+                    <h3>🧩 SSAT Analogy Test</h3>
+                    <p>Practice real SSAT-style analogy questions based on <strong>your mastered vocabulary</strong>!</p>
+                    <ul>
+                        <li><strong>Unlock requirement:</strong> Master 100 words</li>
+                        <li>Questions are <strong>generated from words you've mastered</strong></li>
+                        <li>Each test has <strong>10 questions</strong> in SSAT format</li>
+                        <li>Format: "A is to B as C is to D"</li>
+                        <li>Score 80%+ to earn <strong>100 XP</strong> per test!</li>
+                    </ul>
+                    <h4>🎫 Test Limit System</h4>
+                    <p>To encourage vocabulary growth, tests are limited based on mastered words:</p>
+                    <ul>
+                        <li><strong>100 words mastered:</strong> 20 tests available</li>
+                        <li><strong>Every 5 additional words:</strong> +2 more tests</li>
+                        <li><strong>450+ words mastered:</strong> ✨ Unlimited tests!</li>
+                    </ul>
+                    <p class="rules-note">💡 Analogy questions test word relationships like synonyms, antonyms, and degrees of intensity!</p>
+                </div>
+
+                <div class="rules-section">
+                    <h3>📊 Difficulty Levels</h3>
+                    <div class="difficulty-info">
+                        <div class="diff-item">
+                            <span class="diff-icon">🌱</span>
+                            <div>
+                                <strong>Explorer (Level 1)</strong>
+                                <p>Basic vocabulary - great for beginners</p>
+                            </div>
+                        </div>
+                        <div class="diff-item">
+                            <span class="diff-icon">⚡</span>
+                            <div>
+                                <strong>Adventurer (Level 2)</strong>
+                                <p>Intermediate words - building your skills</p>
+                            </div>
+                        </div>
+                        <div class="diff-item">
+                            <span class="diff-icon">🔥</span>
+                            <div>
+                                <strong>Champion (Level 3)</strong>
+                                <p>Advanced vocabulary - challenge yourself!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rules-section tips-section">
+                    <h3>💡 Pro Tips</h3>
+                    <ul>
+                        <li>🎯 Focus on understanding, not memorizing</li>
+                        <li>📝 Use "Add to Review List" for words you want to practice again</li>
+                        <li>🔄 Review words in Quick Review mode</li>
+                        <li>📅 Study a little every day for best results</li>
+                        <li>🌌 Check Skill Galaxy to see your progress visually</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Celebration Overlay -->
+    <div class="celebration-overlay" id="celebrationOverlay">
+        <div class="celebration-content">
+            <span class="celebration-icon" id="celebrationIcon">🎉</span>
+            <p class="celebration-message" id="celebrationMessage">Amazing!</p>
+        </div>
+    </div>
+
+    <!-- Purchase Confirmation Modal -->
+    <div class="modal" id="purchaseModal">
+        <div class="modal-content purchase-modal">
+            <div class="purchase-modal-header">
+                <span class="purchase-item-emoji" id="purchaseItemEmoji">🎁</span>
+                <h3 class="purchase-item-name" id="purchaseItemName">Item Name</h3>
+            </div>
+            <div class="purchase-modal-body">
+                <p class="purchase-question">Do you want to buy this item?</p>
+                <div class="purchase-price">
+                    <span class="price-label">Price:</span>
+                    <span class="price-value" id="purchasePrice">⭐ 100</span>
+                </div>
+                <div class="purchase-balance">
+                    <span class="balance-label">Your XP:</span>
+                    <span class="balance-value" id="purchaseBalance">⭐ 500</span>
+                </div>
+                <div class="purchase-remaining">
+                    <span class="remaining-label">After purchase:</span>
+                    <span class="remaining-value" id="purchaseRemaining">⭐ 400</span>
+                </div>
+            </div>
+            <div class="purchase-modal-actions">
+                <button class="btn purchase-cancel" id="purchaseCancelBtn">Cancel</button>
+                <button class="btn purchase-confirm" id="purchaseConfirmBtn">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/vocabulary_data.js"></script>
+    <script src="js/collectibles.js"></script>
+    <script src="js/analogy_generator.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/vocabulary.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/app-desktop.js"></script>
+</body>
+</html>
