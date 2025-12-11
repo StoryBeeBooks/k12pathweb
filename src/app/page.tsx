@@ -654,50 +654,50 @@ function ResourceCard({ resource }: { resource: Resource }) {
   );
 }
 
-// Category icons mapping
-const categoryIcons: { [key: string]: string } = {
-  '感官发展': '👁️',
-  '语言启蒙': '💬',
-  '运动发展': '🏃',
-  '认知发展': '🧠',
-  '睡眠安抚': '😴',
-  '家长指南': '👨‍👩‍👧',
-  '亲子互动': '👨‍👩‍👦',
-  '语言发展': '🗣️',
-  '艺术启蒙': '🎨',
-  '自理能力': '🧹',
-  '社交能力': '🤝',
-  '阅读启蒙': '📚',
-  '学习启蒙': '📖',
-  '艺术创意': '🎨',
-  '音乐舞蹈': '🎵',
-  '运动体能': '⚽',
-  '生活技能': '🏠',
-  '社交情感': '💚',
-  '阅读故事': '📚',
-  '幼小衔接': '🎯',
-  '阅读能力': '📖',
-  '艺术创作': '🎨',
-  '音乐素养': '🎼',
-  '体育运动': '🏅',
-  '益智游戏': '🧩',
-  '习惯养成': '⏰',
-  '情商发展': '❤️',
-  '语文学习': '📝',
-  '数学学习': '🔢',
-  '英语学习': '🔤',
-  '艺术培养': '🖼️',
-  '音乐学习': '🎹',
-  '思维拓展': '💡',
-  '习惯与品格': '⭐',
-  '心理健康': '🌈',
+// Category colors mapping - pastel backgrounds
+const categoryColors: { [key: string]: { bg: string; border: string; text: string } } = {
+  '感官发展': { bg: 'bg-rose-50', border: 'border-rose-200', text: 'text-rose-600' },
+  '语言启蒙': { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-600' },
+  '运动发展': { bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-600' },
+  '认知发展': { bg: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-600' },
+  '睡眠安抚': { bg: 'bg-indigo-50', border: 'border-indigo-200', text: 'text-indigo-600' },
+  '家长指南': { bg: 'bg-slate-100', border: 'border-slate-300', text: 'text-slate-600' },
+  '亲子互动': { bg: 'bg-pink-50', border: 'border-pink-200', text: 'text-pink-600' },
+  '语言发展': { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-600' },
+  '艺术启蒙': { bg: 'bg-fuchsia-50', border: 'border-fuchsia-200', text: 'text-fuchsia-600' },
+  '自理能力': { bg: 'bg-teal-50', border: 'border-teal-200', text: 'text-teal-600' },
+  '社交能力': { bg: 'bg-emerald-50', border: 'border-emerald-200', text: 'text-emerald-600' },
+  '阅读启蒙': { bg: 'bg-amber-50', border: 'border-amber-200', text: 'text-amber-600' },
+  '学习启蒙': { bg: 'bg-cyan-50', border: 'border-cyan-200', text: 'text-cyan-600' },
+  '艺术创意': { bg: 'bg-fuchsia-50', border: 'border-fuchsia-200', text: 'text-fuchsia-600' },
+  '音乐舞蹈': { bg: 'bg-violet-50', border: 'border-violet-200', text: 'text-violet-600' },
+  '运动体能': { bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-600' },
+  '生活技能': { bg: 'bg-teal-50', border: 'border-teal-200', text: 'text-teal-600' },
+  '社交情感': { bg: 'bg-emerald-50', border: 'border-emerald-200', text: 'text-emerald-600' },
+  '阅读故事': { bg: 'bg-amber-50', border: 'border-amber-200', text: 'text-amber-600' },
+  '幼小衔接': { bg: 'bg-sky-50', border: 'border-sky-200', text: 'text-sky-600' },
+  '阅读能力': { bg: 'bg-amber-50', border: 'border-amber-200', text: 'text-amber-600' },
+  '艺术创作': { bg: 'bg-fuchsia-50', border: 'border-fuchsia-200', text: 'text-fuchsia-600' },
+  '音乐素养': { bg: 'bg-violet-50', border: 'border-violet-200', text: 'text-violet-600' },
+  '体育运动': { bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-600' },
+  '益智游戏': { bg: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-600' },
+  '习惯养成': { bg: 'bg-lime-50', border: 'border-lime-200', text: 'text-lime-600' },
+  '情商发展': { bg: 'bg-rose-50', border: 'border-rose-200', text: 'text-rose-600' },
+  '语文学习': { bg: 'bg-red-50', border: 'border-red-200', text: 'text-red-600' },
+  '数学学习': { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-600' },
+  '英语学习': { bg: 'bg-green-50', border: 'border-green-200', text: 'text-green-600' },
+  '艺术培养': { bg: 'bg-fuchsia-50', border: 'border-fuchsia-200', text: 'text-fuchsia-600' },
+  '音乐学习': { bg: 'bg-violet-50', border: 'border-violet-200', text: 'text-violet-600' },
+  '思维拓展': { bg: 'bg-indigo-50', border: 'border-indigo-200', text: 'text-indigo-600' },
+  '习惯与品格': { bg: 'bg-lime-50', border: 'border-lime-200', text: 'text-lime-600' },
+  '心理健康': { bg: 'bg-pink-50', border: 'border-pink-200', text: 'text-pink-600' },
+  '其他资源': { bg: 'bg-gray-50', border: 'border-gray-200', text: 'text-gray-600' },
 };
 
-// Age Section Component - Clean Minimal Design with Categories
+// Age Section Component - All icons visible with category colors
 function AgeSection({ stage, index }: { stage: AgeStage; index: number }) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -784,57 +784,149 @@ function AgeSection({ stage, index }: { stage: AgeStage; index: number }) {
           </p>
         </div>
 
-        {/* Resources - Grouped by Category */}
+        {/* Resources - All visible with category-colored backgrounds */}
         <div className="p-5 md:p-6">
-          {hasCategories ? (
-            <div className="space-y-4">
-              {categories.map(category => (
-                <div key={category} className="border border-slate-100 rounded-xl overflow-hidden">
-                  {/* Category Header - Clickable */}
-                  <button
-                    onClick={() => setExpandedCategory(expandedCategory === category ? null : category)}
-                    className="w-full flex items-center justify-between px-4 py-3 bg-slate-50 hover:bg-slate-100 transition-colors"
-                  >
-                    <div className="flex items-center gap-2">
-                      <span className="text-lg">{categoryIcons[category] || '📁'}</span>
-                      <span className="font-medium text-slate-700">{category}</span>
-                      <span className="text-xs text-slate-400">({groupedResources[category].length})</span>
-                    </div>
-                    <svg 
-                      className={`w-5 h-5 text-slate-400 transition-transform ${expandedCategory === category ? 'rotate-180' : ''}`} 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
+          {/* All icons grid */}
+          <div className="flex flex-wrap gap-3 md:gap-4">
+            {categories.map(category => 
+              groupedResources[category].map(resource => (
+                <ResourceCardWithCategory 
+                  key={resource.id} 
+                  resource={resource} 
+                  categoryColor={categoryColors[resource.category || '其他资源'] || categoryColors['其他资源']}
+                />
+              ))
+            )}
+          </div>
+          
+          {/* Category Legend */}
+          {hasCategories && (
+            <div className="mt-5 pt-4 border-t border-slate-100">
+              <div className="flex flex-wrap gap-2">
+                {categories.map(category => {
+                  const colors = categoryColors[category] || categoryColors['其他资源'];
+                  return (
+                    <span 
+                      key={category}
+                      className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium ${colors.bg} ${colors.text} border ${colors.border}`}
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                  
-                  {/* Category Resources - Collapsible */}
-                  <div className={`transition-all duration-300 overflow-hidden ${
-                    expandedCategory === category ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
-                  }`}>
-                    <div className="p-4 bg-white">
-                      <div className="flex flex-wrap gap-4 md:gap-5">
-                        {groupedResources[category].map(resource => (
-                          <ResourceCard key={resource.id} resource={resource} />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          ) : (
-            /* No categories - show all resources in a grid */
-            <div className="flex flex-wrap gap-5 md:gap-6">
-              {stage.resources.map(resource => (
-                <ResourceCard key={resource.id} resource={resource} />
-              ))}
+                      <span className="w-2 h-2 rounded-full bg-current opacity-60"></span>
+                      {category}
+                    </span>
+                  );
+                })}
+              </div>
             </div>
           )}
         </div>
       </div>
+    </div>
+  );
+}
+
+// Resource Card with Category Color
+function ResourceCardWithCategory({ resource, categoryColor }: { resource: Resource; categoryColor: { bg: string; border: string; text: string } }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (cardRef.current && !cardRef.current.contains(event.target as Node)) {
+        setIsExpanded(false);
+      }
+    };
+
+    if (isExpanded) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isExpanded]);
+
+  // User type label and color
+  const getUserTypeLabel = (userType?: 'parent' | 'child' | 'both') => {
+    switch (userType) {
+      case 'parent': return { label: '家长', color: 'bg-blue-100 text-blue-600' };
+      case 'child': return { label: '孩子', color: 'bg-pink-100 text-pink-600' };
+      case 'both': return { label: '亲子', color: 'bg-purple-100 text-purple-600' };
+      default: return null;
+    }
+  };
+
+  const userTypeInfo = getUserTypeLabel(resource.userType);
+
+  return (
+    <div 
+      ref={cardRef}
+      className="relative group"
+      onClick={() => setIsExpanded(!isExpanded)}
+    >
+      {/* App Icon with category-colored background */}
+      <div className="flex flex-col items-center cursor-pointer transition-all duration-200 hover:scale-105">
+        <div className={`relative w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-2xl md:text-3xl border-2 ${categoryColor.bg} ${categoryColor.border} hover:shadow-md transition-shadow`}>
+          {resource.icon}
+          {/* Paid indicator */}
+          {resource.type === 'paid' && (
+            <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-amber-400 border-2 border-white flex items-center justify-center">
+              <span className="text-[8px] text-white font-bold">$</span>
+            </span>
+          )}
+        </div>
+        <span className="mt-1.5 text-xs font-medium text-slate-600 text-center max-w-[70px] line-clamp-2">
+          {resource.name}
+        </span>
+      </div>
+
+      {/* Expanded Card Modal */}
+      {isExpanded && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/20" onClick={(e) => { if (e.target === e.currentTarget) setIsExpanded(false); }}>
+          <div className="w-72 max-w-[90vw] p-4 bg-white rounded-xl shadow-xl border border-slate-200 animate-fadeIn" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-start gap-3 mb-3">
+              <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl ${categoryColor.bg} ${categoryColor.border} border`}>
+                {resource.icon}
+              </div>
+              <div className="flex-1 min-w-0">
+                <h4 className="font-semibold text-slate-800 text-base">{resource.name}</h4>
+                <div className="flex items-center gap-1.5 mt-1 flex-wrap">
+                  <span className={`text-xs px-2 py-0.5 rounded ${
+                    resource.type === 'free' 
+                      ? 'bg-emerald-100 text-emerald-700' 
+                      : 'bg-amber-100 text-amber-700'
+                  }`}>
+                    {resource.type === 'free' ? '免费' : '付费'}
+                  </span>
+                  {userTypeInfo && (
+                    <span className={`text-xs px-2 py-0.5 rounded ${userTypeInfo.color}`}>
+                      {userTypeInfo.label}用
+                    </span>
+                  )}
+                  {resource.category && (
+                    <span className={`text-xs px-2 py-0.5 rounded ${categoryColor.bg} ${categoryColor.text}`}>
+                      {resource.category}
+                    </span>
+                  )}
+                </div>
+              </div>
+              <button onClick={() => setIsExpanded(false)} className="text-slate-400 hover:text-slate-600">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <p className="text-sm text-slate-600 mb-4 leading-relaxed">{resource.description}</p>
+            <a 
+              href={resource.link}
+              className={`block w-full text-center py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                resource.type === 'free'
+                  ? 'bg-emerald-500 hover:bg-emerald-600 text-white'
+                  : 'bg-amber-500 hover:bg-amber-600 text-white'
+              }`}
+            >
+              {resource.type === 'free' ? '免费使用' : '了解更多'}
+            </a>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
