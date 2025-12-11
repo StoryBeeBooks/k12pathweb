@@ -10,6 +10,8 @@ interface Resource {
   description: string;
   link: string;
   type: 'free' | 'paid';
+  category?: string;  // Category for grouping
+  userType?: 'parent' | 'child' | 'both';  // Who uses this app
 }
 
 interface AgeStage {
@@ -162,46 +164,219 @@ const lifeJourneyData: AgeStage[] = [
   {
     age: '4岁',
     title: '幼儿园中班',
-    subtitle: 'Pre-K (Senior)',
-    description: '孩子开始展现个性和兴趣爱好，想象力丰富，喜欢问"为什么"。可以进行更复杂的对话，开始理解简单的规则和因果关系。',
+    subtitle: 'Pre-K / 好奇心爆发期',
+    description: '孩子开始展现个性和兴趣爱好，想象力丰富，喜欢问"为什么"。可以进行更复杂的对话，理解规则和因果关系。这是发展兴趣爱好的黄金期。',
     milestone: '幼儿园第二年',
     emoji: '🌟',
     color: 'from-teal-400 to-cyan-300',
     resources: [
-      { id: 'r17', name: '科学小实验', icon: '🔬', description: '安全有趣的家庭科学实验指南', link: '#', type: 'free' },
-      { id: 'r18', name: '英文字母', icon: '🔤', description: 'ABC字母认知和发音学习', link: '#', type: 'free' },
-      { id: 'r19', name: '逻辑思维', icon: '🧠', description: '培养逻辑推理能力的益智游戏', link: '#', type: 'paid' },
-      { id: 'r20', name: '音乐启蒙', icon: '🎼', description: '认识乐器和基础乐理知识', link: '#', type: 'free' },
+      // ========== 📚 学习启蒙 ==========
+      { id: 'r4-1', name: '数字1-20', icon: '🔢', description: '认识数字1-20，学会点数和简单比较大小', link: '#', type: 'free', category: '学习启蒙', userType: 'child' },
+      { id: 'r4-2', name: '字母发音', icon: '🔤', description: 'ABC字母认知、发音和简单单词', link: '#', type: 'free', category: '学习启蒙', userType: 'child' },
+      { id: 'r4-3', name: '汉字认读', icon: '字', description: '常见汉字认读，约100个基础字', link: '#', type: 'free', category: '学习启蒙', userType: 'child' },
+      { id: 'r4-4', name: '科学小实验', icon: '🔬', description: '家庭科学实验：颜色混合、浮沉、磁铁等', link: '#', type: 'free', category: '学习启蒙', userType: 'both' },
+      { id: 'r4-5', name: '逻辑思维', icon: '🧠', description: '排序、分类、找规律等逻辑训练游戏', link: '#', type: 'paid', category: '学习启蒙', userType: 'child' },
+      { id: 'r4-6', name: '记忆力游戏', icon: '🎴', description: '配对游戏、记忆卡片，提升记忆力', link: '#', type: 'paid', category: '学习启蒙', userType: 'child' },
+      
+      // ========== 🎨 艺术创意 ==========
+      { id: 'r4-7', name: '自由绘画', icon: '🎨', description: '数字画板，自由涂鸦和创作', link: '#', type: 'free', category: '艺术创意', userType: 'child' },
+      { id: 'r4-8', name: '简笔画教程', icon: '✏️', description: '一步步学画动物、植物、交通工具', link: '#', type: 'free', category: '艺术创意', userType: 'child' },
+      { id: 'r4-9', name: '手工折纸', icon: '📄', description: '简单折纸教程：飞机、小船、动物', link: '#', type: 'free', category: '艺术创意', userType: 'both' },
+      { id: 'r4-10', name: '黏土创作', icon: '🎭', description: '黏土/橡皮泥创意指南', link: '#', type: 'free', category: '艺术创意', userType: 'both' },
+      { id: 'r4-11', name: '儿童美术课', icon: '🖼️', description: '系统美术启蒙课程', link: '#', type: 'paid', category: '艺术创意', userType: 'child' },
+      
+      // ========== 🎵 音乐舞蹈 ==========
+      { id: 'r4-12', name: '儿歌跟唱', icon: '🎤', description: '经典中英文儿歌，培养乐感', link: '#', type: 'free', category: '音乐舞蹈', userType: 'child' },
+      { id: 'r4-13', name: '节奏训练', icon: '🥁', description: '跟着节拍拍手、敲击，培养节奏感', link: '#', type: 'free', category: '音乐舞蹈', userType: 'child' },
+      { id: 'r4-14', name: '乐器认知', icon: '🎹', description: '认识各种乐器的外形和声音', link: '#', type: 'free', category: '音乐舞蹈', userType: 'child' },
+      { id: 'r4-15', name: '儿童舞蹈', icon: '💃', description: '简单舞蹈动作教学视频', link: '#', type: 'free', category: '音乐舞蹈', userType: 'child' },
+      { id: 'r4-16', name: '钢琴启蒙', icon: '🎼', description: '钢琴/电子琴入门课程', link: '#', type: 'paid', category: '音乐舞蹈', userType: 'child' },
+      
+      // ========== ⚽ 运动体能 ==========
+      { id: 'r4-17', name: '亲子运动', icon: '🏃', description: '家庭亲子运动游戏指南', link: '#', type: 'free', category: '运动体能', userType: 'both' },
+      { id: 'r4-18', name: '平衡训练', icon: '🤸', description: '单脚站、走平衡木等平衡能力训练', link: '#', type: 'free', category: '运动体能', userType: 'child' },
+      { id: 'r4-19', name: '球类入门', icon: '⚽', description: '踢球、投球、接球基础动作', link: '#', type: 'free', category: '运动体能', userType: 'child' },
+      { id: 'r4-20', name: '游泳启蒙', icon: '🏊', description: '幼儿游泳准备和安全知识', link: '#', type: 'free', category: '运动体能', userType: 'parent' },
+      { id: 'r4-21', name: '体操基础', icon: '🤸‍♀️', description: '儿童体操入门动作', link: '#', type: 'paid', category: '运动体能', userType: 'child' },
+      
+      // ========== 🌱 生活技能 ==========
+      { id: 'r4-22', name: '独立穿衣', icon: '👕', description: '学会系扣子、拉拉链、穿袜子', link: '#', type: 'free', category: '生活技能', userType: 'both' },
+      { id: 'r4-23', name: '整理房间', icon: '🧹', description: '收拾玩具、整理书包的习惯培养', link: '#', type: 'free', category: '生活技能', userType: 'both' },
+      { id: 'r4-24', name: '餐桌礼仪', icon: '🍽️', description: '正确使用筷子、基本用餐礼仪', link: '#', type: 'free', category: '生活技能', userType: 'both' },
+      { id: 'r4-25', name: '时间概念', icon: '⏰', description: '认识钟表，理解日程安排', link: '#', type: 'free', category: '生活技能', userType: 'child' },
+      { id: 'r4-26', name: '安全教育', icon: '🚦', description: '交通安全、陌生人安全、居家安全', link: '#', type: 'free', category: '生活技能', userType: 'both' },
+      
+      // ========== 💚 社交情感 ==========
+      { id: 'r4-27', name: '情绪认知', icon: '😊', description: '认识和表达不同情绪', link: '#', type: 'free', category: '社交情感', userType: 'child' },
+      { id: 'r4-28', name: '同理心培养', icon: '💕', description: '理解他人感受的故事和游戏', link: '#', type: 'free', category: '社交情感', userType: 'both' },
+      { id: 'r4-29', name: '合作游戏', icon: '🤝', description: '需要合作完成的团队游戏', link: '#', type: 'free', category: '社交情感', userType: 'child' },
+      { id: 'r4-30', name: '社交故事', icon: '📚', description: '如何交朋友、如何道歉等社交情境', link: '#', type: 'free', category: '社交情感', userType: 'both' },
+      
+      // ========== 📖 阅读故事 ==========
+      { id: 'r4-31', name: '绘本推荐', icon: '📚', description: '4岁适龄绘本精选书单', link: '#', type: 'free', category: '阅读故事', userType: 'parent' },
+      { id: 'r4-32', name: '有声故事', icon: '🎧', description: '睡前故事、童话故事音频', link: '#', type: 'free', category: '阅读故事', userType: 'child' },
+      { id: 'r4-33', name: '互动绘本', icon: '📱', description: '可点击互动的电子绘本', link: '#', type: 'paid', category: '阅读故事', userType: 'child' },
+      
+      // ========== 👨‍👩‍👧 家长指南 ==========
+      { id: 'r4-34', name: '4岁发育指南', icon: '📋', description: '4岁儿童发育里程碑和评估', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r4-35', name: '兴趣发现', icon: '🔍', description: '如何发现和培养孩子的兴趣爱好', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r4-36', name: '正面管教', icon: '💡', description: '应对"为什么"阶段的沟通技巧', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r4-37', name: '屏幕时间', icon: '📵', description: '如何合理管理孩子的屏幕时间', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r4-38', name: '择校准备', icon: '🏫', description: '了解幼升小准备时间线', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
     ]
   },
   {
     age: '5岁',
     title: '幼儿园大班',
-    subtitle: 'Kindergarten Prep',
-    description: '为进入小学做准备，学习更多的汉字和数学概念。能够独立完成简单任务，有较强的自我表达能力。开始学习团队合作。',
+    subtitle: 'Kindergarten / 幼小衔接年',
+    description: '为小学做准备的关键一年！学习更多汉字和数学，能独立完成任务，有较强的自我表达能力。开始理解规则和学习团队合作。',
     milestone: '明年就要上小学啦！',
     emoji: '📚',
     color: 'from-blue-400 to-indigo-300',
     resources: [
-      { id: 'r21', name: '幼小衔接', icon: '🎯', description: '系统的幼小衔接课程，包含语数英三科', link: '#', type: 'paid' },
-      { id: 'r22', name: '加减法入门', icon: '➕', description: '10以内加减法的趣味学习', link: '#', type: 'free' },
-      { id: 'r23', name: '拼音学习', icon: '🅰️', description: '汉语拼音的系统学习课程', link: '#', type: 'paid' },
-      { id: 'r24', name: '专注力训练', icon: '🎯', description: '提高注意力集中时间的训练游戏', link: '#', type: 'free' },
+      // ========== 📚 幼小衔接 ==========
+      { id: 'r5-1', name: '拼音入门', icon: '🅰️', description: '声母、韵母、整体认读音节学习', link: '#', type: 'free', category: '幼小衔接', userType: 'child' },
+      { id: 'r5-2', name: '汉字书写', icon: '✏️', description: '正确笔顺，学写50-100个常用字', link: '#', type: 'free', category: '幼小衔接', userType: 'child' },
+      { id: 'r5-3', name: '20以内加减', icon: '➕', description: '20以内加减法，凑十法', link: '#', type: 'free', category: '幼小衔接', userType: 'child' },
+      { id: 'r5-4', name: '英文拼读', icon: '🔤', description: 'Phonics自然拼读基础', link: '#', type: 'free', category: '幼小衔接', userType: 'child' },
+      { id: 'r5-5', name: '看图说话', icon: '🖼️', description: '观察图片，组织语言描述', link: '#', type: 'free', category: '幼小衔接', userType: 'child' },
+      { id: 'r5-6', name: '幼小衔接课', icon: '🎯', description: '系统幼小衔接课程（语数英）', link: '#', type: 'paid', category: '幼小衔接', userType: 'child' },
+      { id: 'r5-7', name: '思维训练', icon: '🧠', description: '逻辑思维、空间想象专项训练', link: '#', type: 'paid', category: '幼小衔接', userType: 'child' },
+      
+      // ========== 📖 阅读能力 ==========
+      { id: 'r5-8', name: '分级阅读', icon: '📚', description: '适合5岁的中文分级读物', link: '#', type: 'free', category: '阅读能力', userType: 'child' },
+      { id: 'r5-9', name: '亲子共读', icon: '👨‍👩‍👧', description: '如何进行有效的亲子阅读', link: '#', type: 'free', category: '阅读能力', userType: 'parent' },
+      { id: 'r5-10', name: '英文绘本', icon: '📕', description: '适合英语启蒙的简单绘本', link: '#', type: 'free', category: '阅读能力', userType: 'child' },
+      { id: 'r5-11', name: '识字量测试', icon: '📊', description: '测试孩子的识字量和阅读水平', link: '#', type: 'free', category: '阅读能力', userType: 'parent' },
+      { id: 'r5-12', name: '阅读理解', icon: '💭', description: '听故事回答问题，培养理解力', link: '#', type: 'paid', category: '阅读能力', userType: 'child' },
+      
+      // ========== 🎨 艺术创作 ==========
+      { id: 'r5-13', name: '创意绘画', icon: '🎨', description: '引导式创意绘画，不再是涂色', link: '#', type: 'free', category: '艺术创作', userType: 'child' },
+      { id: 'r5-14', name: '手工制作', icon: '✂️', description: '剪纸、折纸、拼贴等综合手工', link: '#', type: 'free', category: '艺术创作', userType: 'child' },
+      { id: 'r5-15', name: '涂色本', icon: '🖍️', description: '精细涂色，练习手部控制', link: '#', type: 'free', category: '艺术创作', userType: 'child' },
+      { id: 'r5-16', name: '素描基础', icon: '✏️', description: '简单素描入门：线条和形状', link: '#', type: 'paid', category: '艺术创作', userType: 'child' },
+      
+      // ========== 🎵 音乐素养 ==========
+      { id: 'r5-17', name: '音乐欣赏', icon: '🎵', description: '古典音乐启蒙，认识音乐家', link: '#', type: 'free', category: '音乐素养', userType: 'child' },
+      { id: 'r5-18', name: '唱歌技巧', icon: '🎤', description: '简单发声方法和儿歌演唱', link: '#', type: 'free', category: '音乐素养', userType: 'child' },
+      { id: 'r5-19', name: '尤克里里', icon: '🎸', description: '尤克里里入门，简单弹唱', link: '#', type: 'paid', category: '音乐素养', userType: 'child' },
+      { id: 'r5-20', name: '钢琴入门', icon: '🎹', description: '钢琴基础课程', link: '#', type: 'paid', category: '音乐素养', userType: 'child' },
+      
+      // ========== ⚽ 体育运动 ==========
+      { id: 'r5-21', name: '跳绳教学', icon: '🏃', description: '从零开始学跳绳', link: '#', type: 'free', category: '体育运动', userType: 'child' },
+      { id: 'r5-22', name: '足球基础', icon: '⚽', description: '足球基本动作和规则', link: '#', type: 'free', category: '体育运动', userType: 'child' },
+      { id: 'r5-23', name: '篮球启蒙', icon: '🏀', description: '拍球、投篮基础', link: '#', type: 'free', category: '体育运动', userType: 'child' },
+      { id: 'r5-24', name: '轮滑入门', icon: '⛸️', description: '轮滑装备选择和基础教学', link: '#', type: 'free', category: '体育运动', userType: 'both' },
+      { id: 'r5-25', name: '游泳课程', icon: '🏊', description: '儿童游泳系统课程', link: '#', type: 'paid', category: '体育运动', userType: 'child' },
+      { id: 'r5-26', name: '跆拳道', icon: '🥋', description: '跆拳道/武术入门', link: '#', type: 'paid', category: '体育运动', userType: 'child' },
+      
+      // ========== 🧩 益智游戏 ==========
+      { id: 'r5-27', name: '国际象棋', icon: '♟️', description: '国际象棋入门规则和走法', link: '#', type: 'free', category: '益智游戏', userType: 'child' },
+      { id: 'r5-28', name: '围棋启蒙', icon: '⚫', description: '围棋基础规则', link: '#', type: 'free', category: '益智游戏', userType: 'child' },
+      { id: 'r5-29', name: '拼图挑战', icon: '🧩', description: '50-100片拼图', link: '#', type: 'free', category: '益智游戏', userType: 'child' },
+      { id: 'r5-30', name: '迷宫游戏', icon: '🌀', description: '迷宫和路径规划游戏', link: '#', type: 'free', category: '益智游戏', userType: 'child' },
+      { id: 'r5-31', name: '编程启蒙', icon: '🤖', description: 'Scratch Jr等图形化编程', link: '#', type: 'paid', category: '益智游戏', userType: 'child' },
+      
+      // ========== 🌱 习惯养成 ==========
+      { id: 'r5-32', name: '作息规律', icon: '⏰', description: '建立固定的作息时间表', link: '#', type: 'free', category: '习惯养成', userType: 'both' },
+      { id: 'r5-33', name: '专注力', icon: '🎯', description: '提高专注时间的训练方法', link: '#', type: 'free', category: '习惯养成', userType: 'both' },
+      { id: 'r5-34', name: '独立完成', icon: '✅', description: '培养独立完成任务的能力', link: '#', type: 'free', category: '习惯养成', userType: 'parent' },
+      { id: 'r5-35', name: '责任心', icon: '💪', description: '通过家务培养责任感', link: '#', type: 'free', category: '习惯养成', userType: 'both' },
+      
+      // ========== 💚 情商发展 ==========
+      { id: 'r5-36', name: '情绪管理', icon: '😌', description: '识别情绪，学习自我调节', link: '#', type: 'free', category: '情商发展', userType: 'child' },
+      { id: 'r5-37', name: '挫折教育', icon: '💪', description: '面对失败和挫折的正确态度', link: '#', type: 'free', category: '情商发展', userType: 'both' },
+      { id: 'r5-38', name: '自信培养', icon: '⭐', description: '建立自信心的方法和活动', link: '#', type: 'free', category: '情商发展', userType: 'parent' },
+      
+      // ========== 👨‍👩‍👧 家长指南 ==========
+      { id: 'r5-39', name: '幼升小攻略', icon: '🏫', description: '择校、面试、准备全攻略', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r5-40', name: '入学准备清单', icon: '📋', description: '小学入学物品和能力清单', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r5-41', name: '学习习惯', icon: '📚', description: '帮助孩子建立良好学习习惯', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r5-42', name: '分离焦虑', icon: '🤗', description: '应对入学分离焦虑的方法', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
     ]
   },
   {
     age: '6岁',
     title: '小学一年级',
-    subtitle: 'Grade 1',
-    description: '正式开始小学生活！学习正规的读写和算术，建立学习习惯和时间管理意识。适应新的学校环境和作息时间。',
+    subtitle: 'Grade 1 / 正式学习元年',
+    description: '正式开始小学生活！学习正规读写和算术，建立学习习惯和时间管理。适应新环境、结交新朋友，孩子开始更独立地学习和社交。',
     milestone: '小学生活开始！',
     emoji: '✏️',
     color: 'from-violet-400 to-purple-300',
     resources: [
-      { id: 'r25', name: '语文同步', icon: '📝', description: '与课本同步的语文学习和练习', link: '#', type: 'paid' },
-      { id: 'r26', name: '数学思维', icon: '🔢', description: '一年级数学思维训练题库', link: '#', type: 'free' },
-      { id: 'r27', name: '写字练习', icon: '✍️', description: '规范汉字书写的练习应用', link: '#', type: 'free' },
-      { id: 'r28', name: '英语单词', icon: '🇬🇧', description: '基础英语单词和简单对话学习', link: '#', type: 'paid' },
+      // ========== 📚 语文学习 ==========
+      { id: 'r6-1', name: '拼音巩固', icon: '🅰️', description: '拼音复习和拼读练习', link: '#', type: 'free', category: '语文学习', userType: 'child' },
+      { id: 'r6-2', name: '生字学习', icon: '字', description: '一年级课本生字认读和书写', link: '#', type: 'free', category: '语文学习', userType: 'child' },
+      { id: 'r6-3', name: '笔顺练习', icon: '✍️', description: '正确笔顺，规范书写', link: '#', type: 'free', category: '语文学习', userType: 'child' },
+      { id: 'r6-4', name: '古诗背诵', icon: '📜', description: '一年级必背古诗', link: '#', type: 'free', category: '语文学习', userType: 'child' },
+      { id: 'r6-5', name: '课文朗读', icon: '🔊', description: '课文朗读和复述练习', link: '#', type: 'free', category: '语文学习', userType: 'child' },
+      { id: 'r6-6', name: '语文同步课', icon: '📖', description: '与课本同步的语文辅导', link: '#', type: 'paid', category: '语文学习', userType: 'child' },
+      { id: 'r6-7', name: '写作入门', icon: '✏️', description: '看图写话、日记入门', link: '#', type: 'paid', category: '语文学习', userType: 'child' },
+      
+      // ========== 🔢 数学学习 ==========
+      { id: 'r6-8', name: '100以内加减', icon: '➕', description: '100以内加减法计算', link: '#', type: 'free', category: '数学学习', userType: 'child' },
+      { id: 'r6-9', name: '口算练习', icon: '💯', description: '每日口算训练，提高速度', link: '#', type: 'free', category: '数学学习', userType: 'child' },
+      { id: 'r6-10', name: '认识钟表', icon: '🕐', description: '整点和半点的认识', link: '#', type: 'free', category: '数学学习', userType: 'child' },
+      { id: 'r6-11', name: '图形认识', icon: '📐', description: '平面图形和立体图形', link: '#', type: 'free', category: '数学学习', userType: 'child' },
+      { id: 'r6-12', name: '应用题入门', icon: '📝', description: '简单应用题理解和解答', link: '#', type: 'free', category: '数学学习', userType: 'child' },
+      { id: 'r6-13', name: '数学思维课', icon: '🧠', description: '一年级数学思维拓展', link: '#', type: 'paid', category: '数学学习', userType: 'child' },
+      
+      // ========== 🔤 英语学习 ==========
+      { id: 'r6-14', name: '字母书写', icon: '✏️', description: '26个字母大小写规范书写', link: '#', type: 'free', category: '英语学习', userType: 'child' },
+      { id: 'r6-15', name: '基础单词', icon: '📚', description: '一年级核心词汇学习', link: '#', type: 'free', category: '英语学习', userType: 'child' },
+      { id: 'r6-16', name: '英语儿歌', icon: '🎵', description: '通过儿歌学英语', link: '#', type: 'free', category: '英语学习', userType: 'child' },
+      { id: 'r6-17', name: '自然拼读', icon: '🔤', description: 'Phonics系统学习', link: '#', type: 'paid', category: '英语学习', userType: 'child' },
+      { id: 'r6-18', name: '英语口语', icon: '🗣️', description: '简单日常对话练习', link: '#', type: 'paid', category: '英语学习', userType: 'child' },
+      
+      // ========== 🎨 艺术培养 ==========
+      { id: 'r6-19', name: '绘画技法', icon: '🎨', description: '儿童画技法学习', link: '#', type: 'free', category: '艺术培养', userType: 'child' },
+      { id: 'r6-20', name: '书法入门', icon: '🖌️', description: '硬笔书法基础', link: '#', type: 'free', category: '艺术培养', userType: 'child' },
+      { id: 'r6-21', name: '手工创意', icon: '✂️', description: '综合材料手工制作', link: '#', type: 'free', category: '艺术培养', userType: 'child' },
+      { id: 'r6-22', name: '素描课程', icon: '✏️', description: '系统素描学习', link: '#', type: 'paid', category: '艺术培养', userType: 'child' },
+      { id: 'r6-23', name: '国画入门', icon: '🎋', description: '中国画基础', link: '#', type: 'paid', category: '艺术培养', userType: 'child' },
+      
+      // ========== 🎵 音乐学习 ==========
+      { id: 'r6-24', name: '乐理基础', icon: '🎼', description: '音符、节拍等基础乐理', link: '#', type: 'free', category: '音乐学习', userType: 'child' },
+      { id: 'r6-25', name: '唱歌训练', icon: '🎤', description: '儿童声乐基础', link: '#', type: 'free', category: '音乐学习', userType: 'child' },
+      { id: 'r6-26', name: '钢琴课程', icon: '🎹', description: '钢琴系统学习', link: '#', type: 'paid', category: '音乐学习', userType: 'child' },
+      { id: 'r6-27', name: '小提琴', icon: '🎻', description: '小提琴入门', link: '#', type: 'paid', category: '音乐学习', userType: 'child' },
+      { id: 'r6-28', name: '架子鼓', icon: '🥁', description: '架子鼓入门', link: '#', type: 'paid', category: '音乐学习', userType: 'child' },
+      
+      // ========== ⚽ 体育运动 ==========
+      { id: 'r6-29', name: '跳绳达标', icon: '🏃', description: '跳绳技巧和训练计划', link: '#', type: 'free', category: '体育运动', userType: 'child' },
+      { id: 'r6-30', name: '跑步训练', icon: '🏃‍♂️', description: '短跑和耐力训练', link: '#', type: 'free', category: '体育运动', userType: 'child' },
+      { id: 'r6-31', name: '足球技术', icon: '⚽', description: '足球技术进阶', link: '#', type: 'free', category: '体育运动', userType: 'child' },
+      { id: 'r6-32', name: '篮球训练', icon: '🏀', description: '篮球基本功训练', link: '#', type: 'free', category: '体育运动', userType: 'child' },
+      { id: 'r6-33', name: '乒乓球', icon: '🏓', description: '乒乓球入门', link: '#', type: 'free', category: '体育运动', userType: 'child' },
+      { id: 'r6-34', name: '羽毛球', icon: '🏸', description: '羽毛球入门', link: '#', type: 'free', category: '体育运动', userType: 'child' },
+      { id: 'r6-35', name: '游泳进阶', icon: '🏊', description: '游泳技术提升', link: '#', type: 'paid', category: '体育运动', userType: 'child' },
+      { id: 'r6-36', name: '武术/跆拳道', icon: '🥋', description: '武术或跆拳道课程', link: '#', type: 'paid', category: '体育运动', userType: 'child' },
+      
+      // ========== 🧩 思维拓展 ==========
+      { id: 'r6-37', name: '象棋入门', icon: '♟️', description: '中国象棋或国际象棋', link: '#', type: 'free', category: '思维拓展', userType: 'child' },
+      { id: 'r6-38', name: '围棋基础', icon: '⚫', description: '围棋进阶学习', link: '#', type: 'free', category: '思维拓展', userType: 'child' },
+      { id: 'r6-39', name: '数独入门', icon: '🔢', description: '简单数独游戏', link: '#', type: 'free', category: '思维拓展', userType: 'child' },
+      { id: 'r6-40', name: '编程基础', icon: '💻', description: 'Scratch图形化编程', link: '#', type: 'paid', category: '思维拓展', userType: 'child' },
+      { id: 'r6-41', name: '机器人课', icon: '🤖', description: '乐高机器人入门', link: '#', type: 'paid', category: '思维拓展', userType: 'child' },
+      
+      // ========== 🌱 习惯与品格 ==========
+      { id: 'r6-42', name: '作业管理', icon: '📋', description: '如何高效完成作业', link: '#', type: 'free', category: '习惯与品格', userType: 'both' },
+      { id: 'r6-43', name: '时间管理', icon: '⏰', description: '学习时间规划', link: '#', type: 'free', category: '习惯与品格', userType: 'both' },
+      { id: 'r6-44', name: '整理书包', icon: '🎒', description: '物品整理和管理', link: '#', type: 'free', category: '习惯与品格', userType: 'child' },
+      { id: 'r6-45', name: '预习复习', icon: '📖', description: '如何预习和复习', link: '#', type: 'free', category: '习惯与品格', userType: 'both' },
+      
+      // ========== 💚 心理健康 ==========
+      { id: 'r6-46', name: '适应新环境', icon: '🏫', description: '帮助孩子适应小学生活', link: '#', type: 'free', category: '心理健康', userType: 'parent' },
+      { id: 'r6-47', name: '交友指南', icon: '👫', description: '如何在学校交朋友', link: '#', type: 'free', category: '心理健康', userType: 'both' },
+      { id: 'r6-48', name: '考试心态', icon: '📝', description: '面对测验的正确心态', link: '#', type: 'free', category: '心理健康', userType: 'both' },
+      { id: 'r6-49', name: '自信表达', icon: '🎤', description: '鼓励课堂发言和表达', link: '#', type: 'free', category: '心理健康', userType: 'both' },
+      
+      // ========== 👨‍👩‍👧 家长指南 ==========
+      { id: 'r6-50', name: '家校沟通', icon: '💬', description: '如何与老师有效沟通', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r6-51', name: '作业辅导', icon: '📚', description: '如何辅导孩子写作业', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r6-52', name: '学业规划', icon: '🗓️', description: '小学六年学习规划', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r6-53', name: '兴趣班选择', icon: '🎯', description: '如何选择合适的兴趣班', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r6-54', name: '阅读计划', icon: '📖', description: '一年级阅读书单和计划', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
     ]
   },
   {
@@ -232,7 +407,7 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r34', name: '英语语法', icon: '📖', description: '基础英语语法学习', link: '#', type: 'free' },
       { id: 'r35', name: '奥数入门', icon: '🏆', description: '数学思维拓展和竞赛入门', link: '#', type: 'paid' },
       { id: 'r36', name: '科学探索', icon: '🔭', description: '趣味科学知识和小实验', link: '#', type: 'free' },
-      { id: 'r36b', name: 'SSAT词汇', icon: '📚', description: 'SSAT Elementary词汇学习，适合3-4年级备考', link: '/word-quest/', type: 'paid' },
+      { id: 'wq1', name: 'Word Quest', icon: '🎮', description: 'K12Path原创SSAT词汇游戏！通过闯关游戏趣味学习SSAT Elementary词汇，适合3-4年级备考', link: '/word-quest/', type: 'free', category: '英语学习', userType: 'child' },
     ]
   },
   {
@@ -390,6 +565,18 @@ function ResourceCard({ resource }: { resource: Resource }) {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isExpanded]);
 
+  // User type label and color
+  const getUserTypeLabel = (userType?: 'parent' | 'child' | 'both') => {
+    switch (userType) {
+      case 'parent': return { label: '家长', color: 'bg-blue-100 text-blue-600' };
+      case 'child': return { label: '孩子', color: 'bg-pink-100 text-pink-600' };
+      case 'both': return { label: '亲子', color: 'bg-purple-100 text-purple-600' };
+      default: return null;
+    }
+  };
+
+  const userTypeInfo = getUserTypeLabel(resource.userType);
+
   return (
     <div 
       ref={cardRef}
@@ -398,12 +585,19 @@ function ResourceCard({ resource }: { resource: Resource }) {
     >
       {/* App Icon - Clean minimal style */}
       <div className="flex flex-col items-center cursor-pointer transition-all duration-200 hover:scale-105">
-        <div className={`w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-2xl md:text-3xl border ${
+        <div className={`relative w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-2xl md:text-3xl border ${
           resource.type === 'free' 
             ? 'bg-slate-50 border-slate-200 hover:border-emerald-300 hover:bg-emerald-50' 
             : 'bg-slate-50 border-slate-200 hover:border-amber-300 hover:bg-amber-50'
         } ${isExpanded ? (resource.type === 'free' ? 'border-emerald-400 bg-emerald-50' : 'border-amber-400 bg-amber-50') : ''}`}>
           {resource.icon}
+          {/* User type indicator dot */}
+          {userTypeInfo && (
+            <span className={`absolute -top-1 -right-1 w-3 h-3 rounded-full border border-white ${
+              resource.userType === 'parent' ? 'bg-blue-400' :
+              resource.userType === 'child' ? 'bg-pink-400' : 'bg-purple-400'
+            }`}></span>
+          )}
         </div>
         <span className="mt-1.5 text-xs font-medium text-slate-600 text-center max-w-[70px] line-clamp-2">
           {resource.name}
@@ -421,13 +615,20 @@ function ResourceCard({ resource }: { resource: Resource }) {
               <span className="text-3xl">{resource.icon}</span>
               <div className="flex-1 min-w-0">
                 <h4 className="font-semibold text-slate-800 text-base">{resource.name}</h4>
-                <span className={`text-xs px-2 py-0.5 rounded ${
-                  resource.type === 'free' 
-                    ? 'bg-emerald-100 text-emerald-700' 
-                    : 'bg-amber-100 text-amber-700'
-                }`}>
-                  {resource.type === 'free' ? '免费' : '付费'}
-                </span>
+                <div className="flex items-center gap-1.5 mt-1 flex-wrap">
+                  <span className={`text-xs px-2 py-0.5 rounded ${
+                    resource.type === 'free' 
+                      ? 'bg-emerald-100 text-emerald-700' 
+                      : 'bg-amber-100 text-amber-700'
+                  }`}>
+                    {resource.type === 'free' ? '免费' : '付费'}
+                  </span>
+                  {userTypeInfo && (
+                    <span className={`text-xs px-2 py-0.5 rounded ${userTypeInfo.color}`}>
+                      {userTypeInfo.label}用
+                    </span>
+                  )}
+                </div>
               </div>
               <button onClick={() => setIsExpanded(false)} className="text-slate-400 hover:text-slate-600">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -453,10 +654,50 @@ function ResourceCard({ resource }: { resource: Resource }) {
   );
 }
 
-// Age Section Component - Clean Minimal Design
+// Category icons mapping
+const categoryIcons: { [key: string]: string } = {
+  '感官发展': '👁️',
+  '语言启蒙': '💬',
+  '运动发展': '🏃',
+  '认知发展': '🧠',
+  '睡眠安抚': '😴',
+  '家长指南': '👨‍👩‍👧',
+  '亲子互动': '👨‍👩‍👦',
+  '语言发展': '🗣️',
+  '艺术启蒙': '🎨',
+  '自理能力': '🧹',
+  '社交能力': '🤝',
+  '阅读启蒙': '📚',
+  '学习启蒙': '📖',
+  '艺术创意': '🎨',
+  '音乐舞蹈': '🎵',
+  '运动体能': '⚽',
+  '生活技能': '🏠',
+  '社交情感': '💚',
+  '阅读故事': '📚',
+  '幼小衔接': '🎯',
+  '阅读能力': '📖',
+  '艺术创作': '🎨',
+  '音乐素养': '🎼',
+  '体育运动': '🏅',
+  '益智游戏': '🧩',
+  '习惯养成': '⏰',
+  '情商发展': '❤️',
+  '语文学习': '📝',
+  '数学学习': '🔢',
+  '英语学习': '🔤',
+  '艺术培养': '🖼️',
+  '音乐学习': '🎹',
+  '思维拓展': '💡',
+  '习惯与品格': '⭐',
+  '心理健康': '🌈',
+};
+
+// Age Section Component - Clean Minimal Design with Categories
 function AgeSection({ stage, index }: { stage: AgeStage; index: number }) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -474,6 +715,28 @@ function AgeSection({ stage, index }: { stage: AgeStage; index: number }) {
 
     return () => observer.disconnect();
   }, []);
+
+  // Group resources by category
+  const groupedResources = stage.resources.reduce((acc, resource) => {
+    const category = resource.category || '其他资源';
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(resource);
+    return acc;
+  }, {} as { [key: string]: Resource[] });
+
+  // Sort resources within each category: free first, then paid
+  Object.keys(groupedResources).forEach(category => {
+    groupedResources[category].sort((a, b) => {
+      if (a.type === 'free' && b.type === 'paid') return -1;
+      if (a.type === 'paid' && b.type === 'free') return 1;
+      return 0;
+    });
+  });
+
+  const categories = Object.keys(groupedResources);
+  const hasCategories = categories.length > 1 || (categories.length === 1 && categories[0] !== '其他资源');
 
   return (
     <div 
@@ -521,13 +784,55 @@ function AgeSection({ stage, index }: { stage: AgeStage; index: number }) {
           </p>
         </div>
 
-        {/* Resources Grid */}
+        {/* Resources - Grouped by Category */}
         <div className="p-5 md:p-6">
-          <div className="flex flex-wrap gap-5 md:gap-6">
-            {stage.resources.map(resource => (
-              <ResourceCard key={resource.id} resource={resource} />
-            ))}
-          </div>
+          {hasCategories ? (
+            <div className="space-y-4">
+              {categories.map(category => (
+                <div key={category} className="border border-slate-100 rounded-xl overflow-hidden">
+                  {/* Category Header - Clickable */}
+                  <button
+                    onClick={() => setExpandedCategory(expandedCategory === category ? null : category)}
+                    className="w-full flex items-center justify-between px-4 py-3 bg-slate-50 hover:bg-slate-100 transition-colors"
+                  >
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg">{categoryIcons[category] || '📁'}</span>
+                      <span className="font-medium text-slate-700">{category}</span>
+                      <span className="text-xs text-slate-400">({groupedResources[category].length})</span>
+                    </div>
+                    <svg 
+                      className={`w-5 h-5 text-slate-400 transition-transform ${expandedCategory === category ? 'rotate-180' : ''}`} 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  
+                  {/* Category Resources - Collapsible */}
+                  <div className={`transition-all duration-300 overflow-hidden ${
+                    expandedCategory === category ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+                  }`}>
+                    <div className="p-4 bg-white">
+                      <div className="flex flex-wrap gap-4 md:gap-5">
+                        {groupedResources[category].map(resource => (
+                          <ResourceCard key={resource.id} resource={resource} />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            /* No categories - show all resources in a grid */
+            <div className="flex flex-wrap gap-5 md:gap-6">
+              {stage.resources.map(resource => (
+                <ResourceCard key={resource.id} resource={resource} />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
