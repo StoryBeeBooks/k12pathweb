@@ -375,12 +375,26 @@ const lifeJourneyData: AgeStage[] = [
 // Resource Card Component - Minimal Design
 function ResourceCard({ resource }: { resource: Resource }) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  // Close popup when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (cardRef.current && !cardRef.current.contains(event.target as Node)) {
+        setIsExpanded(false);
+      }
+    };
+    if (isExpanded) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isExpanded]);
 
   return (
     <div 
+      ref={cardRef}
       className="relative group"
-      onMouseEnter={() => setIsExpanded(true)}
-      onMouseLeave={() => setIsExpanded(false)}
+      onClick={() => setIsExpanded(!isExpanded)}
     >
       {/* App Icon - Clean minimal style */}
       <div className="flex flex-col items-center cursor-pointer transition-all duration-200 hover:scale-105">
@@ -388,7 +402,7 @@ function ResourceCard({ resource }: { resource: Resource }) {
           resource.type === 'free' 
             ? 'bg-slate-50 border-slate-200 hover:border-emerald-300 hover:bg-emerald-50' 
             : 'bg-slate-50 border-slate-200 hover:border-amber-300 hover:bg-amber-50'
-        }`}>
+        } ${isExpanded ? (resource.type === 'free' ? 'border-emerald-400 bg-emerald-50' : 'border-amber-400 bg-amber-50') : ''}`}>
           {resource.icon}
         </div>
         <span className="mt-1.5 text-xs font-medium text-slate-600 text-center max-w-[70px] line-clamp-2">
@@ -399,34 +413,40 @@ function ResourceCard({ resource }: { resource: Resource }) {
         )}
       </div>
 
-      {/* Expanded Card - Cleaner popup */}
+      {/* Expanded Card - Fixed positioning to avoid overflow */}
       {isExpanded && (
-        <div className="absolute z-50 bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 p-3 bg-white rounded-lg shadow-lg border border-slate-200 animate-fadeIn">
-          <div className="flex items-start gap-2 mb-2">
-            <span className="text-2xl">{resource.icon}</span>
-            <div className="flex-1 min-w-0">
-              <h4 className="font-semibold text-slate-800 text-sm">{resource.name}</h4>
-              <span className={`text-[10px] px-1.5 py-0.5 rounded ${
-                resource.type === 'free' 
-                  ? 'bg-emerald-100 text-emerald-700' 
-                  : 'bg-amber-100 text-amber-700'
-              }`}>
-                {resource.type === 'free' ? '免费' : '付费'}
-              </span>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/20" onClick={(e) => { if (e.target === e.currentTarget) setIsExpanded(false); }}>
+          <div className="w-72 max-w-[90vw] p-4 bg-white rounded-xl shadow-xl border border-slate-200 animate-fadeIn" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-start gap-3 mb-3">
+              <span className="text-3xl">{resource.icon}</span>
+              <div className="flex-1 min-w-0">
+                <h4 className="font-semibold text-slate-800 text-base">{resource.name}</h4>
+                <span className={`text-xs px-2 py-0.5 rounded ${
+                  resource.type === 'free' 
+                    ? 'bg-emerald-100 text-emerald-700' 
+                    : 'bg-amber-100 text-amber-700'
+                }`}>
+                  {resource.type === 'free' ? '免费' : '付费'}
+                </span>
+              </div>
+              <button onClick={() => setIsExpanded(false)} className="text-slate-400 hover:text-slate-600">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
+            <p className="text-sm text-slate-600 mb-4 leading-relaxed">{resource.description}</p>
+            <a 
+              href={resource.link}
+              className={`block w-full text-center py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                resource.type === 'free'
+                  ? 'bg-emerald-500 hover:bg-emerald-600 text-white'
+                  : 'bg-amber-500 hover:bg-amber-600 text-white'
+              }`}
+            >
+              {resource.type === 'free' ? '免费使用' : '了解更多'}
+            </a>
           </div>
-          <p className="text-xs text-slate-500 mb-2 leading-relaxed">{resource.description}</p>
-          <a 
-            href={resource.link}
-            className={`block w-full text-center py-1.5 rounded text-xs font-medium transition-colors ${
-              resource.type === 'free'
-                ? 'bg-emerald-500 hover:bg-emerald-600 text-white'
-                : 'bg-amber-500 hover:bg-amber-600 text-white'
-            }`}
-          >
-            {resource.type === 'free' ? '免费使用' : '了解更多'}
-          </a>
-          <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-r border-b border-slate-200 rotate-45"></div>
         </div>
       )}
     </div>
