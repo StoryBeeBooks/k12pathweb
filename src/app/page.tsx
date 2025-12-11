@@ -704,7 +704,7 @@ function ResourceCard({ resource }: { resource: Resource }) {
         </span>
       </div>
 
-      {/* Expanded Card - Fixed positioning to avoid overflow */
+      {/* Expanded Card - Fixed positioning to avoid overflow */}
       {isExpanded && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/20" onClick={(e) => { if (e.target === e.currentTarget) setIsExpanded(false); }}>
           <div className="w-72 max-w-[90vw] p-4 bg-white rounded-xl shadow-xl border border-slate-200 animate-fadeIn" onClick={(e) => e.stopPropagation()}>
