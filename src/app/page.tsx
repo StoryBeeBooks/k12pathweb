@@ -75,6 +75,12 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r0-26', name: '产后抑郁', icon: '💚', description: '识别和应对产后情绪问题', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r0-27', name: '育儿日程', icon: '📅', description: '新生儿作息时间表参考', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r0-28', name: '用品清单', icon: '🛒', description: '0-1岁必备用品购物清单', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      
+      // ========== 🌏 移民指南 (新增) ==========
+      { id: 'r0-29', name: '儿科就医指南', icon: '🏥', description: '如何在西方国家带宝宝看医生、疫苗接种流程', link: '#', type: 'free', category: '移民指南', userType: 'parent' },
+      { id: 'r0-30', name: '出生登记', icon: '📋', description: '出生证明、护照、社保号办理流程', link: '#', type: 'free', category: '移民指南', userType: 'parent' },
+      { id: 'r0-31', name: '育儿福利', icon: '💰', description: '各国儿童福利金、产假政策介绍', link: '#', type: 'free', category: '移民指南', userType: 'parent' },
+      { id: 'r0-32', name: '婴儿用品', icon: '🍼', description: '西方常见婴儿品牌和购物渠道推荐', link: '#', type: 'free', category: '移民指南', userType: 'parent' },
     ]
   },
   {
@@ -130,6 +136,11 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r1-27', name: '1岁发育指南', icon: '📋', description: '12-24个月发育里程碑', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r1-28', name: '断奶指南', icon: '🤱', description: '科学断奶的时机和方法', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r1-29', name: '玩具推荐', icon: '🧸', description: '1岁适龄玩具选购指南', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      
+      // ========== 🌏 移民指南 (新增) ==========
+      { id: 'r1-30', name: 'Daycare指南', icon: '🏠', description: '如何选择和申请西方托儿所、费用补贴', link: '#', type: 'free', category: '移民指南', userType: 'parent' },
+      { id: 'r1-31', name: '双语环境', icon: '🌐', description: '海外如何建立中英双语环境', link: '#', type: 'free', category: '移民指南', userType: 'parent' },
+      { id: 'r1-32', name: '亲子活动', icon: '👶', description: '本地图书馆、社区中心免费亲子活动', link: '#', type: 'free', category: '移民指南', userType: 'parent' },
     ]
   },
   {
@@ -193,6 +204,15 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r2-33', name: '2岁发育指南', icon: '📋', description: '24-36个月发育里程碑', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r2-34', name: '入园准备', icon: '🏫', description: '提前了解幼儿园准备事项', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r2-35', name: '屏幕时间', icon: '📱', description: '2岁屏幕时间控制建议', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      
+      // ========== 🌏 移民指南 (新增) ==========
+      { id: 'r2-36', name: 'Preschool申请', icon: '🏫', description: '西方幼儿园类型、申请流程和时间线', link: '#', type: 'free', category: '移民指南', userType: 'parent' },
+      { id: 'r2-37', name: '双语发展', icon: '🗣️', description: '2岁双语儿童语言发展特点和支持', link: '#', type: 'free', category: '移民指南', userType: 'parent' },
+      { id: 'r2-38', name: 'Playdate文化', icon: '👫', description: '如何融入本地社区、安排playdate', link: '#', type: 'free', category: '移民指南', userType: 'parent' },
+      
+      // ========== 📚 本地课程 (新增) ==========
+      { id: 'r2-39', name: 'PBS Kids', icon: '📺', description: '美国公共电视台优质儿童教育节目', link: 'https://pbskids.org', type: 'free', category: '本地课程', userType: 'child' },
+      { id: 'r2-40', name: 'Super Simple', icon: '🎵', description: '英语启蒙儿歌和动画，适合双语家庭', link: 'https://supersimple.com', type: 'free', category: '本地课程', userType: 'both' },
     ]
   },
   {
@@ -263,6 +283,13 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r3-38', name: '家园沟通', icon: '💬', description: '如何与幼儿园老师沟通', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r3-39', name: '作息安排', icon: '⏰', description: '幼儿园作息与家庭作息衔接', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r3-40', name: '兴趣发现', icon: '🔍', description: '观察和发现孩子的兴趣', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      
+      // ========== 🌏 西方教育适应 (新增) ==========
+      { id: 'r3-41', name: 'Starfall', icon: '⭐', description: '美国经典英语阅读启蒙，适合ESL儿童', link: 'https://starfall.com', type: 'free', category: '本地课程', userType: 'child' },
+      { id: 'r3-42', name: 'ABCmouse', icon: '🐭', description: '美国幼儿在线学习平台，涵盖各学科', link: 'https://abcmouse.com', type: 'paid', category: '本地课程', userType: 'child' },
+      { id: 'r3-43', name: '西方幼儿园指南', icon: '🏫', description: '理解西方幼儿园教育理念（玩中学）', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
+      { id: 'r3-44', name: '家长志愿者', icon: '🤝', description: '如何参与西方学校的家长志愿服务', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
+      { id: 'r3-45', name: '英语社交', icon: '👋', description: '帮助孩子用英语交朋友的常用句型', link: '#', type: 'free', category: 'ESL英语', userType: 'both' },
     ]
   },
   {
@@ -397,6 +424,14 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r5-40', name: '入学准备清单', icon: '📋', description: '小学入学物品和能力清单', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r5-41', name: '学习习惯', icon: '📚', description: '帮助孩子建立良好学习习惯', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r5-42', name: '分离焦虑', icon: '🤗', description: '应对入学分离焦虑的方法', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      
+      // ========== 🌏 西方教育适应 (新增) ==========
+      { id: 'r5-43', name: 'Khan Academy Kids', icon: '🎓', description: '可汗学院儿童版，完全免费优质课程', link: 'https://learn.khanacademy.org/khan-academy-kids/', type: 'free', category: '本地课程', userType: 'child' },
+      { id: 'r5-44', name: 'Epic!阅读', icon: '📚', description: '西方最大儿童电子图书馆，4万+英文书', link: 'https://getepic.com', type: 'paid', category: '本地课程', userType: 'child' },
+      { id: 'r5-45', name: 'Kindergarten入学', icon: '🏫', description: '北美Kindergarten入学要求和准备', link: '#', type: 'free', category: '学校系统', userType: 'parent' },
+      { id: 'r5-46', name: 'IEP/504计划', icon: '📋', description: '了解特殊教育支持计划（如需要）', link: '#', type: 'free', category: '学校系统', userType: 'parent' },
+      { id: 'r5-47', name: '英语日常会话', icon: '🗣️', description: '帮孩子适应英语课堂的常用表达', link: '#', type: 'free', category: 'ESL英语', userType: 'both' },
+      { id: 'r5-48', name: '中文传承', icon: '🏮', description: '在西方保持中文能力的方法', link: '#', type: 'free', category: '中文传承', userType: 'parent' },
     ]
   },
   {
@@ -481,6 +516,14 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r6-52', name: '学业规划', icon: '🗓️', description: '小学六年学习规划', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r6-53', name: '兴趣班选择', icon: '🎯', description: '如何选择合适的兴趣班', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r6-54', name: '阅读计划', icon: '📖', description: '一年级阅读书单和计划', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      
+      // ========== 🌏 西方教育适应 (新增) ==========
+      { id: 'r6-55', name: 'Prodigy Math', icon: '🎮', description: '北美流行的游戏化数学学习平台', link: 'https://prodigygame.com', type: 'free', category: '本地课程', userType: 'child' },
+      { id: 'r6-56', name: 'Reading Eggs', icon: '🥚', description: '西方儿童阅读学习平台', link: 'https://readingeggs.com', type: 'paid', category: '本地课程', userType: 'child' },
+      { id: 'r6-57', name: 'Grade 1课程', icon: '📖', description: '北美一年级学习内容和要求', link: '#', type: 'free', category: '学校系统', userType: 'parent' },
+      { id: 'r6-58', name: 'Parent-Teacher会议', icon: '👨‍👩‍👧', description: '如何准备和参加家长会', link: '#', type: 'free', category: '学校系统', userType: 'parent' },
+      { id: 'r6-59', name: 'ESL支持', icon: '🗣️', description: '了解学校ESL/ELL支持项目', link: '#', type: 'free', category: 'ESL英语', userType: 'parent' },
+      { id: 'r6-60', name: '中文周末学校', icon: '🏮', description: '本地中文学校选择和对比', link: '#', type: 'free', category: '中文传承', userType: 'parent' },
     ]
   },
   {
@@ -539,6 +582,12 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r7-30', name: '作业辅导', icon: '📝', description: '如何辅导孩子写作业', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r7-31', name: '阅读陪伴', icon: '📚', description: '培养阅读习惯的方法', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r7-32', name: '兴趣班选择', icon: '🎭', description: '如何选择适合的课外班', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      
+      // ========== 🌏 西方教育适应 (新增) ==========
+      { id: 'r7-33', name: 'IXL Learning', icon: '📊', description: '美国学校广泛使用的练习平台', link: 'https://ixl.com', type: 'paid', category: '本地课程', userType: 'child' },
+      { id: 'r7-34', name: 'Lexile阅读', icon: '📖', description: '了解北美Lexile阅读分级体系', link: '#', type: 'free', category: '学校系统', userType: 'parent' },
+      { id: 'r7-35', name: 'Raz-Kids', icon: '📚', description: '北美学校常用分级阅读', link: 'https://raz-kids.com', type: 'paid', category: '本地课程', userType: 'child' },
+      { id: 'r7-36', name: '成绩单解读', icon: '📋', description: '如何理解北美Report Card', link: '#', type: 'free', category: '学校系统', userType: 'parent' },
     ]
   },
   {
@@ -603,6 +652,12 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r8-35', name: '奥数规划', icon: '🏆', description: '是否学奥数及如何规划', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r8-36', name: '学习焦虑', icon: '💚', description: '缓解孩子学习压力', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r8-37', name: '家校沟通', icon: '💬', description: '与老师有效沟通的技巧', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      
+      // ========== 🌏 西方教育适应 (新增) ==========
+      { id: 'r8-38', name: 'Khan Academy', icon: '🎓', description: '免费全学科学习平台，北美必备', link: 'https://khanacademy.org', type: 'free', category: '本地课程', userType: 'child' },
+      { id: 'r8-39', name: 'Scratch编程', icon: '🐱', description: 'MIT开发的儿童编程平台', link: 'https://scratch.mit.edu', type: 'free', category: '本地课程', userType: 'child' },
+      { id: 'r8-40', name: 'State Testing', icon: '📝', description: '了解本州/省标准化考试', link: '#', type: 'free', category: '学校系统', userType: 'parent' },
+      { id: 'r8-41', name: 'Gifted Program', icon: '🌟', description: '了解天才班/资优班申请', link: '#', type: 'free', category: '学校系统', userType: 'parent' },
     ]
   },
   {
@@ -671,6 +726,12 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r9-38', name: '升学准备', icon: '🎯', description: '提前了解小升初', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r9-39', name: '亲子沟通', icon: '💬', description: '与学龄儿童的有效沟通', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r9-40', name: '电子产品', icon: '📱', description: '管理孩子使用电子设备', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      
+      // ========== 🌏 西方教育适应 (新增) ==========
+      { id: 'r9-41', name: 'Typing.com', icon: '⌨️', description: '免费打字练习，北美学校必备技能', link: 'https://typing.com', type: 'free', category: '本地课程', userType: 'child' },
+      { id: 'r9-42', name: 'BrainPOP', icon: '🧠', description: '西方学校常用动画学习平台', link: 'https://brainpop.com', type: 'paid', category: '本地课程', userType: 'child' },
+      { id: 'r9-43', name: '标准化考试', icon: '📝', description: '了解EQAO/NAPLAN等标准化测试', link: '#', type: 'free', category: '学校系统', userType: 'parent' },
+      { id: 'r9-44', name: 'Math Olympiad', icon: '🏆', description: '北美数学竞赛和备考资源', link: '#', type: 'free', category: '本地课程', userType: 'both' },
     ]
   },
   {
@@ -744,6 +805,12 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r10-41', name: '升学策略', icon: '🎯', description: '小升初家长全攻略', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r10-42', name: '培优选择', icon: '📚', description: '课外辅导和培训班选择', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r10-43', name: '亲子沟通', icon: '💬', description: '青春前期亲子沟通技巧', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      
+      // ========== 🌏 西方教育适应 (新增) ==========
+      { id: 'r10-44', name: 'Middle School准备', icon: '🏫', description: '北美中学制度介绍和准备', link: '#', type: 'free', category: '学校系统', userType: 'parent' },
+      { id: 'r10-45', name: 'AMC 8竞赛', icon: '🏆', description: '美国数学竞赛AMC 8入门', link: '#', type: 'free', category: '本地课程', userType: 'child' },
+      { id: 'r10-46', name: 'Google Docs', icon: '📄', description: '学会使用Google文档等协作工具', link: '#', type: 'free', category: '本地课程', userType: 'child' },
+      { id: 'r10-47', name: '选课指导', icon: '📋', description: '理解北美中学选课制度', link: '#', type: 'free', category: '学校系统', userType: 'parent' },
     ]
   },
   {
@@ -807,6 +874,12 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r11-35', name: '政策解读', icon: '📜', description: '最新小升初政策解读', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r11-36', name: '青春期沟通', icon: '💬', description: '与青春期孩子的沟通', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r11-37', name: '心理支持', icon: '💚', description: '升学压力下的心理支持', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      
+      // ========== 🌏 西方教育适应 (新增) ==========
+      { id: 'r11-38', name: 'Middle School过渡', icon: '🏫', description: '从小学到中学的适应指南', link: '#', type: 'free', category: '学校系统', userType: 'both' },
+      { id: 'r11-39', name: 'Duolingo', icon: '🦉', description: '免费语言学习，保持中文或学其他语言', link: 'https://duolingo.com', type: 'free', category: '本地课程', userType: 'child' },
+      { id: 'r11-40', name: '课外活动选择', icon: '⚽', description: '选择适合的extracurriculars', link: '#', type: 'free', category: '学校系统', userType: 'both' },
+      { id: 'r11-41', name: 'Code.org', icon: '💻', description: '免费编程学习平台', link: 'https://code.org', type: 'free', category: '本地课程', userType: 'child' },
     ]
   },
   {
@@ -875,6 +948,13 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r12-38', name: '家校配合', icon: '🤝', description: '与初中老师配合', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r12-39', name: '手机管理', icon: '📱', description: '初中生手机使用管理', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r12-40', name: '中考规划', icon: '🎯', description: '提前了解中考政策', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      
+      // ========== 🌏 西方教育适应 (新增) ==========
+      { id: 'r12-41', name: 'High School规划', icon: '🎓', description: '开始规划高中选课和升学路径', link: '#', type: 'free', category: '升学准备', userType: 'parent' },
+      { id: 'r12-42', name: 'Coursera青少年', icon: '📚', description: '大学级别在线课程平台', link: 'https://coursera.org', type: 'free', category: '本地课程', userType: 'child' },
+      { id: 'r12-43', name: 'GPA重要性', icon: '📊', description: '理解北美GPA计算和重要性', link: '#', type: 'free', category: '学校系统', userType: 'both' },
+      { id: 'r12-44', name: 'Honor Roll', icon: '🏆', description: '如何进入Honor Roll和荣誉课程', link: '#', type: 'free', category: '学校系统', userType: 'both' },
+      { id: 'r12-45', name: 'Volunteer Hours', icon: '🤝', description: '志愿者时长要求和机会', link: '#', type: 'free', category: '学校系统', userType: 'both' },
     ]
   },
   {
@@ -886,70 +966,172 @@ const lifeJourneyData: AgeStage[] = [
     emoji: '📈',
     color: 'from-purple-400 to-fuchsia-300',
     resources: [
-      { id: 'r53', name: '化学启蒙', icon: '🧪', description: '化学基础知识和实验', link: '#', type: 'free' },
-      { id: 'r54', name: '写作进阶', icon: '✍️', description: '议论文和记叙文写作技巧', link: '#', type: 'paid' },
-      { id: 'r55', name: '英语语法', icon: '📝', description: '中级英语语法系统学习', link: '#', type: 'paid' },
-      { id: 'r56', name: '心理健康', icon: '🧘', description: '青少年心理健康指导', link: '#', type: 'free' },
+      // ========== 📚 学术学习 ==========
+      { id: 'r13-1', name: '化学启蒙', icon: '🧪', description: '化学基础知识和实验', link: '#', type: 'free', category: '理科学习', userType: 'child' },
+      { id: 'r13-2', name: '写作进阶', icon: '✍️', description: '议论文和记叙文写作技巧', link: '#', type: 'free', category: '语文学习', userType: 'child' },
+      { id: 'r13-3', name: '英语语法', icon: '📝', description: '中级英语语法系统学习', link: '#', type: 'free', category: '英语学习', userType: 'child' },
+      { id: 'r13-4', name: '代数进阶', icon: '📐', description: '代数方程和函数入门', link: '#', type: 'free', category: '数学学习', userType: 'child' },
+      
+      // ========== 💚 成长健康 ==========
+      { id: 'r13-5', name: '心理健康', icon: '🧘', description: '青少年心理健康指导', link: '#', type: 'free', category: '成长教育', userType: 'both' },
+      { id: 'r13-6', name: '青春期指南', icon: '💚', description: '青春期身心变化和应对', link: '#', type: 'free', category: '成长教育', userType: 'both' },
+      
+      // ========== 🌏 西方教育 ==========
+      { id: 'r13-7', name: 'Quizlet', icon: '📇', description: '北美流行的单词卡片和学习工具', link: 'https://quizlet.com', type: 'free', category: '本地课程', userType: 'child' },
+      { id: 'r13-8', name: 'High School选课', icon: '📋', description: '规划9年级选课，了解必修选修', link: '#', type: 'free', category: '升学准备', userType: 'parent' },
+      { id: 'r13-9', name: 'Honors vs Regular', icon: '⭐', description: '了解荣誉课程和普通课程区别', link: '#', type: 'free', category: '学校系统', userType: 'both' },
+      { id: 'r13-10', name: 'Sports Teams', icon: '🏀', description: '如何参加学校运动队', link: '#', type: 'free', category: '学校系统', userType: 'child' },
+      { id: 'r13-11', name: 'Club Activities', icon: '🎭', description: '学校社团选择和参与指南', link: '#', type: 'free', category: '学校系统', userType: 'child' },
+      { id: 'r13-12', name: '家长角色转变', icon: '👨‍👩‍👧', description: '高中阶段家长如何支持孩子', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
     ]
   },
   {
     age: '14岁',
-    title: '初中三年级',
-    subtitle: 'Grade 9',
-    description: '中考备战年，学习压力最大的一年。需要系统复习三年所学，准备升入高中。开始考虑未来的学业规划。',
-    milestone: '中考年',
-    emoji: '🎯',
+    title: '高中一年级',
+    subtitle: 'Grade 9 / Freshman Year',
+    description: '正式进入高中，这是GPA计算的开始！选课至关重要，开始参与课外活动。适应高中节奏，建立良好的学习习惯。',
+    milestone: 'High School开始',
+    emoji: '🏫',
     color: 'from-red-400 to-rose-300',
     resources: [
-      { id: 'r57', name: '中考真题', icon: '📋', description: '历年中考真题和解析', link: '#', type: 'paid' },
-      { id: 'r58', name: '志愿填报', icon: '🎓', description: '高中择校和志愿填报指南', link: '#', type: 'free' },
-      { id: 'r59', name: '冲刺复习', icon: '🏃', description: '中考各科冲刺复习资料', link: '#', type: 'paid' },
-      { id: 'r60', name: '压力管理', icon: '🌈', description: '考试压力管理和放松技巧', link: '#', type: 'free' },
+      // ========== 📚 学术学习 ==========
+      { id: 'r14-1', name: 'Algebra I', icon: '📊', description: '北美9年级数学核心内容', link: '#', type: 'free', category: '数学学习', userType: 'child' },
+      { id: 'r14-2', name: 'Biology', icon: '🧬', description: '9年级生物课程内容', link: '#', type: 'free', category: '理科学习', userType: 'child' },
+      { id: 'r14-3', name: 'English 9', icon: '📖', description: '9年级英语阅读写作要求', link: '#', type: 'free', category: '英语学习', userType: 'child' },
+      { id: 'r14-4', name: '世界历史', icon: '🌍', description: 'World History课程内容', link: '#', type: 'free', category: '文科学习', userType: 'child' },
+      
+      // ========== 🎓 升学准备 ==========
+      { id: 'r14-5', name: 'GPA计算器', icon: '📊', description: '了解和计算GPA，维护好成绩', link: '#', type: 'free', category: '升学准备', userType: 'both' },
+      { id: 'r14-6', name: '4年规划', icon: '📅', description: '高中四年选课和活动规划', link: '#', type: 'free', category: '升学准备', userType: 'parent' },
+      { id: 'r14-7', name: 'Honors课程', icon: '⭐', description: '如何申请和应对Honors课程', link: '#', type: 'free', category: '学校系统', userType: 'both' },
+      
+      // ========== 🌏 西方教育资源 ==========
+      { id: 'r14-8', name: 'Khan Academy', icon: '🎓', description: '免费全科学习，高中数学必备', link: 'https://khanacademy.org', type: 'free', category: '本地课程', userType: 'child' },
+      { id: 'r14-9', name: 'Desmos', icon: '📈', description: '图形计算器，数学课必备工具', link: 'https://desmos.com', type: 'free', category: '本地课程', userType: 'child' },
+      { id: 'r14-10', name: 'Grammarly', icon: '✍️', description: 'AI写作助手，提升英文写作', link: 'https://grammarly.com', type: 'free', category: '本地课程', userType: 'child' },
+      { id: 'r14-11', name: 'Extracurriculars', icon: '🎭', description: '课外活动选择策略', link: '#', type: 'free', category: '升学准备', userType: 'both' },
+      { id: 'r14-12', name: 'Summer Programs', icon: '☀️', description: '暑期项目和夏校选择', link: '#', type: 'free', category: '升学准备', userType: 'parent' },
+      
+      // ========== 👨‍👩‍👧 家长指南 ==========
+      { id: 'r14-13', name: '9年级指南', icon: '📋', description: '高一家长全年规划要点', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r14-14', name: 'Counselor沟通', icon: '💬', description: '如何与学校counselor沟通', link: '#', type: 'free', category: '学校系统', userType: 'parent' },
     ]
   },
   {
     age: '15岁',
-    title: '高中一年级',
-    subtitle: 'Grade 10',
-    description: '高中新起点，课程难度显著提升。开始思考大学专业方向，参加各类学科竞赛和课外活动丰富简历。',
-    milestone: '高中生活开始',
-    emoji: '🌟',
+    title: '高中二年级',
+    subtitle: 'Grade 10 / Sophomore Year',
+    description: '高中节奏加快，可以开始选AP/IB课程。PSAT考试首考，了解自己水平。开始思考未来专业方向，积累课外活动深度。',
+    milestone: '标化考试准备年',
+    emoji: '📈',
     color: 'from-emerald-400 to-teal-300',
     resources: [
-      { id: 'r61', name: '高中数学', icon: '📊', description: '高中数学系统课程', link: '#', type: 'paid' },
-      { id: 'r62', name: '学科竞赛', icon: '🏆', description: '数理化生竞赛入门', link: '#', type: 'paid' },
-      { id: 'r63', name: 'SAT准备', icon: '📝', description: 'SAT考试入门准备', link: '#', type: 'free' },
-      { id: 'r64', name: '课外活动', icon: '🎭', description: '课外活动规划指导', link: '#', type: 'free' },
+      // ========== 📚 学术学习 ==========
+      { id: 'r15-1', name: 'Geometry', icon: '📐', description: '几何课程学习', link: '#', type: 'free', category: '数学学习', userType: 'child' },
+      { id: 'r15-2', name: 'Chemistry', icon: '🧪', description: '化学课程内容和实验', link: '#', type: 'free', category: '理科学习', userType: 'child' },
+      { id: 'r15-3', name: 'World Literature', icon: '📖', description: '世界文学阅读和分析', link: '#', type: 'free', category: '文科学习', userType: 'child' },
+      
+      // ========== 🎯 标化考试 ==========
+      { id: 'r15-4', name: 'PSAT准备', icon: '📝', description: 'PSAT考试介绍和备考', link: '#', type: 'free', category: '标化考试', userType: 'child' },
+      { id: 'r15-5', name: 'SAT入门', icon: '📋', description: 'SAT考试结构和备考开始', link: '#', type: 'free', category: '标化考试', userType: 'both' },
+      { id: 'r15-6', name: 'ACT vs SAT', icon: '🎯', description: '选择适合自己的标化考试', link: '#', type: 'free', category: '标化考试', userType: 'both' },
+      
+      // ========== 🏫 AP/IB课程 ==========
+      { id: 'r15-7', name: 'AP课程介绍', icon: '🎓', description: '常见AP课程难度和选择', link: '#', type: 'free', category: '学校系统', userType: 'both' },
+      { id: 'r15-8', name: 'IB课程介绍', icon: '🌍', description: 'IB项目介绍和利弊分析', link: '#', type: 'free', category: '学校系统', userType: 'both' },
+      
+      // ========== 🌏 西方教育资源 ==========
+      { id: 'r15-9', name: 'College Board', icon: '📊', description: 'SAT/AP官方资源和练习', link: 'https://collegeboard.org', type: 'free', category: '本地课程', userType: 'child' },
+      { id: 'r15-10', name: 'AP Classroom', icon: '📚', description: 'AP官方学习平台', link: '#', type: 'free', category: '本地课程', userType: 'child' },
+      { id: 'r15-11', name: 'Naviance', icon: '🎓', description: '学校常用的升学规划平台', link: '#', type: 'free', category: '升学准备', userType: 'both' },
+      
+      // ========== 💼 活动规划 ==========
+      { id: 'r15-12', name: '领导力培养', icon: '👑', description: '在社团中担任领导职位', link: '#', type: 'free', category: '升学准备', userType: 'child' },
+      { id: 'r15-13', name: '志愿服务', icon: '🤝', description: '有意义的志愿者活动选择', link: '#', type: 'free', category: '升学准备', userType: 'child' },
+      { id: 'r15-14', name: 'Summer Programs', icon: '☀️', description: '名校暑期项目申请', link: '#', type: 'free', category: '升学准备', userType: 'both' },
+      
+      // ========== 👨‍👩‍👧 家长指南 ==========
+      { id: 'r15-15', name: '10年级指南', icon: '📋', description: '高二家长关注要点', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r15-16', name: '大学探校', icon: '🏫', description: '开始了解和参观大学', link: '#', type: 'free', category: '升学准备', userType: 'parent' },
     ]
   },
   {
     age: '16岁',
-    title: '高中二年级',
-    subtitle: 'Grade 11',
-    description: '高中最关键的一年，各类标准化考试集中。开始准备大学申请材料，研究目标学校。需要平衡学业和申请准备。',
-    milestone: '大学申请准备年',
-    emoji: '📋',
+    title: '高中三年级',
+    subtitle: 'Grade 11 / Junior Year',
+    description: '高中最关键的一年！SAT/ACT正式考试，AP考试，同时要保持GPA。开始大学选校研究，准备申请文书素材。',
+    milestone: '最关键的一年！',
+    emoji: '🔥',
     color: 'from-sky-400 to-blue-300',
     resources: [
-      { id: 'r65', name: 'AP课程', icon: '🎓', description: 'AP各科学习资源', link: '#', type: 'paid' },
-      { id: 'r66', name: 'SAT/ACT', icon: '📝', description: '标准化考试备考', link: '#', type: 'paid' },
-      { id: 'r67', name: '大学调研', icon: '🏫', description: '美国大学信息和排名', link: '#', type: 'free' },
-      { id: 'r68', name: '文书准备', icon: '✍️', description: '大学申请文书指导', link: '#', type: 'paid' },
+      // ========== 🎯 标化考试 ==========
+      { id: 'r16-1', name: 'SAT备考', icon: '📝', description: 'SAT全面备考策略和资源', link: '#', type: 'free', category: '标化考试', userType: 'child' },
+      { id: 'r16-2', name: 'ACT备考', icon: '📋', description: 'ACT考试备考指南', link: '#', type: 'free', category: '标化考试', userType: 'child' },
+      { id: 'r16-3', name: 'SAT Subject', icon: '📚', description: 'SAT2科目考试选择', link: '#', type: 'free', category: '标化考试', userType: 'both' },
+      { id: 'r16-4', name: 'AP考试', icon: '🎓', description: 'AP考试5分备考攻略', link: '#', type: 'free', category: '标化考试', userType: 'child' },
+      
+      // ========== 🏫 大学申请准备 ==========
+      { id: 'r16-5', name: '大学选校', icon: '🏫', description: '如何建立大学申请清单', link: '#', type: 'free', category: '大学申请', userType: 'both' },
+      { id: 'r16-6', name: 'Common App', icon: '💻', description: '了解Common App申请系统', link: 'https://commonapp.org', type: 'free', category: '大学申请', userType: 'both' },
+      { id: 'r16-7', name: 'UC Application', icon: '🐻', description: '加州大学申请系统介绍', link: '#', type: 'free', category: '大学申请', userType: 'both' },
+      { id: 'r16-8', name: '文书准备', icon: '✍️', description: '开始构思个人陈述主题', link: '#', type: 'free', category: '大学申请', userType: 'child' },
+      { id: 'r16-9', name: '推荐信', icon: '📧', description: '如何请老师写推荐信', link: '#', type: 'free', category: '大学申请', userType: 'child' },
+      
+      // ========== 🌏 西方教育资源 ==========
+      { id: 'r16-10', name: 'Khan SAT', icon: '🎓', description: '可汗学院官方SAT免费备考', link: 'https://khanacademy.org/sat', type: 'free', category: '本地课程', userType: 'child' },
+      { id: 'r16-11', name: 'Niche', icon: '📊', description: '大学排名和真实评价', link: 'https://niche.com', type: 'free', category: '本地课程', userType: 'both' },
+      { id: 'r16-12', name: 'College Confidential', icon: '💬', description: '大学申请论坛和经验分享', link: '#', type: 'free', category: '大学申请', userType: 'both' },
+      
+      // ========== 💼 活动和成就 ==========
+      { id: 'r16-13', name: '活动清单', icon: '📋', description: '整理课外活动，准备申请', link: '#', type: 'free', category: '升学准备', userType: 'child' },
+      { id: 'r16-14', name: '竞赛成绩', icon: '🏆', description: '学术竞赛和奖项规划', link: '#', type: 'free', category: '升学准备', userType: 'both' },
+      
+      // ========== 👨‍👩‍👧 家长指南 ==========
+      { id: 'r16-15', name: '11年级指南', icon: '📋', description: '高三家长全年时间线', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r16-16', name: '大学费用', icon: '💰', description: '了解学费、助学金和贷款', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r16-17', name: 'FAFSA/CSS', icon: '📊', description: '助学金申请表格介绍', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
     ]
   },
   {
     age: '17岁',
-    title: '高中三年级',
-    subtitle: 'Grade 12',
-    description: '高中最后一年，大学申请季。提交申请、等待录取、做出最终选择。即将开启人生新篇章！',
+    title: '高中四年级',
+    subtitle: 'Grade 12 / Senior Year',
+    description: '申请季！提交大学申请，等待录取结果。保持成绩，完成高中学业。做出最终选择，开启人生新篇章！',
     milestone: '大学申请年！🎓',
     emoji: '🎓',
     color: 'from-amber-500 to-yellow-400',
     resources: [
-      { id: 'r69', name: '申请系统', icon: '💻', description: 'Common App申请指导', link: '#', type: 'free' },
-      { id: 'r70', name: '面试准备', icon: '🎤', description: '大学面试技巧和模拟', link: '#', type: 'paid' },
-      { id: 'r71', name: '选校决策', icon: '🎯', description: '如何选择最适合的大学', link: '#', type: 'free' },
-      { id: 'r72', name: '奖学金', icon: '💰', description: '奖学金申请和资源', link: '#', type: 'free' },
+      // ========== 📝 大学申请 ==========
+      { id: 'r17-1', name: 'EA/ED申请', icon: '⏰', description: 'Early Action/Decision策略', link: '#', type: 'free', category: '大学申请', userType: 'both' },
+      { id: 'r17-2', name: 'RD申请', icon: '📋', description: 'Regular Decision申请指南', link: '#', type: 'free', category: '大学申请', userType: 'both' },
+      { id: 'r17-3', name: '文书润色', icon: '✍️', description: '申请文书最终修改', link: '#', type: 'free', category: '大学申请', userType: 'child' },
+      { id: 'r17-4', name: '面试准备', icon: '🎤', description: '大学面试技巧和常见问题', link: '#', type: 'free', category: '大学申请', userType: 'child' },
+      { id: 'r17-5', name: '补充文书', icon: '📝', description: '各校Supplemental Essays', link: '#', type: 'free', category: '大学申请', userType: 'child' },
+      
+      // ========== 💰 助学金申请 ==========
+      { id: 'r17-6', name: 'FAFSA填写', icon: '📊', description: '联邦助学金申请表填写', link: 'https://fafsa.gov', type: 'free', category: '大学申请', userType: 'parent' },
+      { id: 'r17-7', name: 'CSS Profile', icon: '💰', description: '私立大学助学金申请', link: '#', type: 'free', category: '大学申请', userType: 'parent' },
+      { id: 'r17-8', name: '奖学金搜索', icon: '🏆', description: '外部奖学金申请资源', link: '#', type: 'free', category: '大学申请', userType: 'both' },
+      
+      // ========== 🎯 录取后 ==========
+      { id: 'r17-9', name: '比较Offer', icon: '⚖️', description: '如何比较不同大学录取', link: '#', type: 'free', category: '升学准备', userType: 'both' },
+      { id: 'r17-10', name: 'Waitlist策略', icon: '⏳', description: '候补名单应对策略', link: '#', type: 'free', category: '大学申请', userType: 'both' },
+      { id: 'r17-11', name: '选校决定', icon: '🎯', description: '做出最终入学决定', link: '#', type: 'free', category: '升学准备', userType: 'both' },
+      
+      // ========== 🌏 西方教育资源 ==========
+      { id: 'r17-12', name: 'Common App', icon: '💻', description: '正式提交Common App申请', link: 'https://commonapp.org', type: 'free', category: '本地课程', userType: 'child' },
+      { id: 'r17-13', name: 'Coalition App', icon: '📋', description: 'Coalition申请系统', link: 'https://coalitionforcollegeaccess.org', type: 'free', category: '本地课程', userType: 'child' },
+      { id: 'r17-14', name: 'r/ApplyingToCollege', icon: '💬', description: 'Reddit申请经验分享社区', link: 'https://reddit.com/r/ApplyingToCollege', type: 'free', category: '大学申请', userType: 'child' },
+      
+      // ========== 🎓 大学准备 ==========
+      { id: 'r17-15', name: '宿舍申请', icon: '🏠', description: '大学宿舍申请流程', link: '#', type: 'free', category: '升学准备', userType: 'both' },
+      { id: 'r17-16', name: 'Orientation', icon: '🎉', description: '新生入学orientation准备', link: '#', type: 'free', category: '升学准备', userType: 'child' },
+      { id: 'r17-17', name: '大学过渡', icon: '🌟', description: '从高中到大学的心理准备', link: '#', type: 'free', category: '成长教育', userType: 'both' },
+      
+      // ========== 👨‍👩‍👧 家长指南 ==========
+      { id: 'r17-18', name: '12年级指南', icon: '📋', description: '高四家长全年时间线', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r17-19', name: '放手的艺术', icon: '🦋', description: '让孩子独立上大学的准备', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r17-20', name: 'Financial Aid比较', icon: '💰', description: '比较各校财务援助Package', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
     ]
   },
 ];
@@ -1134,6 +1316,18 @@ const categoryColors: { [key: string]: { bg: string; border: string; text: strin
   '理科学习': { bg: 'bg-cyan-50', border: 'border-cyan-200', text: 'text-cyan-600' },
   '文科学习': { bg: 'bg-amber-50', border: 'border-amber-200', text: 'text-amber-600' },
   '成长教育': { bg: 'bg-emerald-50', border: 'border-emerald-200', text: 'text-emerald-600' },
+  
+  // === 西方教育适应 Categories (For Immigrant Families) ===
+  'ESL英语': { bg: 'bg-green-100', border: 'border-green-300', text: 'text-green-700' },
+  '本地课程': { bg: 'bg-blue-100', border: 'border-blue-300', text: 'text-blue-700' },
+  '文化适应': { bg: 'bg-purple-100', border: 'border-purple-300', text: 'text-purple-700' },
+  '西方教育': { bg: 'bg-indigo-100', border: 'border-indigo-300', text: 'text-indigo-700' },
+  '升学准备': { bg: 'bg-rose-100', border: 'border-rose-300', text: 'text-rose-700' },
+  '标化考试': { bg: 'bg-red-100', border: 'border-red-300', text: 'text-red-700' },
+  '大学申请': { bg: 'bg-violet-100', border: 'border-violet-300', text: 'text-violet-700' },
+  '中文传承': { bg: 'bg-amber-100', border: 'border-amber-300', text: 'text-amber-700' },
+  '移民指南': { bg: 'bg-slate-100', border: 'border-slate-300', text: 'text-slate-700' },
+  '学校系统': { bg: 'bg-sky-100', border: 'border-sky-300', text: 'text-sky-700' },
   
   '其他资源': { bg: 'bg-gray-50', border: 'border-gray-200', text: 'text-gray-600' },
 };
@@ -1466,6 +1660,35 @@ export default function Home() {
                 <span className="text-lg font-bold text-slate-800">0-17</span>
                 <span className="text-sm text-slate-500 group-hover:text-slate-700">岁全覆盖</span>
               </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Legend Section - UserType & Info */}
+      <div className="bg-white border-b border-slate-100 py-4 px-4">
+        <div className="max-w-3xl mx-auto">
+          {/* Target Audience Info */}
+          <div className="text-center mb-4">
+            <p className="text-sm text-slate-600">
+              🌏 专为<span className="font-semibold text-slate-800">海外华人家庭</span>设计 · 适用于加拿大、美国、英国、澳洲等西方国家
+            </p>
+          </div>
+          
+          {/* UserType Legend */}
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+            <span className="text-xs text-slate-500 font-medium">图标说明：</span>
+            <div className="flex items-center gap-1.5">
+              <span className="w-5 h-5 rounded-full bg-rose-400 flex items-center justify-center text-[10px] text-white font-bold">P</span>
+              <span className="text-sm text-slate-600">家长专用</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="w-5 h-5 rounded-full bg-sky-400 flex items-center justify-center text-[10px] text-white font-bold">S</span>
+              <span className="text-sm text-slate-600">学生专用</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="w-5 h-5 rounded-full bg-violet-400 flex items-center justify-center text-[10px] text-white font-bold">♥</span>
+              <span className="text-sm text-slate-600">亲子共用</span>
             </div>
           </div>
         </div>
