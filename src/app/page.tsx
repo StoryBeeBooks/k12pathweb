@@ -676,46 +676,205 @@ const lifeJourneyData: AgeStage[] = [
   {
     age: '10岁',
     title: '小学五年级',
-    subtitle: 'Grade 5',
-    description: '为小升初做准备，学习压力增加。开始有更多的课外活动选择，培养兴趣爱好。社交关系变得更加复杂。',
+    subtitle: 'Grade 5 / 小升初预备期',
+    description: '为小升初做准备，学习压力增加。开始有更多的课外活动选择，培养兴趣爱好。社交关系变得更加复杂，需要平衡学业和兴趣。',
     milestone: '明年小学毕业',
     emoji: '🚀',
     color: 'from-lime-400 to-green-300',
     resources: [
-      { id: 'r41', name: '小升初备考', icon: '🎯', description: '小升初考试真题和模拟练习', link: '#', type: 'paid' },
-      { id: 'r42', name: '古诗文', icon: '📜', description: '必背古诗词学习和赏析', link: '#', type: 'free' },
-      { id: 'r43', name: '几何入门', icon: '📐', description: '平面几何基础知识', link: '#', type: 'free' },
-      { id: 'r44', name: '演讲口才', icon: '🎤', description: '培养公众演讲能力', link: '#', type: 'paid' },
+      // ========== 📚 语文学习 ==========
+      { id: 'r10-1', name: '高级作文', icon: '📝', description: '议论文、说明文写作技巧', link: '#', type: 'free', category: '语文学习', userType: 'child' },
+      { id: 'r10-2', name: '古诗文赏析', icon: '📜', description: '必背古诗词深度学习和赏析', link: '#', type: 'free', category: '语文学习', userType: 'child' },
+      { id: 'r10-3', name: '文言文阅读', icon: '📖', description: '文言文阅读理解训练', link: '#', type: 'free', category: '语文学习', userType: 'child' },
+      { id: 'r10-4', name: '阅读理解专项', icon: '📰', description: '各类文体阅读理解技巧', link: '#', type: 'free', category: '语文学习', userType: 'child' },
+      { id: 'r10-5', name: '名著精读', icon: '📕', description: '五年级必读名著深度解读', link: '#', type: 'free', category: '语文学习', userType: 'child' },
+      
+      // ========== 🔢 数学学习 ==========
+      { id: 'r10-6', name: '分数应用', icon: '½', description: '分数的综合应用', link: '#', type: 'free', category: '数学学习', userType: 'child' },
+      { id: 'r10-7', name: '几何进阶', icon: '📐', description: '圆、扇形面积和周长', link: '#', type: 'free', category: '数学学习', userType: 'child' },
+      { id: 'r10-8', name: '方程入门', icon: '🔢', description: '简单方程的建立和求解', link: '#', type: 'free', category: '数学学习', userType: 'child' },
+      { id: 'r10-9', name: '比例应用', icon: '⚖️', description: '比和比例的实际应用', link: '#', type: 'free', category: '数学学习', userType: 'child' },
+      { id: 'r10-10', name: '奥数强化', icon: '🏆', description: '奥数专题强化训练', link: '#', type: 'free', category: '数学学习', userType: 'child' },
+      { id: 'r10-11', name: '数学竞赛', icon: '🥇', description: '数学竞赛备考指南', link: '#', type: 'free', category: '数学学习', userType: 'both' },
+      
+      // ========== 🌐 英语学习 ==========
+      { id: 'r10-12', name: '英语语法综合', icon: '📖', description: '小学英语语法系统复习', link: '#', type: 'free', category: '英语学习', userType: 'child' },
+      { id: 'r10-13', name: '英语听力强化', icon: '🎧', description: '听力理解专项训练', link: '#', type: 'free', category: '英语学习', userType: 'child' },
+      { id: 'r10-14', name: '英语口语表达', icon: '🗣️', description: '日常口语和话题表达', link: '#', type: 'free', category: '英语学习', userType: 'child' },
+      { id: 'r10-15', name: '英语写作进阶', icon: '✏️', description: '各类英语作文写作', link: '#', type: 'free', category: '英语学习', userType: 'child' },
+      { id: 'r10-16', name: '英语阅读理解', icon: '📗', description: '英语阅读理解技巧', link: '#', type: 'free', category: '英语学习', userType: 'child' },
+      { id: 'r10-17', name: 'KET备考', icon: '🎯', description: '剑桥KET考试准备', link: '#', type: 'free', category: '英语学习', userType: 'both' },
+      
+      // ========== 🔬 科学素养 ==========
+      { id: 'r10-18', name: '科学实验项目', icon: '🔬', description: '科学探究和实验设计', link: '#', type: 'free', category: '科学素养', userType: 'child' },
+      { id: 'r10-19', name: '中国地理', icon: '🗺️', description: '中国地理知识系统学习', link: '#', type: 'free', category: '科学素养', userType: 'child' },
+      { id: 'r10-20', name: '中国历史', icon: '🏛️', description: '中国历史朝代和人物', link: '#', type: 'free', category: '科学素养', userType: 'child' },
+      { id: 'r10-21', name: '生物知识', icon: '🧬', description: '人体和生物科学', link: '#', type: 'free', category: '科学素养', userType: 'child' },
+      
+      // ========== 💻 信息与编程 ==========
+      { id: 'r10-22', name: 'Python入门', icon: '🐍', description: 'Python编程语言入门', link: '#', type: 'free', category: '信息与编程', userType: 'child' },
+      { id: 'r10-23', name: '信息学基础', icon: '💻', description: '信息学奥赛入门', link: '#', type: 'free', category: '信息与编程', userType: 'child' },
+      { id: 'r10-24', name: '办公软件', icon: '📊', description: 'Word、PPT基础操作', link: '#', type: 'free', category: '信息与编程', userType: 'child' },
+      
+      // ========== 🎯 小升初准备 ==========
+      { id: 'r10-25', name: '小升初规划', icon: '🎯', description: '小升初升学路径和规划', link: '#', type: 'free', category: '小升初准备', userType: 'parent' },
+      { id: 'r10-26', name: '真题模拟', icon: '📝', description: '小升初真题和模拟测试', link: '#', type: 'free', category: '小升初准备', userType: 'child' },
+      { id: 'r10-27', name: '重点中学', icon: '🏫', description: '各地重点初中介绍', link: '#', type: 'free', category: '小升初准备', userType: 'parent' },
+      { id: 'r10-28', name: '特长生准备', icon: '⭐', description: '艺术、体育特长生准备', link: '#', type: 'free', category: '小升初准备', userType: 'both' },
+      
+      // ========== 🎨 才艺特长 ==========
+      { id: 'r10-29', name: '演讲口才', icon: '🎤', description: '演讲技巧和辩论入门', link: '#', type: 'free', category: '才艺特长', userType: 'child' },
+      { id: 'r10-30', name: '艺术特长', icon: '🎨', description: '美术、书法进阶', link: '#', type: 'free', category: '才艺特长', userType: 'child' },
+      { id: 'r10-31', name: '音乐素养', icon: '🎵', description: '音乐理论和乐器学习', link: '#', type: 'free', category: '才艺特长', userType: 'child' },
+      { id: 'r10-32', name: '体育训练', icon: '⚽', description: '体育项目专项训练', link: '#', type: 'free', category: '才艺特长', userType: 'child' },
+      
+      // ========== 🧠 学习策略 ==========
+      { id: 'r10-33', name: '高效学习法', icon: '🧠', description: '费曼学习法等高效方法', link: '#', type: 'free', category: '学习策略', userType: 'both' },
+      { id: 'r10-34', name: '考试技巧', icon: '📝', description: '各科考试答题技巧', link: '#', type: 'free', category: '学习策略', userType: 'child' },
+      { id: 'r10-35', name: '错题分析', icon: '📕', description: '系统错题分析方法', link: '#', type: 'free', category: '学习策略', userType: 'both' },
+      { id: 'r10-36', name: '学习计划', icon: '📅', description: '制定科学学习计划', link: '#', type: 'free', category: '学习策略', userType: 'both' },
+      
+      // ========== 😊 心理成长 ==========
+      { id: 'r10-37', name: '压力管理', icon: '😌', description: '学业压力调节方法', link: '#', type: 'free', category: '心理成长', userType: 'both' },
+      { id: 'r10-38', name: '青春前期', icon: '🌱', description: '青春前期身心变化', link: '#', type: 'free', category: '心理成长', userType: 'both' },
+      { id: 'r10-39', name: '社交技能', icon: '👫', description: '同伴关系和社交技巧', link: '#', type: 'free', category: '心理成长', userType: 'child' },
+      
+      // ========== 👨‍👩‍👧 家长指南 ==========
+      { id: 'r10-40', name: '五年级指南', icon: '📋', description: '五年级学习重点和关注事项', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r10-41', name: '升学策略', icon: '🎯', description: '小升初家长全攻略', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r10-42', name: '培优选择', icon: '📚', description: '课外辅导和培训班选择', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r10-43', name: '亲子沟通', icon: '💬', description: '青春前期亲子沟通技巧', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
     ]
   },
   {
     age: '11岁',
     title: '小学六年级',
-    subtitle: 'Grade 6',
-    description: '小学最后一年，准备升入初中。系统复习小学知识，参加各类升学考试。开始青春期的身心变化。',
+    subtitle: 'Grade 6 / 小升初冲刺',
+    description: '小学最后一年，准备升入初中。系统复习小学知识，参加各类升学考试。开始青春期的身心变化，需要家长更多关注。',
     milestone: '小学毕业年',
     emoji: '🎊',
     color: 'from-cyan-400 to-blue-300',
     resources: [
-      { id: 'r45', name: '升学指南', icon: '🗺️', description: '初中择校和升学政策解读', link: '#', type: 'free' },
-      { id: 'r46', name: '总复习', icon: '📋', description: '小学六年知识点系统复习', link: '#', type: 'paid' },
-      { id: 'r47', name: '青春期教育', icon: '💪', description: '青春期身心健康知识', link: '#', type: 'free' },
-      { id: 'r48', name: '小升初面试', icon: '🎤', description: '初中入学面试准备和技巧', link: '#', type: 'paid' },
+      // ========== 📚 语文冲刺 ==========
+      { id: 'r11-1', name: '语文总复习', icon: '📚', description: '六年语文知识系统复习', link: '#', type: 'free', category: '语文冲刺', userType: 'child' },
+      { id: 'r11-2', name: '作文冲刺', icon: '📝', description: '小升初作文高分技巧', link: '#', type: 'free', category: '语文冲刺', userType: 'child' },
+      { id: 'r11-3', name: '文学常识', icon: '📖', description: '必考文学常识汇总', link: '#', type: 'free', category: '语文冲刺', userType: 'child' },
+      { id: 'r11-4', name: '古诗文默写', icon: '📜', description: '必背古诗文汇总和默写', link: '#', type: 'free', category: '语文冲刺', userType: 'child' },
+      { id: 'r11-5', name: '阅读理解技巧', icon: '📰', description: '阅读理解答题模板', link: '#', type: 'free', category: '语文冲刺', userType: 'child' },
+      
+      // ========== 🔢 数学冲刺 ==========
+      { id: 'r11-6', name: '数学总复习', icon: '🔢', description: '六年数学知识系统梳理', link: '#', type: 'free', category: '数学冲刺', userType: 'child' },
+      { id: 'r11-7', name: '计算强化', icon: '💯', description: '计算准确率和速度训练', link: '#', type: 'free', category: '数学冲刺', userType: 'child' },
+      { id: 'r11-8', name: '应用题大全', icon: '📊', description: '各类应用题解题方法', link: '#', type: 'free', category: '数学冲刺', userType: 'child' },
+      { id: 'r11-9', name: '几何综合', icon: '📐', description: '平面几何综合题', link: '#', type: 'free', category: '数学冲刺', userType: 'child' },
+      { id: 'r11-10', name: '数学思维题', icon: '🧠', description: '逻辑推理和思维拓展', link: '#', type: 'free', category: '数学冲刺', userType: 'child' },
+      { id: 'r11-11', name: '奥数冲刺', icon: '🏆', description: '奥数竞赛最后冲刺', link: '#', type: 'free', category: '数学冲刺', userType: 'child' },
+      
+      // ========== 🌐 英语冲刺 ==========
+      { id: 'r11-12', name: '英语总复习', icon: '📖', description: '小学英语知识系统复习', link: '#', type: 'free', category: '英语冲刺', userType: 'child' },
+      { id: 'r11-13', name: '语法专项', icon: '📝', description: '英语语法专项训练', link: '#', type: 'free', category: '英语冲刺', userType: 'child' },
+      { id: 'r11-14', name: '听力模拟', icon: '🎧', description: '小升初英语听力练习', link: '#', type: 'free', category: '英语冲刺', userType: 'child' },
+      { id: 'r11-15', name: '口语面试', icon: '🗣️', description: '英语口语面试准备', link: '#', type: 'free', category: '英语冲刺', userType: 'child' },
+      { id: 'r11-16', name: 'PET备考', icon: '🎯', description: '剑桥PET考试准备', link: '#', type: 'free', category: '英语冲刺', userType: 'both' },
+      
+      // ========== 🎯 小升初专项 ==========
+      { id: 'r11-17', name: '升学指南', icon: '🗺️', description: '初中择校和升学政策解读', link: '#', type: 'free', category: '小升初专项', userType: 'parent' },
+      { id: 'r11-18', name: '简历制作', icon: '📋', description: '小升初简历制作指南', link: '#', type: 'free', category: '小升初专项', userType: 'both' },
+      { id: 'r11-19', name: '面试技巧', icon: '🎤', description: '小升初面试问答和技巧', link: '#', type: 'free', category: '小升初专项', userType: 'child' },
+      { id: 'r11-20', name: '真题解析', icon: '📝', description: '各校小升初真题详解', link: '#', type: 'free', category: '小升初专项', userType: 'child' },
+      { id: 'r11-21', name: '模拟冲刺', icon: '🎯', description: '小升初模拟测试', link: '#', type: 'free', category: '小升初专项', userType: 'child' },
+      
+      // ========== 🏫 初中衔接 ==========
+      { id: 'r11-22', name: '初中预习', icon: '📚', description: '初一知识提前预习', link: '#', type: 'free', category: '初中衔接', userType: 'child' },
+      { id: 'r11-23', name: '学习方法', icon: '💡', description: '初中学习方法介绍', link: '#', type: 'free', category: '初中衔接', userType: 'both' },
+      { id: 'r11-24', name: '初中生活', icon: '🏫', description: '初中生活适应指南', link: '#', type: 'free', category: '初中衔接', userType: 'both' },
+      { id: 'r11-25', name: '科目介绍', icon: '📖', description: '初中新增科目介绍', link: '#', type: 'free', category: '初中衔接', userType: 'both' },
+      
+      // ========== 🌱 青春期教育 ==========
+      { id: 'r11-26', name: '青春期身体', icon: '🧬', description: '青春期身体发育知识', link: '#', type: 'free', category: '青春期教育', userType: 'both' },
+      { id: 'r11-27', name: '青春期心理', icon: '💚', description: '青春期心理变化和调适', link: '#', type: 'free', category: '青春期教育', userType: 'both' },
+      { id: 'r11-28', name: '性教育启蒙', icon: '📖', description: '适龄性教育知识', link: '#', type: 'free', category: '青春期教育', userType: 'both' },
+      { id: 'r11-29', name: '情绪管理', icon: '😊', description: '青春期情绪管理', link: '#', type: 'free', category: '青春期教育', userType: 'child' },
+      
+      // ========== 💪 综合能力 ==========
+      { id: 'r11-30', name: '时间管理', icon: '⏰', description: '高效时间管理技巧', link: '#', type: 'free', category: '综合能力', userType: 'both' },
+      { id: 'r11-31', name: '抗压能力', icon: '💪', description: '应对学习压力的方法', link: '#', type: 'free', category: '综合能力', userType: 'both' },
+      { id: 'r11-32', name: '独立能力', icon: '🌟', description: '培养独立自主能力', link: '#', type: 'free', category: '综合能力', userType: 'both' },
+      
+      // ========== 👨‍👩‍👧 家长指南 ==========
+      { id: 'r11-33', name: '毕业季指南', icon: '📋', description: '六年级家长全年规划', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r11-34', name: '择校攻略', icon: '🏫', description: '如何选择适合的初中', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r11-35', name: '政策解读', icon: '📜', description: '最新小升初政策解读', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r11-36', name: '青春期沟通', icon: '💬', description: '与青春期孩子的沟通', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r11-37', name: '心理支持', icon: '💚', description: '升学压力下的心理支持', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
     ]
   },
   {
     age: '12岁',
     title: '初中一年级',
-    subtitle: 'Grade 7',
-    description: '进入初中，科目增加，学习节奏加快。开始接触物理、化学等科学课程。社交圈扩大，同伴影响增加。',
+    subtitle: 'Grade 7 / 初中适应期',
+    description: '进入初中，科目增加，学习节奏加快。开始接触更多学科，需要适应新的学习环境。社交圈扩大，同伴影响增加。',
     milestone: '中学生活开始',
     emoji: '🔬',
     color: 'from-indigo-400 to-violet-300',
     resources: [
-      { id: 'r49', name: '初中数学', icon: '📐', description: '代数和几何系统学习', link: '#', type: 'paid' },
-      { id: 'r50', name: '物理入门', icon: '⚡', description: '物理学基础概念和实验', link: '#', type: 'free' },
-      { id: 'r51', name: '英语阅读', icon: '📖', description: '中级英语阅读材料', link: '#', type: 'free' },
-      { id: 'r52', name: '学习方法', icon: '💡', description: '初中学习方法和时间管理', link: '#', type: 'free' },
+      // ========== 📚 语文学习 ==========
+      { id: 'r12-1', name: '初中语文', icon: '📖', description: '初一语文课程系统学习', link: '#', type: 'free', category: '语文学习', userType: 'child' },
+      { id: 'r12-2', name: '文言文进阶', icon: '📜', description: '初中文言文阅读技巧', link: '#', type: 'free', category: '语文学习', userType: 'child' },
+      { id: 'r12-3', name: '现代文阅读', icon: '📰', description: '记叙文、说明文阅读', link: '#', type: 'free', category: '语文学习', userType: 'child' },
+      { id: 'r12-4', name: '初中作文', icon: '📝', description: '初中各类作文写作', link: '#', type: 'free', category: '语文学习', userType: 'child' },
+      { id: 'r12-5', name: '名著阅读', icon: '📕', description: '初中必读名著导读', link: '#', type: 'free', category: '语文学习', userType: 'child' },
+      
+      // ========== 🔢 数学学习 ==========
+      { id: 'r12-6', name: '初中代数', icon: '🔢', description: '有理数、代数式、方程', link: '#', type: 'free', category: '数学学习', userType: 'child' },
+      { id: 'r12-7', name: '初中几何', icon: '📐', description: '几何图形和证明入门', link: '#', type: 'free', category: '数学学习', userType: 'child' },
+      { id: 'r12-8', name: '数学思维', icon: '🧠', description: '初中数学思维训练', link: '#', type: 'free', category: '数学学习', userType: 'child' },
+      { id: 'r12-9', name: '数学竞赛', icon: '🏆', description: '初中数学竞赛入门', link: '#', type: 'free', category: '数学学习', userType: 'child' },
+      { id: 'r12-10', name: '计算巩固', icon: '💯', description: '有理数运算强化', link: '#', type: 'free', category: '数学学习', userType: 'child' },
+      
+      // ========== 🌐 英语学习 ==========
+      { id: 'r12-11', name: '初中英语', icon: '📖', description: '初一英语系统学习', link: '#', type: 'free', category: '英语学习', userType: 'child' },
+      { id: 'r12-12', name: '英语语法系统', icon: '📝', description: '初中英语语法体系', link: '#', type: 'free', category: '英语学习', userType: 'child' },
+      { id: 'r12-13', name: '英语听力', icon: '🎧', description: '初中英语听力训练', link: '#', type: 'free', category: '英语学习', userType: 'child' },
+      { id: 'r12-14', name: '英语阅读', icon: '📗', description: '中级英语阅读材料', link: '#', type: 'free', category: '英语学习', userType: 'child' },
+      { id: 'r12-15', name: '英语口语', icon: '🗣️', description: '口语表达和对话练习', link: '#', type: 'free', category: '英语学习', userType: 'child' },
+      { id: 'r12-16', name: '词汇积累', icon: '📚', description: '初中核心词汇学习', link: '#', type: 'free', category: '英语学习', userType: 'child' },
+      
+      // ========== 🔬 理科学习 ==========
+      { id: 'r12-17', name: '生物入门', icon: '🧬', description: '初一生物基础知识', link: '#', type: 'free', category: '理科学习', userType: 'child' },
+      { id: 'r12-18', name: '地理入门', icon: '🌍', description: '初一地理系统学习', link: '#', type: 'free', category: '理科学习', userType: 'child' },
+      { id: 'r12-19', name: '科学实验', icon: '🔬', description: '初中科学实验方法', link: '#', type: 'free', category: '理科学习', userType: 'child' },
+      
+      // ========== 📖 文科学习 ==========
+      { id: 'r12-20', name: '历史入门', icon: '🏛️', description: '中国古代史学习', link: '#', type: 'free', category: '文科学习', userType: 'child' },
+      { id: 'r12-21', name: '政治入门', icon: '📜', description: '道德与法治基础', link: '#', type: 'free', category: '文科学习', userType: 'child' },
+      
+      // ========== 💻 信息技术 ==========
+      { id: 'r12-22', name: 'Python进阶', icon: '🐍', description: 'Python编程进阶', link: '#', type: 'free', category: '信息技术', userType: 'child' },
+      { id: 'r12-23', name: '信息学竞赛', icon: '💻', description: 'NOIP竞赛入门', link: '#', type: 'free', category: '信息技术', userType: 'child' },
+      { id: 'r12-24', name: '办公技能', icon: '📊', description: 'Office办公软件进阶', link: '#', type: 'free', category: '信息技术', userType: 'child' },
+      
+      // ========== 📚 学习方法 ==========
+      { id: 'r12-25', name: '初中学习法', icon: '💡', description: '初中学习方法和技巧', link: '#', type: 'free', category: '学习方法', userType: 'both' },
+      { id: 'r12-26', name: '笔记方法', icon: '📝', description: '康奈尔笔记法等方法', link: '#', type: 'free', category: '学习方法', userType: 'child' },
+      { id: 'r12-27', name: '时间管理', icon: '⏰', description: '初中生时间管理', link: '#', type: 'free', category: '学习方法', userType: 'both' },
+      { id: 'r12-28', name: '复习策略', icon: '📖', description: '科学复习方法', link: '#', type: 'free', category: '学习方法', userType: 'child' },
+      { id: 'r12-29', name: '考试技巧', icon: '📝', description: '初中考试答题技巧', link: '#', type: 'free', category: '学习方法', userType: 'child' },
+      
+      // ========== 🌱 成长教育 ==========
+      { id: 'r12-30', name: '初中适应', icon: '🏫', description: '初中新生适应指南', link: '#', type: 'free', category: '成长教育', userType: 'both' },
+      { id: 'r12-31', name: '人际关系', icon: '👫', description: '初中同学关系处理', link: '#', type: 'free', category: '成长教育', userType: 'child' },
+      { id: 'r12-32', name: '青春期健康', icon: '💚', description: '青春期身心健康', link: '#', type: 'free', category: '成长教育', userType: 'both' },
+      { id: 'r12-33', name: '目标规划', icon: '🎯', description: '设定学习和人生目标', link: '#', type: 'free', category: '成长教育', userType: 'both' },
+      { id: 'r12-34', name: '抗挫能力', icon: '💪', description: '面对挫折的心态', link: '#', type: 'free', category: '成长教育', userType: 'both' },
+      
+      // ========== 👨‍👩‍👧 家长指南 ==========
+      { id: 'r12-35', name: '初一指南', icon: '📋', description: '初一家长全年规划', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r12-36', name: '学业监督', icon: '📚', description: '如何监督初中学习', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r12-37', name: '青春期沟通', icon: '💬', description: '与青春期孩子沟通', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r12-38', name: '家校配合', icon: '🤝', description: '与初中老师配合', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r12-39', name: '手机管理', icon: '📱', description: '初中生手机使用管理', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r12-40', name: '中考规划', icon: '🎯', description: '提前了解中考政策', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
     ]
   },
   {
@@ -958,6 +1117,23 @@ const categoryColors: { [key: string]: { bg: string; border: string; text: strin
   '信息技术': { bg: 'bg-indigo-50', border: 'border-indigo-200', text: 'text-indigo-600' },
   '学习能力': { bg: 'bg-sky-50', border: 'border-sky-200', text: 'text-sky-600' },
   '心理成长': { bg: 'bg-pink-50', border: 'border-pink-200', text: 'text-pink-600' },
+  
+  // === Grades 5-7 Categories ===
+  '科学素养': { bg: 'bg-cyan-50', border: 'border-cyan-200', text: 'text-cyan-600' },
+  '信息与编程': { bg: 'bg-indigo-50', border: 'border-indigo-200', text: 'text-indigo-600' },
+  '小升初准备': { bg: 'bg-rose-50', border: 'border-rose-200', text: 'text-rose-600' },
+  '才艺特长': { bg: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-600' },
+  '学习策略': { bg: 'bg-sky-50', border: 'border-sky-200', text: 'text-sky-600' },
+  '语文冲刺': { bg: 'bg-red-100', border: 'border-red-300', text: 'text-red-700' },
+  '数学冲刺': { bg: 'bg-blue-100', border: 'border-blue-300', text: 'text-blue-700' },
+  '英语冲刺': { bg: 'bg-green-100', border: 'border-green-300', text: 'text-green-700' },
+  '小升初专项': { bg: 'bg-rose-100', border: 'border-rose-300', text: 'text-rose-700' },
+  '初中衔接': { bg: 'bg-violet-50', border: 'border-violet-200', text: 'text-violet-600' },
+  '青春期教育': { bg: 'bg-pink-50', border: 'border-pink-200', text: 'text-pink-600' },
+  '综合能力': { bg: 'bg-teal-50', border: 'border-teal-200', text: 'text-teal-600' },
+  '理科学习': { bg: 'bg-cyan-50', border: 'border-cyan-200', text: 'text-cyan-600' },
+  '文科学习': { bg: 'bg-amber-50', border: 'border-amber-200', text: 'text-amber-600' },
+  '成长教育': { bg: 'bg-emerald-50', border: 'border-emerald-200', text: 'text-emerald-600' },
   
   '其他资源': { bg: 'bg-gray-50', border: 'border-gray-200', text: 'text-gray-600' },
 };
