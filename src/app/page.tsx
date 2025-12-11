@@ -908,6 +908,12 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r12-34', name: '大学准备', icon: '🎓', description: '从7年级开始的大学准备', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
       { id: 'r12-35', name: '亲子沟通', icon: '💬', description: '与青春期孩子的有效沟通', link: '#', type: 'free', category: '心理社交', userType: 'parent' },
       { id: 'r12-36', name: '家长角色', icon: '👨‍👩‍👧', description: '从管理者到顾问的角色转变', link: '#', type: 'free', category: '心理社交', userType: 'parent' },
+      
+      // ========== 🏛️ 顶私教育（提前规划：高中路径）==========
+      { id: 'r12-37', name: '私校高中了解', icon: '🏛️', description: '顶私高中vs公立高中：7年级开始了解差异', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r12-38', name: 'IB学校选择', icon: '🌏', description: 'IB高中项目了解：哪些学校提供IB Diploma', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r12-39', name: '私校申请时间线', icon: '📅', description: '私立高中申请：从7年级开始的准备计划', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r12-40', name: 'SSAT早期准备', icon: '📚', description: '8年级要考SSAT？现在开始准备词汇和阅读', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
     ]
   },
   {
@@ -973,6 +979,13 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r13-33', name: '大学准备', icon: '🎓', description: '从8年级开始的大学申请准备', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
       { id: 'r13-34', name: '家长支持', icon: '👨‍👩‍👧', description: '高中阶段家长的角色', link: '#', type: 'free', category: '心理社交', userType: 'parent' },
       { id: 'r13-35', name: '沟通策略', icon: '💬', description: '与青春期孩子讨论未来规划', link: '#', type: 'free', category: '心理社交', userType: 'parent' },
+      
+      // ========== 🏛️ 顶私教育（高中路径关键决策）==========
+      { id: 'r13-39', name: 'AP vs IB详解', icon: '📚', description: '深入了解AP和IB的区别：课程结构、难度、大学认可度', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r13-40', name: 'IB学校申请', icon: '🌏', description: 'IB Diploma学校的申请流程和要求', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r13-41', name: 'A-Level了解', icon: '🇬🇧', description: '英联邦国家的A-Level体系：适合什么样的学生', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r13-42', name: '私校课外优势', icon: '🎭', description: '顶私高中的课外活动和资源优势', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r13-43', name: '私校vs公立AP', icon: '⚖️', description: '私校AP项目vs公立学校AP：差异和选择', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
     ]
   },
   {
@@ -1019,11 +1032,12 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r14-20', name: '家长角色转变', icon: '👨‍👩‍👧', description: '高中阶段家长要学会放手，但要保持参与', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r14-21', name: '9年级检查清单', icon: '✅', description: '9年级结束前应该完成的事项清单', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       
-      // ========== 🏛️ 顶私教育（私校9年级）==========
-      { id: 'r14-22', name: '私校新生', icon: '🏛️', description: '顶私高中新生：适应私校高中的节奏', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
-      { id: 'r14-23', name: 'Pre-AP准备', icon: '📚', description: '私校Pre-AP课程：为AP打基础', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
-      { id: 'r14-24', name: '私校活动', icon: '🎭', description: '私校的课外活动和社团选择', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
-      { id: 'r14-25', name: 'IB预备', icon: '🌏', description: 'Pre-IB课程和IB Diploma准备', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
+      // ========== 🏛️ 顶私教育（高中阶段重点）==========
+      { id: 'r14-22', name: 'AP课程选择', icon: '📚', description: '私校AP课程选择策略：哪些AP最适合9年级', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
+      { id: 'r14-23', name: 'IB DP规划', icon: '🌏', description: 'IB Diploma完整要求：EE、TOK、CAS如何提前准备', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
+      { id: 'r14-24', name: '私校升学优势', icon: '🎓', description: '顶私学校的大学升学指导和资源优势', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      { id: 'r14-25', name: '推荐信优势', icon: '📧', description: '私校老师推荐信的优势：如何让老师了解你', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
+      { id: 'r14-26', name: '私校学术资源', icon: '📖', description: '顶私高中特有的学术资源和研究机会', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
     ]
   },
   {
@@ -1068,12 +1082,6 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r15-20', name: '大学费用初了解', icon: '💰', description: '美国大学费用：公立vs私立、州内vs州外、助学金', link: '#', type: 'free', category: '西方教育', userType: 'parent' },
       { id: 'r15-21', name: '升学顾问', icon: '🧭', description: '是否需要升学顾问？学校counselor vs 私人顾问', link: '#', type: 'free', category: '升学规划', userType: 'parent' },
       { id: 'r15-22', name: '10年级检查清单', icon: '✅', description: '10年级结束前应该完成的事项清单', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
-      
-      // ========== 🏛️ 顶私教育（私校10年级）==========
-      { id: 'r15-23', name: 'AP课程选择', icon: '📚', description: '私校AP课程：哪些AP最值得选', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
-      { id: 'r15-24', name: 'IB选课', icon: '🌏', description: 'IB课程选择：HL vs SL科目搭配策略', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
-      { id: 'r15-25', name: '私校升学', icon: '🎓', description: '顶私的大学升学率和录取优势', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
-      { id: 'r15-26', name: '私校竞赛', icon: '🏆', description: '私校学生参与学术竞赛的优势和资源', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
     ]
   },
   {
@@ -1123,11 +1131,9 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r16-23', name: '探校规划', icon: '🚗', description: '11年级暑假探校：如何安排高效的校园参观行程', link: '#', type: 'free', category: '升学规划', userType: 'parent' },
       { id: 'r16-24', name: '11年级检查清单', icon: '✅', description: '11年级结束前必须完成的事项清单', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       
-      // ========== 🏛️ 顶私教育（私校11年级）==========
-      { id: 'r16-25', name: 'AP考试规划', icon: '📚', description: '私校学生AP考试策略：考几门、如何平衡', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
-      { id: 'r16-26', name: 'IB DP', icon: '🌏', description: 'IB Diploma Program详解：EE、TOK、CAS要求', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
-      { id: 'r16-27', name: '私校推荐信', icon: '📧', description: '顶私的推荐信优势和如何最大化利用', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
-      { id: 'r16-28', name: '私校升学指导', icon: '🎓', description: '利用私校的大学升学指导资源', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
+      // ========== 🎓 IB/AP深度（通用）==========
+      { id: 'r16-25', name: 'AP考试规划', icon: '📚', description: 'AP考试策略：考几门、如何平衡学业', link: '#', type: 'free', category: '升学规划', userType: 'both' },
+      { id: 'r16-26', name: 'IB DP详解', icon: '🌏', description: 'IB Diploma Program详解：EE、TOK、CAS要求', link: '#', type: 'free', category: '升学规划', userType: 'both' },
     ]
   },
   {
@@ -1177,12 +1183,6 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r17-23', name: '放手的艺术', icon: '🦋', description: '让孩子独立：从高中生到大学生的角色转变', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r17-24', name: 'Aid Appeal', icon: '💬', description: '如何与大学沟通争取更多财务援助', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
       { id: 'r17-25', name: '回顾与祝福', icon: '🌟', description: 'K-12结束：回顾旅程，展望未来', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
-      
-      // ========== 🏛️ 顶私教育（私校12年级）==========
-      { id: 'r17-26', name: 'IB考试', icon: '🌏', description: 'IB DP最终考试准备和分数预测', link: '#', type: 'free', category: '顶私教育', userType: 'child' },
-      { id: 'r17-27', name: 'A-Level考试', icon: '🇬🇧', description: 'A-Level最终考试准备和UCAS申请', link: '#', type: 'free', category: '顶私教育', userType: 'child' },
-      { id: 'r17-28', name: '私校校友网络', icon: '🤝', description: '利用顶私校友资源和网络', link: '#', type: 'free', category: '顶私教育', userType: 'both' },
-      { id: 'r17-29', name: '顶私毕业后', icon: '🎓', description: '顶私毕业生的大学适应和优势', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
     ]
   },
 ];
