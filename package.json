@@ -5,6 +5,8 @@
   "homepage": "https://storybeeBooks.github.io/k12pathweb",
   "scripts": {
     "dev": "next dev",
+    "stats": "node scripts/generate-stats.js",
+    "prebuild": "node scripts/generate-stats.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
