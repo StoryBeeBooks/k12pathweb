@@ -689,26 +689,19 @@ function ResourceCard({ resource }: { resource: Resource }) {
     >
       {/* App Icon - Clean minimal style */}
       <div className="flex flex-col items-center cursor-pointer transition-all duration-200 hover:scale-105">
-        <div className={`relative w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-2xl md:text-3xl border ${
-          resource.type === 'free' 
-            ? 'bg-slate-50 border-slate-200 hover:border-emerald-300 hover:bg-emerald-50' 
-            : 'bg-slate-50 border-slate-200 hover:border-amber-300 hover:bg-amber-50'
-        } ${isExpanded ? (resource.type === 'free' ? 'border-emerald-400 bg-emerald-50' : 'border-amber-400 bg-amber-50') : ''}`}>
+        <div className={`relative w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-2xl md:text-3xl border bg-slate-50 border-slate-200 hover:border-slate-300 hover:bg-slate-100 ${isExpanded ? 'border-slate-400 bg-slate-100' : ''}`}>
           {resource.icon}
-          {/* User type indicator dot */}
-          {userTypeInfo && (
-            <span className={`absolute -top-1 -right-1 w-3 h-3 rounded-full border border-white ${
-              resource.userType === 'parent' ? 'bg-blue-400' :
-              resource.userType === 'child' ? 'bg-pink-400' : 'bg-purple-400'
-            }`}></span>
-          )}
+          {/* User type indicator */}
+          <span className={`absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full border-2 border-white flex items-center justify-center text-[10px] shadow-sm ${
+            resource.userType === 'parent' ? 'bg-blue-100' :
+            resource.userType === 'child' ? 'bg-pink-100' : 'bg-purple-100'
+          }`}>
+            {resource.userType === 'parent' ? '👨‍👩‍👧' : resource.userType === 'child' ? '📚' : '👨‍👩‍👧‍👦'}
+          </span>
         </div>
         <span className="mt-1.5 text-xs font-medium text-slate-600 text-center max-w-[70px] line-clamp-2">
           {resource.name}
         </span>
-        {resource.type === 'paid' && (
-          <span className="text-[10px] text-amber-500 font-medium">付费</span>
-        )}
       </div>
 
       {/* Expanded Card - Fixed positioning to avoid overflow */}
@@ -720,13 +713,6 @@ function ResourceCard({ resource }: { resource: Resource }) {
               <div className="flex-1 min-w-0">
                 <h4 className="font-semibold text-slate-800 text-base">{resource.name}</h4>
                 <div className="flex items-center gap-1.5 mt-1 flex-wrap">
-                  <span className={`text-xs px-2 py-0.5 rounded ${
-                    resource.type === 'free' 
-                      ? 'bg-emerald-100 text-emerald-700' 
-                      : 'bg-amber-100 text-amber-700'
-                  }`}>
-                    {resource.type === 'free' ? '免费' : '付费'}
-                  </span>
                   {userTypeInfo && (
                     <span className={`text-xs px-2 py-0.5 rounded ${userTypeInfo.color}`}>
                       {userTypeInfo.label}用
@@ -743,13 +729,9 @@ function ResourceCard({ resource }: { resource: Resource }) {
             <p className="text-sm text-slate-600 mb-4 leading-relaxed">{resource.description}</p>
             <a 
               href={resource.link}
-              className={`block w-full text-center py-2.5 rounded-lg text-sm font-medium transition-colors ${
-                resource.type === 'free'
-                  ? 'bg-emerald-500 hover:bg-emerald-600 text-white'
-                  : 'bg-amber-500 hover:bg-amber-600 text-white'
-              }`}
+              className="block w-full text-center py-2.5 rounded-lg text-sm font-medium transition-colors bg-slate-800 hover:bg-slate-900 text-white"
             >
-              {resource.type === 'free' ? '免费使用' : '了解更多'}
+              开始使用
             </a>
           </div>
         </div>
@@ -841,27 +823,14 @@ function AgeSection({ stage, index }: { stage: AgeStage; index: number }) {
     return () => observer.disconnect();
   }, []);
 
-  // Group resources by category
-  const groupedResources = stage.resources.reduce((acc, resource) => {
-    const category = resource.category || '其他资源';
-    if (!acc[category]) {
-      acc[category] = [];
-    }
-    acc[category].push(resource);
-    return acc;
-  }, {} as { [key: string]: Resource[] });
-
-  // Sort resources within each category: free first, then paid
-  Object.keys(groupedResources).forEach(category => {
-    groupedResources[category].sort((a, b) => {
-      if (a.type === 'free' && b.type === 'paid') return -1;
-      if (a.type === 'paid' && b.type === 'free') return 1;
-      return 0;
-    });
-  });
-
-  const categories = Object.keys(groupedResources);
-  const hasCategories = categories.length > 1 || (categories.length === 1 && categories[0] !== '其他资源');
+  // Group resources by userType: parent, child, both
+  const parentResources = stage.resources.filter(r => r.userType === 'parent');
+  const childResources = stage.resources.filter(r => r.userType === 'child');
+  const bothResources = stage.resources.filter(r => r.userType === 'both' || !r.userType);
+  
+  const hasParentResources = parentResources.length > 0;
+  const hasChildResources = childResources.length > 0;
+  const hasBothResources = bothResources.length > 0;
 
   return (
     <div 
@@ -909,37 +878,64 @@ function AgeSection({ stage, index }: { stage: AgeStage; index: number }) {
           </p>
         </div>
 
-        {/* Resources - All visible with category-colored backgrounds */}
-        <div className="p-5 md:p-6">
-          {/* All icons grid */}
-          <div className="flex flex-wrap gap-3 md:gap-4">
-            {categories.map(category => 
-              groupedResources[category].map(resource => (
-                <ResourceCardWithCategory 
-                  key={resource.id} 
-                  resource={resource} 
-                  categoryColor={categoryColors[resource.category || '其他资源'] || categoryColors['其他资源']}
-                />
-              ))
-            )}
-          </div>
+        {/* Resources - Organized by user type: Parents first, then Students */}
+        <div className="p-5 md:p-6 space-y-6">
+          {/* Parent Resources Section */}
+          {hasParentResources && (
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-lg">👨‍👩‍👧</span>
+                <h3 className="text-sm font-semibold text-slate-700">家长专区</h3>
+                <span className="text-xs text-slate-400">({parentResources.length})</span>
+              </div>
+              <div className="flex flex-wrap gap-3 md:gap-4">
+                {parentResources.map(resource => (
+                  <ResourceCardWithCategory 
+                    key={resource.id} 
+                    resource={resource} 
+                    categoryColor={categoryColors[resource.category || '其他资源'] || categoryColors['其他资源']}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
           
-          {/* Category Legend */}
-          {hasCategories && (
-            <div className="mt-5 pt-4 border-t border-slate-100">
-              <div className="flex flex-wrap gap-2">
-                {categories.map(category => {
-                  const colors = categoryColors[category] || categoryColors['其他资源'];
-                  return (
-                    <span 
-                      key={category}
-                      className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium ${colors.bg} ${colors.text} border ${colors.border}`}
-                    >
-                      <span className="w-2 h-2 rounded-full bg-current opacity-60"></span>
-                      {category}
-                    </span>
-                  );
-                })}
+          {/* Child/Student Resources Section */}
+          {hasChildResources && (
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-lg">📚</span>
+                <h3 className="text-sm font-semibold text-slate-700">学生专区</h3>
+                <span className="text-xs text-slate-400">({childResources.length})</span>
+              </div>
+              <div className="flex flex-wrap gap-3 md:gap-4">
+                {childResources.map(resource => (
+                  <ResourceCardWithCategory 
+                    key={resource.id} 
+                    resource={resource} 
+                    categoryColor={categoryColors[resource.category || '其他资源'] || categoryColors['其他资源']}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+          
+          {/* Both/亲子 Resources Section */}
+          {hasBothResources && (
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-lg">👨‍👩‍👧‍👦</span>
+                <h3 className="text-sm font-semibold text-slate-700">亲子共用</h3>
+                <span className="text-xs text-slate-400">({bothResources.length})</span>
+              </div>
+              <div className="flex flex-wrap gap-3 md:gap-4">
+                {bothResources.map(resource => (
+                  <ResourceCardWithCategory 
+                    key={resource.id} 
+                    resource={resource} 
+                    categoryColor={categoryColors[resource.category || '其他资源'] || categoryColors['其他资源']}
+                  />
+                ))}
               </div>
             </div>
           )}
@@ -990,12 +986,13 @@ function ResourceCardWithCategory({ resource, categoryColor }: { resource: Resou
       <div className="flex flex-col items-center cursor-pointer transition-all duration-200 hover:scale-105">
         <div className={`relative w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-2xl md:text-3xl border-2 ${categoryColor.bg} ${categoryColor.border} hover:shadow-md transition-shadow`}>
           {resource.icon}
-          {/* Paid indicator */}
-          {resource.type === 'paid' && (
-            <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-amber-400 border-2 border-white flex items-center justify-center">
-              <span className="text-[8px] text-white font-bold">$</span>
-            </span>
-          )}
+          {/* User type indicator */}
+          <span className={`absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full border-2 border-white flex items-center justify-center text-[10px] shadow-sm ${
+            resource.userType === 'parent' ? 'bg-blue-100' :
+            resource.userType === 'child' ? 'bg-pink-100' : 'bg-purple-100'
+          }`}>
+            {resource.userType === 'parent' ? '👨‍👩‍👧' : resource.userType === 'child' ? '📚' : '👨‍👩‍👧‍👦'}
+          </span>
         </div>
         <span className="mt-1.5 text-xs font-medium text-slate-600 text-center max-w-[70px] line-clamp-2">
           {resource.name}
@@ -1013,13 +1010,6 @@ function ResourceCardWithCategory({ resource, categoryColor }: { resource: Resou
               <div className="flex-1 min-w-0">
                 <h4 className="font-semibold text-slate-800 text-base">{resource.name}</h4>
                 <div className="flex items-center gap-1.5 mt-1 flex-wrap">
-                  <span className={`text-xs px-2 py-0.5 rounded ${
-                    resource.type === 'free' 
-                      ? 'bg-emerald-100 text-emerald-700' 
-                      : 'bg-amber-100 text-amber-700'
-                  }`}>
-                    {resource.type === 'free' ? '免费' : '付费'}
-                  </span>
                   {userTypeInfo && (
                     <span className={`text-xs px-2 py-0.5 rounded ${userTypeInfo.color}`}>
                       {userTypeInfo.label}用
@@ -1041,13 +1031,9 @@ function ResourceCardWithCategory({ resource, categoryColor }: { resource: Resou
             <p className="text-sm text-slate-600 mb-4 leading-relaxed">{resource.description}</p>
             <a 
               href={resource.link}
-              className={`block w-full text-center py-2.5 rounded-lg text-sm font-medium transition-colors ${
-                resource.type === 'free'
-                  ? 'bg-emerald-500 hover:bg-emerald-600 text-white'
-                  : 'bg-amber-500 hover:bg-amber-600 text-white'
-              }`}
+              className="block w-full text-center py-2.5 rounded-lg text-sm font-medium transition-colors bg-slate-800 hover:bg-slate-900 text-white"
             >
-              {resource.type === 'free' ? '免费使用' : '了解更多'}
+              开始使用
             </a>
           </div>
         </div>
