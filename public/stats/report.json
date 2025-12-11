@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-12-11T18:55:34.772Z",
+  "generatedAt": "2025-12-11T19:00:02.679Z",
   "summary": {
     "totalResources": 639,
     "totalStages": 18,
@@ -1811,7 +1811,7 @@
         },
         {
           "id": "r9-17",
-          "name": "Word Quest",
+          "name": "SSAT 小学词汇",
           "icon": "🎮",
           "userType": "child"
         },
@@ -7698,7 +7698,7 @@
     },
     {
       "id": "r9-17",
-      "name": "Word Quest",
+      "name": "SSAT 小学词汇",
       "icon": "🎮",
       "description": "K12Path原创SSAT词汇游戏！趣味学习SSAT Elementary词汇",
       "link": "/word-quest/",

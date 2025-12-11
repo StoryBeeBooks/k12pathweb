@@ -681,7 +681,7 @@ const lifeJourneyData: AgeStage[] = [
       { id: 'r9-14', name: '私校了解', icon: '🏫', description: '西方私立学校概览和选择', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
       { id: 'r9-15', name: 'SSAT了解', icon: '📝', description: '了解SSAT考试（如果考虑私校）', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
       { id: 'r9-16', name: '活动规划', icon: '🎯', description: '课外活动的长期规划思路', link: '#', type: 'free', category: '顶私教育', userType: 'parent' },
-      { id: 'r9-17', name: 'Word Quest', icon: '🎮', description: 'K12Path原创SSAT词汇游戏！趣味学习SSAT Elementary词汇', link: '/word-quest/', type: 'free', category: '顶私教育', userType: 'child' },
+      { id: 'r9-17', name: 'SSAT 小学词汇', icon: '🎮', description: 'K12Path原创SSAT词汇游戏！趣味学习SSAT Elementary词汇', link: '/word-quest/', type: 'free', category: '顶私教育', userType: 'child' },
       
       // ========== 🏮 中文传承 ==========
       { id: 'r9-18', name: '中文阅读', icon: '📚', description: '适合9岁的中文章节书推荐', link: '#', type: 'free', category: '中文传承', userType: 'parent' },
