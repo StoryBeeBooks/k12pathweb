@@ -30,135 +30,239 @@ const lifeJourneyData: AgeStage[] = [
   {
     age: '0岁',
     title: '欢迎来到这个世界！',
-    subtitle: '新生儿期 (0-12个月)',
+    subtitle: 'Newborn / 新生儿期 (0-12个月)',
     description: '宝宝开始感知世界，学会抬头、翻身、坐立。通过声音、触觉和视觉探索周围的一切。这是建立安全感和亲子关系的关键时期。',
     milestone: '距离上幼儿园还有3年',
     emoji: '👶',
     color: 'from-pink-400 to-rose-300',
     resources: [
-      // 睡眠相关
-      { id: 'r0-1', name: '睡眠训练', icon: '😴', description: '新生儿睡眠规律建立指南，帮助宝宝养成健康作息', link: '#', type: 'free' },
-      { id: 'r0-2', name: '白噪音', icon: '🎵', description: '模拟子宫环境的白噪音，帮助宝宝安睡', link: '#', type: 'free' },
-      // 喂养相关
-      { id: 'r0-3', name: '母乳指南', icon: '🤱', description: '母乳喂养姿势、频率、常见问题解答', link: '#', type: 'free' },
-      { id: 'r0-4', name: '配方奶选择', icon: '🍼', description: '如何选择适合宝宝的配方奶粉', link: '#', type: 'free' },
-      { id: 'r0-5', name: '辅食添加', icon: '🥣', description: '6个月后辅食添加时间表和食谱（4-6个月开始准备）', link: '#', type: 'free' },
-      // 健康护理
-      { id: 'r0-6', name: '新生儿护理', icon: '🛁', description: '脐带护理、洗澡、换尿布等日常护理技巧', link: '#', type: 'free' },
-      { id: 'r0-7', name: '疫苗接种', icon: '💉', description: '0-1岁疫苗接种时间表和注意事项', link: '#', type: 'free' },
-      { id: 'r0-8', name: '儿科急救', icon: '🏥', description: '发烧、呛奶、湿疹等常见问题处理', link: '#', type: 'free' },
-      // 发育追踪
-      { id: 'r0-9', name: '发育里程碑', icon: '📊', description: '追踪抬头、翻身、坐立等大动作发育', link: '#', type: 'free' },
-      { id: 'r0-10', name: '成长记录', icon: '📸', description: '记录身高体重和珍贵瞬间', link: '#', type: 'paid' },
-      // 早期刺激
-      { id: 'r0-11', name: '黑白卡片', icon: '🎴', description: '0-3个月视觉刺激训练卡片', link: '#', type: 'free' },
-      { id: 'r0-12', name: '婴儿按摩', icon: '👐', description: '促进亲子关系和身体发育的抚触按摩', link: '#', type: 'free' },
-      { id: 'r0-13', name: '早教音乐', icon: '🎹', description: '莫扎特效应：促进大脑发育的古典音乐', link: '#', type: 'free' },
-      // 父母支持
-      { id: 'r0-14', name: '产后恢复', icon: '🧘‍♀️', description: '妈妈产后身体恢复和心理调适', link: '#', type: 'free' },
-      { id: 'r0-15', name: '新手爸爸', icon: '👨', description: '爸爸如何参与育儿和支持妈妈', link: '#', type: 'free' },
+      // ========== 😴 睡眠安抚 ==========
+      { id: 'r0-1', name: '睡眠训练', icon: '😴', description: '新生儿睡眠规律建立指南，帮助宝宝养成健康作息', link: '#', type: 'free', category: '睡眠安抚', userType: 'parent' },
+      { id: 'r0-2', name: '白噪音', icon: '🎵', description: '模拟子宫环境的白噪音，帮助宝宝安睡', link: '#', type: 'free', category: '睡眠安抚', userType: 'both' },
+      { id: 'r0-3', name: '睡前音乐', icon: '🎶', description: '舒缓的摇篮曲和轻音乐', link: '#', type: 'free', category: '睡眠安抚', userType: 'both' },
+      { id: 'r0-4', name: '睡眠追踪', icon: '📊', description: '记录宝宝睡眠时间和规律', link: '#', type: 'paid', category: '睡眠安抚', userType: 'parent' },
+      
+      // ========== 🍼 喂养营养 ==========
+      { id: 'r0-5', name: '母乳指南', icon: '🤱', description: '母乳喂养姿势、频率、常见问题解答', link: '#', type: 'free', category: '喂养营养', userType: 'parent' },
+      { id: 'r0-6', name: '配方奶选择', icon: '🍼', description: '如何选择适合宝宝的配方奶粉', link: '#', type: 'free', category: '喂养营养', userType: 'parent' },
+      { id: 'r0-7', name: '辅食添加', icon: '🥣', description: '6个月后辅食添加时间表和食谱', link: '#', type: 'free', category: '喂养营养', userType: 'parent' },
+      { id: 'r0-8', name: '喂养记录', icon: '📝', description: '记录喂奶时间、奶量、辅食', link: '#', type: 'free', category: '喂养营养', userType: 'parent' },
+      { id: 'r0-9', name: '过敏防护', icon: '⚠️', description: '常见食物过敏识别和预防', link: '#', type: 'free', category: '喂养营养', userType: 'parent' },
+      
+      // ========== 🏥 健康护理 ==========
+      { id: 'r0-10', name: '新生儿护理', icon: '🛁', description: '脐带护理、洗澡、换尿布等日常护理', link: '#', type: 'free', category: '健康护理', userType: 'parent' },
+      { id: 'r0-11', name: '疫苗接种', icon: '💉', description: '0-1岁疫苗接种时间表和注意事项', link: '#', type: 'free', category: '健康护理', userType: 'parent' },
+      { id: 'r0-12', name: '儿科急救', icon: '🏥', description: '发烧、呛奶、湿疹等常见问题处理', link: '#', type: 'free', category: '健康护理', userType: 'parent' },
+      { id: 'r0-13', name: '黄疸护理', icon: '🌡️', description: '新生儿黄疸的观察和护理', link: '#', type: 'free', category: '健康护理', userType: 'parent' },
+      { id: 'r0-14', name: '皮肤护理', icon: '🧴', description: '湿疹、尿布疹、痱子的预防和处理', link: '#', type: 'free', category: '健康护理', userType: 'parent' },
+      
+      // ========== 📊 发育追踪 ==========
+      { id: 'r0-15', name: '发育里程碑', icon: '📈', description: '追踪抬头、翻身、坐立等大动作发育', link: '#', type: 'free', category: '发育追踪', userType: 'parent' },
+      { id: 'r0-16', name: '身高体重', icon: '📏', description: '生长曲线对照和记录', link: '#', type: 'free', category: '发育追踪', userType: 'parent' },
+      { id: 'r0-17', name: '成长记录', icon: '📸', description: '记录宝宝珍贵瞬间和第一次', link: '#', type: 'paid', category: '发育追踪', userType: 'parent' },
+      
+      // ========== 👁️ 感官刺激 ==========
+      { id: 'r0-18', name: '黑白卡片', icon: '🎴', description: '0-3个月视觉刺激训练卡片', link: '#', type: 'free', category: '感官刺激', userType: 'both' },
+      { id: 'r0-19', name: '彩色卡片', icon: '🌈', description: '3个月后彩色视觉刺激卡', link: '#', type: 'free', category: '感官刺激', userType: 'both' },
+      { id: 'r0-20', name: '婴儿按摩', icon: '👐', description: '促进亲子关系和身体发育的抚触', link: '#', type: 'free', category: '感官刺激', userType: 'both' },
+      { id: 'r0-21', name: '早教音乐', icon: '🎹', description: '促进大脑发育的古典音乐', link: '#', type: 'free', category: '感官刺激', userType: 'both' },
+      { id: 'r0-22', name: '触觉玩具', icon: '🧸', description: '不同材质的触觉探索玩具推荐', link: '#', type: 'free', category: '感官刺激', userType: 'both' },
+      { id: 'r0-23', name: '追视训练', icon: '👀', description: '用玩具训练宝宝追视能力', link: '#', type: 'free', category: '感官刺激', userType: 'both' },
+      
+      // ========== 👨‍👩‍👧 家长指南 ==========
+      { id: 'r0-24', name: '产后恢复', icon: '🧘‍♀️', description: '妈妈产后身体恢复和心理调适', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r0-25', name: '新手爸爸', icon: '👨', description: '爸爸如何参与育儿和支持妈妈', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r0-26', name: '产后抑郁', icon: '💚', description: '识别和应对产后情绪问题', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r0-27', name: '育儿日程', icon: '📅', description: '新生儿作息时间表参考', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r0-28', name: '用品清单', icon: '🛒', description: '0-1岁必备用品购物清单', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
     ]
   },
   {
     age: '1岁',
     title: '宝宝一岁啦！',
-    subtitle: '学步期 (12-24个月)',
+    subtitle: 'Toddler / 学步期 (12-24个月)',
     description: '宝宝开始站立和行走，说出第一个词语。对周围一切充满好奇，喜欢模仿大人。这是语言和运动能力快速发展的阶段。',
     milestone: '距离上幼儿园还有2年',
     emoji: '🚶',
     color: 'from-orange-400 to-amber-300',
     resources: [
-      // 语言发展
-      { id: 'r1-1', name: '学说话', icon: '🗣️', description: '第一批词汇学习：爸爸、妈妈、水、球等', link: '#', type: 'free' },
-      { id: 'r1-2', name: '指物命名', icon: '👆', description: '指着物品说名称，扩展词汇量', link: '#', type: 'free' },
-      { id: 'r1-3', name: '儿歌童谣', icon: '🎤', description: '简单重复的儿歌促进语言发展', link: '#', type: 'free' },
-      // 大动作发展
-      { id: 'r1-4', name: '学步辅助', icon: '🚶', description: '安全学步技巧，何时用/不用学步车', link: '#', type: 'free' },
-      { id: 'r1-5', name: '户外探索', icon: '🌳', description: '公园玩耍安全指南，促进大动作发展', link: '#', type: 'free' },
-      // 精细动作
-      { id: 'r1-6', name: '手指游戏', icon: '✋', description: '促进手眼协调的手指操', link: '#', type: 'free' },
-      { id: 'r1-7', name: '堆叠玩具', icon: '🧱', description: '叠积木、套杯训练精细动作', link: '#', type: 'free' },
-      // 认知发展
-      { id: 'r1-8', name: '认知卡片', icon: '🃏', description: '认识动物、水果、颜色、形状', link: '#', type: 'free' },
-      { id: 'r1-9', name: '藏猫猫', icon: '🙈', description: '物体恒存概念游戏', link: '#', type: 'free' },
-      // 自理能力
-      { id: 'r1-10', name: '自主进食', icon: '🥄', description: '从手抓到用勺子，培养独立吃饭', link: '#', type: 'free' },
-      { id: 'r1-11', name: '喝水杯', icon: '🥛', description: '从奶瓶过渡到吸管杯、敞口杯', link: '#', type: 'free' },
-      // 睡眠
-      { id: 'r1-12', name: '睡眠调整', icon: '😴', description: '1岁后午睡和夜间睡眠调整', link: '#', type: 'free' },
-      { id: 'r1-13', name: '睡前仪式', icon: '🌙', description: '建立固定睡前程序', link: '#', type: 'free' },
-      // 安全
-      { id: 'r1-14', name: '家居安全', icon: '🏠', description: '学步期家居防护清单', link: '#', type: 'free' },
-      { id: 'r1-15', name: '急救知识', icon: '🩹', description: '跌倒、烫伤、误食等紧急处理', link: '#', type: 'free' },
+      // ========== 🗣️ 语言发展 ==========
+      { id: 'r1-1', name: '学说话', icon: '🗣️', description: '第一批词汇：爸爸、妈妈、水、球等', link: '#', type: 'free', category: '语言发展', userType: 'both' },
+      { id: 'r1-2', name: '指物命名', icon: '👆', description: '指着物品说名称，扩展词汇量', link: '#', type: 'free', category: '语言发展', userType: 'both' },
+      { id: 'r1-3', name: '儿歌童谣', icon: '🎤', description: '简单重复的儿歌促进语言发展', link: '#', type: 'free', category: '语言发展', userType: 'both' },
+      { id: 'r1-4', name: '身体部位', icon: '👃', description: '认识眼睛、鼻子、耳朵等', link: '#', type: 'free', category: '语言发展', userType: 'both' },
+      { id: 'r1-5', name: '动物叫声', icon: '🐶', description: '模仿小狗汪汪、小猫喵喵', link: '#', type: 'free', category: '语言发展', userType: 'both' },
+      
+      // ========== 🏃 大动作发展 ==========
+      { id: 'r1-6', name: '学步辅助', icon: '🚶', description: '安全学步技巧，学步车使用建议', link: '#', type: 'free', category: '大动作发展', userType: 'parent' },
+      { id: 'r1-7', name: '户外探索', icon: '🌳', description: '公园玩耍安全指南', link: '#', type: 'free', category: '大动作发展', userType: 'both' },
+      { id: 'r1-8', name: '爬楼梯', icon: '🪜', description: '安全爬上爬下楼梯的训练', link: '#', type: 'free', category: '大动作发展', userType: 'both' },
+      { id: 'r1-9', name: '踢球游戏', icon: '⚽', description: '简单的踢球和扔球游戏', link: '#', type: 'free', category: '大动作发展', userType: 'both' },
+      
+      // ========== ✋ 精细动作 ==========
+      { id: 'r1-10', name: '手指游戏', icon: '✋', description: '促进手眼协调的手指操', link: '#', type: 'free', category: '精细动作', userType: 'both' },
+      { id: 'r1-11', name: '堆叠玩具', icon: '🧱', description: '叠积木、套杯训练精细动作', link: '#', type: 'free', category: '精细动作', userType: 'child' },
+      { id: 'r1-12', name: '翻书训练', icon: '📖', description: '一页一页翻书的练习', link: '#', type: 'free', category: '精细动作', userType: 'both' },
+      { id: 'r1-13', name: '涂鸦启蒙', icon: '🖍️', description: '大蜡笔随意涂鸦', link: '#', type: 'free', category: '精细动作', userType: 'child' },
+      
+      // ========== 🧠 认知发展 ==========
+      { id: 'r1-14', name: '认知卡片', icon: '🃏', description: '认识动物、水果、颜色', link: '#', type: 'free', category: '认知发展', userType: 'both' },
+      { id: 'r1-15', name: '藏猫猫', icon: '🙈', description: '物体恒存概念游戏', link: '#', type: 'free', category: '认知发展', userType: 'both' },
+      { id: 'r1-16', name: '配对游戏', icon: '🎯', description: '简单的形状和颜色配对', link: '#', type: 'free', category: '认知发展', userType: 'child' },
+      { id: 'r1-17', name: '因果玩具', icon: '🔘', description: '按按钮有反应的因果关系玩具', link: '#', type: 'free', category: '认知发展', userType: 'child' },
+      
+      // ========== 🥄 自理能力 ==========
+      { id: 'r1-18', name: '自主进食', icon: '🥄', description: '从手抓到用勺子，培养独立吃饭', link: '#', type: 'free', category: '自理能力', userType: 'both' },
+      { id: 'r1-19', name: '喝水杯', icon: '🥛', description: '从奶瓶过渡到吸管杯、敞口杯', link: '#', type: 'free', category: '自理能力', userType: 'both' },
+      { id: 'r1-20', name: '洗手习惯', icon: '🧼', description: '饭前便后洗手的习惯建立', link: '#', type: 'free', category: '自理能力', userType: 'both' },
+      
+      // ========== 😴 睡眠管理 ==========
+      { id: 'r1-21', name: '睡眠调整', icon: '😴', description: '1岁后午睡和夜间睡眠调整', link: '#', type: 'free', category: '睡眠管理', userType: 'parent' },
+      { id: 'r1-22', name: '睡前仪式', icon: '🌙', description: '建立固定睡前程序', link: '#', type: 'free', category: '睡眠管理', userType: 'both' },
+      { id: 'r1-23', name: '戒夜奶', icon: '🍼', description: '科学戒夜奶的方法', link: '#', type: 'free', category: '睡眠管理', userType: 'parent' },
+      
+      // ========== 🏠 安全防护 ==========
+      { id: 'r1-24', name: '家居安全', icon: '🏠', description: '学步期家居防护清单', link: '#', type: 'free', category: '安全防护', userType: 'parent' },
+      { id: 'r1-25', name: '急救知识', icon: '🩹', description: '跌倒、烫伤、误食等紧急处理', link: '#', type: 'free', category: '安全防护', userType: 'parent' },
+      { id: 'r1-26', name: '出行安全', icon: '🚗', description: '安全座椅使用和外出安全', link: '#', type: 'free', category: '安全防护', userType: 'parent' },
+      
+      // ========== 👨‍👩‍👧 家长指南 ==========
+      { id: 'r1-27', name: '1岁发育指南', icon: '📋', description: '12-24个月发育里程碑', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r1-28', name: '断奶指南', icon: '🤱', description: '科学断奶的时机和方法', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r1-29', name: '玩具推荐', icon: '🧸', description: '1岁适龄玩具选购指南', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
     ]
   },
   {
     age: '2岁',
     title: '宝宝两岁啦！',
-    subtitle: '语言爆发期 / Terrible Twos',
+    subtitle: 'Terrible Twos / 语言爆发期',
     description: '宝宝开始说简单句子，表达想法和需求。喜欢说"不"，有了自我意识。这是培养良好习惯、开始如厕训练的重要时期。',
     milestone: '距离上幼儿园还有1年',
     emoji: '💬',
     color: 'from-yellow-400 to-orange-300',
     resources: [
-      // 如厕训练（重点！）
-      { id: 'r2-1', name: '如厕准备', icon: '🚽', description: '判断宝宝是否准备好如厕训练的信号', link: '#', type: 'free' },
-      { id: 'r2-2', name: '如厕训练', icon: '🧻', description: '循序渐进的如厕训练方法和技巧', link: '#', type: 'free' },
-      { id: 'r2-3', name: '小马桶', icon: '🪑', description: '如何选择和使用儿童马桶', link: '#', type: 'free' },
-      // 刷牙（重点！）
-      { id: 'r2-4', name: '刷牙入门', icon: '🪥', description: '让2岁宝宝爱上刷牙的趣味方法', link: '#', type: 'free' },
-      { id: 'r2-5', name: '牙齿护理', icon: '🦷', description: '幼儿牙齿保健和第一次看牙医', link: '#', type: 'free' },
-      // 语言发展
-      { id: 'r2-6', name: '句子表达', icon: '💬', description: '从单词到2-3词句子的过渡', link: '#', type: 'free' },
-      { id: 'r2-7', name: '绘本阅读', icon: '📚', description: '适合2岁的中英文绘本推荐', link: '#', type: 'free' },
-      { id: 'r2-8', name: '儿歌大全', icon: '🎵', description: '促进语言和记忆的经典儿歌', link: '#', type: 'free' },
-      // 情绪管理
-      { id: 'r2-9', name: '情绪引导', icon: '😤', description: '应对Terrible Twos的发脾气', link: '#', type: 'free' },
-      { id: 'r2-10', name: '情绪绘本', icon: '📖', description: '帮助孩子认识和表达情绪的绘本', link: '#', type: 'free' },
-      // 社交
-      { id: 'r2-11', name: '分享概念', icon: '🤝', description: '教导分享和轮流的技巧', link: '#', type: 'free' },
-      { id: 'r2-12', name: '同龄互动', icon: '👫', description: '安排playdate促进社交发展', link: '#', type: 'free' },
-      // 认知游戏
-      { id: 'r2-13', name: '涂色绘画', icon: '🎨', description: '简单涂色培养创造力', link: '#', type: 'free' },
-      { id: 'r2-14', name: '形状配对', icon: '🔷', description: '认识形状和颜色的益智游戏', link: '#', type: 'free' },
-      { id: 'r2-15', name: '动物认知', icon: '🦁', description: '认识动物及其叫声', link: '#', type: 'free' },
-      // 独立性
-      { id: 'r2-16', name: '自己穿衣', icon: '👕', description: '简单衣物的穿脱练习', link: '#', type: 'free' },
-      { id: 'r2-17', name: '收拾玩具', icon: '🧸', description: '培养整理物品的习惯', link: '#', type: 'free' },
+      // ========== 🚽 如厕训练 ==========
+      { id: 'r2-1', name: '如厕准备', icon: '🚽', description: '判断宝宝是否准备好如厕训练的信号', link: '#', type: 'free', category: '如厕训练', userType: 'parent' },
+      { id: 'r2-2', name: '如厕方法', icon: '📖', description: '循序渐进的如厕训练方法和技巧', link: '#', type: 'free', category: '如厕训练', userType: 'both' },
+      { id: 'r2-3', name: '小马桶', icon: '🪑', description: '如何选择和使用儿童马桶', link: '#', type: 'free', category: '如厕训练', userType: 'parent' },
+      { id: 'r2-4', name: '如厕绘本', icon: '📚', description: '帮助理解如厕的趣味绘本', link: '#', type: 'free', category: '如厕训练', userType: 'both' },
+      { id: 'r2-5', name: '夜间训练', icon: '🌙', description: '夜间不穿尿布的过渡', link: '#', type: 'free', category: '如厕训练', userType: 'parent' },
+      
+      // ========== 🪥 卫生习惯 ==========
+      { id: 'r2-6', name: '刷牙入门', icon: '🪥', description: '让2岁宝宝爱上刷牙的趣味方法', link: '#', type: 'free', category: '卫生习惯', userType: 'both' },
+      { id: 'r2-7', name: '牙齿护理', icon: '🦷', description: '幼儿牙齿保健和第一次看牙医', link: '#', type: 'free', category: '卫生习惯', userType: 'parent' },
+      { id: 'r2-8', name: '洗手歌', icon: '🧼', description: '边唱歌边洗手的好习惯', link: '#', type: 'free', category: '卫生习惯', userType: 'both' },
+      { id: 'r2-9', name: '洗澡时间', icon: '🛁', description: '让洗澡变有趣的方法', link: '#', type: 'free', category: '卫生习惯', userType: 'both' },
+      
+      // ========== 🗣️ 语言发展 ==========
+      { id: 'r2-10', name: '句子表达', icon: '💬', description: '从单词到2-3词句子的过渡', link: '#', type: 'free', category: '语言发展', userType: 'both' },
+      { id: 'r2-11', name: '绘本阅读', icon: '📚', description: '适合2岁的中英文绘本推荐', link: '#', type: 'free', category: '语言发展', userType: 'both' },
+      { id: 'r2-12', name: '儿歌大全', icon: '🎵', description: '促进语言和记忆的经典儿歌', link: '#', type: 'free', category: '语言发展', userType: 'child' },
+      { id: 'r2-13', name: '词汇扩展', icon: '📝', description: '日常对话中扩展词汇量', link: '#', type: 'free', category: '语言发展', userType: 'parent' },
+      { id: 'r2-14', name: '双语启蒙', icon: '🌐', description: '2岁开始双语环境建立', link: '#', type: 'free', category: '语言发展', userType: 'both' },
+      
+      // ========== 😤 情绪管理 ==========
+      { id: 'r2-15', name: '情绪引导', icon: '😤', description: '应对Terrible Twos的发脾气', link: '#', type: 'free', category: '情绪管理', userType: 'parent' },
+      { id: 'r2-16', name: '情绪绘本', icon: '📖', description: '帮助孩子认识和表达情绪', link: '#', type: 'free', category: '情绪管理', userType: 'both' },
+      { id: 'r2-17', name: '冷静角', icon: '🧘', description: '建立冷静角帮助情绪调节', link: '#', type: 'free', category: '情绪管理', userType: 'both' },
+      { id: 'r2-18', name: '正面管教', icon: '💡', description: '不吼不叫的育儿方法', link: '#', type: 'free', category: '情绪管理', userType: 'parent' },
+      
+      // ========== 🤝 社交发展 ==========
+      { id: 'r2-19', name: '分享概念', icon: '🤝', description: '教导分享和轮流的技巧', link: '#', type: 'free', category: '社交发展', userType: 'both' },
+      { id: 'r2-20', name: '同龄互动', icon: '👫', description: '安排playdate促进社交发展', link: '#', type: 'free', category: '社交发展', userType: 'parent' },
+      { id: 'r2-21', name: '礼貌用语', icon: '🙏', description: '请、谢谢、对不起的学习', link: '#', type: 'free', category: '社交发展', userType: 'both' },
+      
+      // ========== 🎨 认知游戏 ==========
+      { id: 'r2-22', name: '涂色绘画', icon: '🎨', description: '简单涂色培养创造力', link: '#', type: 'free', category: '认知游戏', userType: 'child' },
+      { id: 'r2-23', name: '形状配对', icon: '🔷', description: '认识形状和颜色的益智游戏', link: '#', type: 'free', category: '认知游戏', userType: 'child' },
+      { id: 'r2-24', name: '动物认知', icon: '🦁', description: '认识动物及其叫声和特征', link: '#', type: 'free', category: '认知游戏', userType: 'child' },
+      { id: 'r2-25', name: '数数启蒙', icon: '🔢', description: '从1数到5的入门', link: '#', type: 'free', category: '认知游戏', userType: 'both' },
+      { id: 'r2-26', name: '拼图入门', icon: '🧩', description: '2-4片简单拼图', link: '#', type: 'free', category: '认知游戏', userType: 'child' },
+      
+      // ========== 👕 独立性培养 ==========
+      { id: 'r2-27', name: '自己穿衣', icon: '👕', description: '简单衣物的穿脱练习', link: '#', type: 'free', category: '独立性培养', userType: 'both' },
+      { id: 'r2-28', name: '收拾玩具', icon: '🧸', description: '培养整理物品的习惯', link: '#', type: 'free', category: '独立性培养', userType: 'both' },
+      { id: 'r2-29', name: '帮忙做事', icon: '🧹', description: '简单家务参与（擦桌子、扔垃圾）', link: '#', type: 'free', category: '独立性培养', userType: 'both' },
+      
+      // ========== 🏃 运动发展 ==========
+      { id: 'r2-30', name: '跑跳游戏', icon: '🏃', description: '跑步、跳跃等大动作游戏', link: '#', type: 'free', category: '运动发展', userType: 'child' },
+      { id: 'r2-31', name: '平衡训练', icon: '🤸', description: '走平衡木、单脚站等', link: '#', type: 'free', category: '运动发展', userType: 'child' },
+      { id: 'r2-32', name: '球类游戏', icon: '⚽', description: '踢球、扔接球游戏', link: '#', type: 'free', category: '运动发展', userType: 'both' },
+      
+      // ========== 👨‍👩‍👧 家长指南 ==========
+      { id: 'r2-33', name: '2岁发育指南', icon: '📋', description: '24-36个月发育里程碑', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r2-34', name: '入园准备', icon: '🏫', description: '提前了解幼儿园准备事项', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r2-35', name: '屏幕时间', icon: '📱', description: '2岁屏幕时间控制建议', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
     ]
   },
   {
     age: '3岁',
     title: '幼儿园小班',
-    subtitle: 'Pre-K / Preschool',
-    description: '宝宝第一次进入集体生活，学习与小朋友相处。巩固如厕和自理能力，开始接触数字和字母概念。',
+    subtitle: 'Preschool / 集体生活开始',
+    description: '宝宝第一次进入集体生活，学习与小朋友相处。巩固如厕和自理能力，开始接触数字和字母概念。这是社交能力快速发展的时期。',
     milestone: '幼儿园第一年',
     emoji: '🎒',
     color: 'from-green-400 to-emerald-300',
     resources: [
-      // 入园准备
-      { id: 'r3-1', name: '入园准备', icon: '🏫', description: '幼儿园适应期指南，缓解分离焦虑', link: '#', type: 'free' },
-      { id: 'r3-2', name: '择园攻略', icon: '🔍', description: '如何选择适合的幼儿园', link: '#', type: 'free' },
-      // 自理能力（巩固）
-      { id: 'r3-3', name: '独立如厕', icon: '🚽', description: '在幼儿园独立上厕所', link: '#', type: 'free' },
-      { id: 'r3-4', name: '刷牙习惯', icon: '🪥', description: '早晚刷牙习惯的巩固', link: '#', type: 'free' },
-      { id: 'r3-5', name: '独立吃饭', icon: '🍽️', description: '使用筷子和勺子独立进餐', link: '#', type: 'free' },
-      { id: 'r3-6', name: '穿衣穿鞋', icon: '👟', description: '自己穿脱衣服和鞋子', link: '#', type: 'free' },
-      // 社交技能
-      { id: 'r3-7', name: '社交故事', icon: '👫', description: '理解分享、轮流、排队等规则', link: '#', type: 'free' },
-      { id: 'r3-8', name: '交朋友', icon: '🤗', description: '如何在幼儿园交到朋友', link: '#', type: 'free' },
-      { id: 'r3-9', name: '冲突解决', icon: '🤝', description: '教孩子用语言解决小冲突', link: '#', type: 'free' },
-      // 早期学习
-      { id: 'r3-10', name: '数字启蒙', icon: '🔢', description: '认识1-10，简单点数', link: '#', type: 'free' },
-      { id: 'r3-11', name: '字母认知', icon: '🔤', description: 'ABC字母歌和字母认识', link: '#', type: 'free' },
-      { id: 'r3-12', name: '颜色形状', icon: '🔵', description: '认识基本颜色和形状', link: '#', type: 'free' },
-      // 精细动作
-      { id: 'r3-13', name: '握笔练习', icon: '✏️', description: '正确握笔姿势启蒙', link: '#', type: 'free' },
-      { id: 'r3-14', name: '剪纸手工', icon: '✂️', description: '安全剪刀使用和简单手工', link: '#', type: 'free' },
-      { id: 'r3-15', name: '益智拼图', icon: '🧩', description: '锻炼观察力和专注力', link: '#', type: 'free' },
-      // 语言发展
-      { id: 'r3-16', name: '讲故事', icon: '📖', description: '鼓励孩子复述简单故事', link: '#', type: 'free' },
-      { id: 'r3-17', name: '双语启蒙', icon: '🌐', description: '中英双语环境建立', link: '#', type: 'free' },
+      // ========== 🏫 入园适应 ==========
+      { id: 'r3-1', name: '入园准备', icon: '🏫', description: '幼儿园适应期指南，缓解分离焦虑', link: '#', type: 'free', category: '入园适应', userType: 'parent' },
+      { id: 'r3-2', name: '择园攻略', icon: '🔍', description: '如何选择适合的幼儿园', link: '#', type: 'free', category: '入园适应', userType: 'parent' },
+      { id: 'r3-3', name: '分离焦虑', icon: '🤗', description: '帮助孩子克服分离焦虑', link: '#', type: 'free', category: '入园适应', userType: 'both' },
+      { id: 'r3-4', name: '入园物品', icon: '🎒', description: '幼儿园必备物品清单', link: '#', type: 'free', category: '入园适应', userType: 'parent' },
+      
+      // ========== 🚽 自理能力 ==========
+      { id: 'r3-5', name: '独立如厕', icon: '🚽', description: '在幼儿园独立上厕所', link: '#', type: 'free', category: '自理能力', userType: 'both' },
+      { id: 'r3-6', name: '刷牙习惯', icon: '🪥', description: '早晚刷牙习惯的巩固', link: '#', type: 'free', category: '自理能力', userType: 'both' },
+      { id: 'r3-7', name: '独立吃饭', icon: '🍽️', description: '使用筷子和勺子独立进餐', link: '#', type: 'free', category: '自理能力', userType: 'both' },
+      { id: 'r3-8', name: '穿衣穿鞋', icon: '👟', description: '自己穿脱衣服和鞋子', link: '#', type: 'free', category: '自理能力', userType: 'both' },
+      { id: 'r3-9', name: '整理物品', icon: '🧹', description: '整理自己的书包和物品', link: '#', type: 'free', category: '自理能力', userType: 'both' },
+      
+      // ========== 👫 社交技能 ==========
+      { id: 'r3-10', name: '社交故事', icon: '👫', description: '理解分享、轮流、排队等规则', link: '#', type: 'free', category: '社交技能', userType: 'both' },
+      { id: 'r3-11', name: '交朋友', icon: '🤗', description: '如何在幼儿园交到朋友', link: '#', type: 'free', category: '社交技能', userType: 'both' },
+      { id: 'r3-12', name: '冲突解决', icon: '🤝', description: '教孩子用语言解决小冲突', link: '#', type: 'free', category: '社交技能', userType: 'both' },
+      { id: 'r3-13', name: '合作游戏', icon: '🎮', description: '需要合作完成的小游戏', link: '#', type: 'free', category: '社交技能', userType: 'child' },
+      
+      // ========== 🔢 早期学习 ==========
+      { id: 'r3-14', name: '数字启蒙', icon: '🔢', description: '认识1-10，简单点数', link: '#', type: 'free', category: '早期学习', userType: 'child' },
+      { id: 'r3-15', name: '字母认知', icon: '🔤', description: 'ABC字母歌和字母认识', link: '#', type: 'free', category: '早期学习', userType: 'child' },
+      { id: 'r3-16', name: '颜色形状', icon: '🔵', description: '认识基本颜色和形状', link: '#', type: 'free', category: '早期学习', userType: 'child' },
+      { id: 'r3-17', name: '中文识字', icon: '字', description: '简单汉字认读启蒙', link: '#', type: 'free', category: '早期学习', userType: 'child' },
+      { id: 'r3-18', name: '英语儿歌', icon: '🎵', description: '英语启蒙儿歌', link: '#', type: 'free', category: '早期学习', userType: 'child' },
+      
+      // ========== ✏️ 精细动作 ==========
+      { id: 'r3-19', name: '握笔练习', icon: '✏️', description: '正确握笔姿势启蒙', link: '#', type: 'free', category: '精细动作', userType: 'both' },
+      { id: 'r3-20', name: '剪纸手工', icon: '✂️', description: '安全剪刀使用和简单手工', link: '#', type: 'free', category: '精细动作', userType: 'child' },
+      { id: 'r3-21', name: '涂色练习', icon: '🖍️', description: '在线条内涂色', link: '#', type: 'free', category: '精细动作', userType: 'child' },
+      { id: 'r3-22', name: '折纸入门', icon: '📄', description: '简单折纸教程', link: '#', type: 'free', category: '精细动作', userType: 'both' },
+      
+      // ========== 🧩 益智游戏 ==========
+      { id: 'r3-23', name: '益智拼图', icon: '🧩', description: '锻炼观察力和专注力', link: '#', type: 'free', category: '益智游戏', userType: 'child' },
+      { id: 'r3-24', name: '记忆游戏', icon: '🎴', description: '翻卡片配对记忆游戏', link: '#', type: 'free', category: '益智游戏', userType: 'child' },
+      { id: 'r3-25', name: '逻辑排序', icon: '📊', description: '按大小、颜色排序', link: '#', type: 'free', category: '益智游戏', userType: 'child' },
+      { id: 'r3-26', name: '迷宫游戏', icon: '🌀', description: '简单迷宫训练思维', link: '#', type: 'free', category: '益智游戏', userType: 'child' },
+      
+      // ========== 📖 语言阅读 ==========
+      { id: 'r3-27', name: '讲故事', icon: '📖', description: '鼓励孩子复述简单故事', link: '#', type: 'free', category: '语言阅读', userType: 'both' },
+      { id: 'r3-28', name: '绘本推荐', icon: '📚', description: '3岁适龄绘本书单', link: '#', type: 'free', category: '语言阅读', userType: 'parent' },
+      { id: 'r3-29', name: '有声故事', icon: '🎧', description: '睡前有声故事', link: '#', type: 'free', category: '语言阅读', userType: 'child' },
+      { id: 'r3-30', name: '双语阅读', icon: '🌐', description: '中英双语绘本', link: '#', type: 'paid', category: '语言阅读', userType: 'both' },
+      
+      // ========== 🎨 艺术启蒙 ==========
+      { id: 'r3-31', name: '自由绘画', icon: '🎨', description: '鼓励创意表达的绘画', link: '#', type: 'free', category: '艺术启蒙', userType: 'child' },
+      { id: 'r3-32', name: '黏土玩耍', icon: '🎭', description: '黏土/橡皮泥创意游戏', link: '#', type: 'free', category: '艺术启蒙', userType: 'child' },
+      { id: 'r3-33', name: '音乐律动', icon: '🎵', description: '跟着音乐做动作', link: '#', type: 'free', category: '艺术启蒙', userType: 'child' },
+      
+      // ========== ⚽ 运动体能 ==========
+      { id: 'r3-34', name: '跑跳训练', icon: '🏃', description: '跑步、跳跃、攀爬', link: '#', type: 'free', category: '运动体能', userType: 'child' },
+      { id: 'r3-35', name: '球类游戏', icon: '⚽', description: '踢球、投球、接球', link: '#', type: 'free', category: '运动体能', userType: 'child' },
+      { id: 'r3-36', name: '骑车入门', icon: '🚲', description: '平衡车/三轮车', link: '#', type: 'free', category: '运动体能', userType: 'child' },
+      
+      // ========== 👨‍👩‍👧 家长指南 ==========
+      { id: 'r3-37', name: '3岁发育指南', icon: '📋', description: '36-48个月发育里程碑', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r3-38', name: '家园沟通', icon: '💬', description: '如何与幼儿园老师沟通', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r3-39', name: '作息安排', icon: '⏰', description: '幼儿园作息与家庭作息衔接', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
+      { id: 'r3-40', name: '兴趣发现', icon: '🔍', description: '观察和发现孩子的兴趣', link: '#', type: 'free', category: '家长指南', userType: 'parent' },
     ]
   },
   {
@@ -656,22 +760,44 @@ function ResourceCard({ resource }: { resource: Resource }) {
 
 // Category colors mapping - pastel backgrounds
 const categoryColors: { [key: string]: { bg: string; border: string; text: string } } = {
+  // === Ages 0-3 Categories ===
+  '睡眠安抚': { bg: 'bg-indigo-50', border: 'border-indigo-200', text: 'text-indigo-600' },
+  '喂养营养': { bg: 'bg-amber-50', border: 'border-amber-200', text: 'text-amber-600' },
+  '健康护理': { bg: 'bg-red-50', border: 'border-red-200', text: 'text-red-600' },
+  '发育追踪': { bg: 'bg-cyan-50', border: 'border-cyan-200', text: 'text-cyan-600' },
+  '感官刺激': { bg: 'bg-rose-50', border: 'border-rose-200', text: 'text-rose-600' },
+  '家长指南': { bg: 'bg-slate-100', border: 'border-slate-300', text: 'text-slate-600' },
+  '语言发展': { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-600' },
+  '大动作发展': { bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-600' },
+  '精细动作': { bg: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-600' },
+  '认知发展': { bg: 'bg-violet-50', border: 'border-violet-200', text: 'text-violet-600' },
+  '自理能力': { bg: 'bg-teal-50', border: 'border-teal-200', text: 'text-teal-600' },
+  '睡眠管理': { bg: 'bg-indigo-50', border: 'border-indigo-200', text: 'text-indigo-600' },
+  '安全防护': { bg: 'bg-red-100', border: 'border-red-300', text: 'text-red-700' },
+  '如厕训练': { bg: 'bg-yellow-50', border: 'border-yellow-200', text: 'text-yellow-700' },
+  '卫生习惯': { bg: 'bg-lime-50', border: 'border-lime-200', text: 'text-lime-600' },
+  '情绪管理': { bg: 'bg-pink-50', border: 'border-pink-200', text: 'text-pink-600' },
+  '社交发展': { bg: 'bg-emerald-50', border: 'border-emerald-200', text: 'text-emerald-600' },
+  '认知游戏': { bg: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-600' },
+  '独立性培养': { bg: 'bg-teal-100', border: 'border-teal-300', text: 'text-teal-700' },
+  '运动发展': { bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-600' },
+  '入园适应': { bg: 'bg-sky-50', border: 'border-sky-200', text: 'text-sky-600' },
+  '社交技能': { bg: 'bg-emerald-50', border: 'border-emerald-200', text: 'text-emerald-600' },
+  '早期学习': { bg: 'bg-blue-100', border: 'border-blue-300', text: 'text-blue-700' },
+  '益智游戏': { bg: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-600' },
+  '语言阅读': { bg: 'bg-amber-50', border: 'border-amber-200', text: 'text-amber-600' },
+  '艺术启蒙': { bg: 'bg-fuchsia-50', border: 'border-fuchsia-200', text: 'text-fuchsia-600' },
+  '运动体能': { bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-600' },
+  
+  // === Ages 4-6 Categories ===
   '感官发展': { bg: 'bg-rose-50', border: 'border-rose-200', text: 'text-rose-600' },
   '语言启蒙': { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-600' },
-  '运动发展': { bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-600' },
-  '认知发展': { bg: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-600' },
-  '睡眠安抚': { bg: 'bg-indigo-50', border: 'border-indigo-200', text: 'text-indigo-600' },
-  '家长指南': { bg: 'bg-slate-100', border: 'border-slate-300', text: 'text-slate-600' },
   '亲子互动': { bg: 'bg-pink-50', border: 'border-pink-200', text: 'text-pink-600' },
-  '语言发展': { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-600' },
-  '艺术启蒙': { bg: 'bg-fuchsia-50', border: 'border-fuchsia-200', text: 'text-fuchsia-600' },
-  '自理能力': { bg: 'bg-teal-50', border: 'border-teal-200', text: 'text-teal-600' },
   '社交能力': { bg: 'bg-emerald-50', border: 'border-emerald-200', text: 'text-emerald-600' },
   '阅读启蒙': { bg: 'bg-amber-50', border: 'border-amber-200', text: 'text-amber-600' },
   '学习启蒙': { bg: 'bg-cyan-50', border: 'border-cyan-200', text: 'text-cyan-600' },
   '艺术创意': { bg: 'bg-fuchsia-50', border: 'border-fuchsia-200', text: 'text-fuchsia-600' },
   '音乐舞蹈': { bg: 'bg-violet-50', border: 'border-violet-200', text: 'text-violet-600' },
-  '运动体能': { bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-600' },
   '生活技能': { bg: 'bg-teal-50', border: 'border-teal-200', text: 'text-teal-600' },
   '社交情感': { bg: 'bg-emerald-50', border: 'border-emerald-200', text: 'text-emerald-600' },
   '阅读故事': { bg: 'bg-amber-50', border: 'border-amber-200', text: 'text-amber-600' },
@@ -680,7 +806,6 @@ const categoryColors: { [key: string]: { bg: string; border: string; text: strin
   '艺术创作': { bg: 'bg-fuchsia-50', border: 'border-fuchsia-200', text: 'text-fuchsia-600' },
   '音乐素养': { bg: 'bg-violet-50', border: 'border-violet-200', text: 'text-violet-600' },
   '体育运动': { bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-600' },
-  '益智游戏': { bg: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-600' },
   '习惯养成': { bg: 'bg-lime-50', border: 'border-lime-200', text: 'text-lime-600' },
   '情商发展': { bg: 'bg-rose-50', border: 'border-rose-200', text: 'text-rose-600' },
   '语文学习': { bg: 'bg-red-50', border: 'border-red-200', text: 'text-red-600' },
