@@ -546,15 +546,28 @@ const App = {
         const input = document.getElementById('clozeInput');
         const submitBtn = document.getElementById('clozeSubmit');
         
+        // Flag to prevent multiple submissions
+        let isSubmitting = false;
+        
+        const submitAnswer = () => {
+            if (isSubmitting) return; // Prevent multiple submissions
+            isSubmitting = true;
+            
+            // Disable input and button immediately
+            input.disabled = true;
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitted';
+            
+            this.handleClozeAnswer(input.value, word);
+        };
+        
         input.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
-                this.handleClozeAnswer(input.value, word);
+                submitAnswer();
             }
         });
         
-        submitBtn.addEventListener('click', () => {
-            this.handleClozeAnswer(input.value, word);
-        });
+        submitBtn.addEventListener('click', submitAnswer);
         
         input.focus();
     },
