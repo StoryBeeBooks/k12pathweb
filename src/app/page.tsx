@@ -692,11 +692,13 @@ function ResourceCard({ resource }: { resource: Resource }) {
         <div className={`relative w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-2xl md:text-3xl border bg-slate-50 border-slate-200 hover:border-slate-300 hover:bg-slate-100 ${isExpanded ? 'border-slate-400 bg-slate-100' : ''}`}>
           {resource.icon}
           {/* User type indicator */}
-          <span className={`absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full border-2 border-white flex items-center justify-center text-[10px] shadow-sm ${
-            resource.userType === 'parent' ? 'bg-red-200' :
-            resource.userType === 'child' ? 'bg-blue-200' : 'bg-purple-200'
+          <span className={`absolute -top-1 -right-1 w-4 h-4 rounded-full border-2 border-white flex items-center justify-center shadow-sm ${
+            resource.userType === 'parent' ? 'bg-rose-400' :
+            resource.userType === 'child' ? 'bg-sky-400' : 'bg-violet-400'
           }`}>
-            {resource.userType === 'parent' ? '🧑‍🏫' : resource.userType === 'child' ? '📚' : '👨‍👩‍👧‍👦'}
+            <span className="text-[8px] text-white font-bold">
+              {resource.userType === 'parent' ? 'P' : resource.userType === 'child' ? 'S' : '♥'}
+            </span>
           </span>
         </div>
         <span className="mt-1.5 text-xs font-medium text-slate-600 text-center max-w-[70px] line-clamp-2">
@@ -884,7 +886,7 @@ function AgeSection({ stage, index }: { stage: AgeStage; index: number }) {
           {hasParentResources && (
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <span className="w-6 h-6 rounded-full bg-red-200 flex items-center justify-center text-sm">🧑‍🏫</span>
+                <span className="w-5 h-5 rounded-full bg-rose-400 flex items-center justify-center text-[10px] text-white font-bold">P</span>
                 <h3 className="text-sm font-semibold text-slate-700">家长专区</h3>
                 <span className="text-xs text-slate-400">({parentResources.length})</span>
               </div>
@@ -904,7 +906,7 @@ function AgeSection({ stage, index }: { stage: AgeStage; index: number }) {
           {hasChildResources && (
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <span className="w-6 h-6 rounded-full bg-blue-200 flex items-center justify-center text-sm">📚</span>
+                <span className="w-5 h-5 rounded-full bg-sky-400 flex items-center justify-center text-[10px] text-white font-bold">S</span>
                 <h3 className="text-sm font-semibold text-slate-700">学生专区</h3>
                 <span className="text-xs text-slate-400">({childResources.length})</span>
               </div>
@@ -924,7 +926,7 @@ function AgeSection({ stage, index }: { stage: AgeStage; index: number }) {
           {hasBothResources && (
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <span className="w-6 h-6 rounded-full bg-purple-200 flex items-center justify-center text-sm">👨‍👩‍👧‍👦</span>
+                <span className="w-5 h-5 rounded-full bg-violet-400 flex items-center justify-center text-[10px] text-white font-bold">♥</span>
                 <h3 className="text-sm font-semibold text-slate-700">亲子共用</h3>
                 <span className="text-xs text-slate-400">({bothResources.length})</span>
               </div>
@@ -987,11 +989,13 @@ function ResourceCardWithCategory({ resource, categoryColor }: { resource: Resou
         <div className={`relative w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-2xl md:text-3xl border-2 ${categoryColor.bg} ${categoryColor.border} hover:shadow-md transition-shadow`}>
           {resource.icon}
           {/* User type indicator */}
-          <span className={`absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full border-2 border-white flex items-center justify-center text-[10px] shadow-sm ${
-            resource.userType === 'parent' ? 'bg-red-200' :
-            resource.userType === 'child' ? 'bg-blue-200' : 'bg-purple-200'
+          <span className={`absolute -top-1 -right-1 w-4 h-4 rounded-full border-2 border-white flex items-center justify-center shadow-sm ${
+            resource.userType === 'parent' ? 'bg-rose-400' :
+            resource.userType === 'child' ? 'bg-sky-400' : 'bg-violet-400'
           }`}>
-            {resource.userType === 'parent' ? '🧑‍🏫' : resource.userType === 'child' ? '📚' : '👨‍👩‍👧‍👦'}
+            <span className="text-[8px] text-white font-bold">
+              {resource.userType === 'parent' ? 'P' : resource.userType === 'child' ? 'S' : '♥'}
+            </span>
           </span>
         </div>
         <span className="mt-1.5 text-xs font-medium text-slate-600 text-center max-w-[70px] line-clamp-2">
