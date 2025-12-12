@@ -2512,6 +2512,10 @@ body {
     height: 100%;
 }
 
+.comparison-after {
+    z-index: 1;
+}
+
 .comparison-after img,
 .comparison-before img {
     width: 100%;
@@ -2523,8 +2527,11 @@ body {
 }
 
 .comparison-before {
+    z-index: 2;
+    -webkit-clip-path: inset(0 50% 0 0);
     clip-path: inset(0 50% 0 0);
-    transition: clip-path 0.05s ease-out;
+    -webkit-transition: -webkit-clip-path 0.05s ease-out, clip-path 0.05s ease-out;
+    transition: -webkit-clip-path 0.05s ease-out, clip-path 0.05s ease-out;
 }
 
 .comparison-label {
@@ -2818,6 +2825,10 @@ body {
     height: 100%;
 }
 
+.mini-comparison-after {
+    z-index: 1;
+}
+
 .mini-comparison-after img,
 .mini-comparison-before img {
     width: 100%;
@@ -2827,6 +2838,8 @@ body {
 }
 
 .mini-comparison-before {
+    z-index: 2;
+    -webkit-clip-path: inset(0 50% 0 0);
     clip-path: inset(0 50% 0 0);
 }
 

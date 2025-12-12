@@ -1211,6 +1211,8 @@ const App = {
         const sliderPos = 50 - (percent * 0.5); // 50% -> 0% as progress goes 0% -> 100%
         
         slider.style.left = `${sliderPos}%`;
+        // Set both webkit and standard clip-path for Safari/iPad compatibility
+        before.style.webkitClipPath = `inset(0 ${100 - sliderPos}% 0 0)`;
         before.style.clipPath = `inset(0 ${100 - sliderPos}% 0 0)`;
     },
 
@@ -1234,6 +1236,8 @@ const App = {
             pos = Math.max(0, Math.min(100, pos));
             
             slider.style.left = `${pos}%`;
+            // Set both webkit and standard clip-path for Safari/iPad compatibility
+            before.style.webkitClipPath = `inset(0 ${100 - pos}% 0 0)`;
             before.style.clipPath = `inset(0 ${100 - pos}% 0 0)`;
         };
         
@@ -1316,6 +1320,8 @@ const App = {
         if (slider && before) {
             const sliderPos = 50 - (percent * 0.5);
             slider.style.left = `${sliderPos}%`;
+            // Set both webkit and standard clip-path for Safari/iPad compatibility
+            before.style.webkitClipPath = `inset(0 ${100 - sliderPos}% 0 0)`;
             before.style.clipPath = `inset(0 ${100 - sliderPos}% 0 0)`;
         }
     },
@@ -1338,6 +1344,8 @@ const App = {
             pos = Math.max(0, Math.min(100, pos));
             
             slider.style.left = `${pos}%`;
+            // Set both webkit and standard clip-path for Safari/iPad compatibility
+            before.style.webkitClipPath = `inset(0 ${100 - pos}% 0 0)`;
             before.style.clipPath = `inset(0 ${100 - pos}% 0 0)`;
         };
         
