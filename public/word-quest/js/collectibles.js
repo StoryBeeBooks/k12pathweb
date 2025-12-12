@@ -20,7 +20,8 @@ const COLLECTIBLES_DATA = {
         { id: 'sports', name: '⚽ Sports', icon: '⚽' },
         { id: 'music', name: '🎵 Music', icon: '🎵' },
         { id: 'nature', name: '🌸 Nature', icon: '🌸' },
-        { id: 'horoscope', name: '♈ Horoscope', icon: '♈' }
+        { id: 'horoscope', name: '♈ Horoscope', icon: '♈' },
+        { id: 'stationery', name: '✏️ Stationery', icon: '✏️' }
     ],
     
     items: [
@@ -692,33 +693,65 @@ const COLLECTIBLES_DATA = {
         { id: 'furn_movie_seat', name: 'Theater Seat', emoji: '🎬', category: 'furniture', price: 400, rarity: 'rare' },
         { id: 'furn_sauna', name: 'Home Sauna', emoji: '🧖', category: 'furniture', price: 850, rarity: 'legendary' },
 
-        // ♈ HOROSCOPE (24 items - 12 Western Zodiac + 12 Chinese Zodiac)
+        // ♈ HOROSCOPE (24 items - 12 Western Zodiac + 12 Chinese Zodiac) - All Mythic 5000 XP
         // Western Zodiac Signs
-        { id: 'zodiac_aries', name: 'Aries Ram', emoji: '♈', category: 'horoscope', price: 150, rarity: 'uncommon' },
-        { id: 'zodiac_taurus', name: 'Taurus Bull', emoji: '♉', category: 'horoscope', price: 150, rarity: 'uncommon' },
-        { id: 'zodiac_gemini', name: 'Gemini Twins', emoji: '♊', category: 'horoscope', price: 150, rarity: 'uncommon' },
-        { id: 'zodiac_cancer', name: 'Cancer Crab', emoji: '♋', category: 'horoscope', price: 150, rarity: 'uncommon' },
-        { id: 'zodiac_leo', name: 'Leo Lion', emoji: '♌', category: 'horoscope', price: 200, rarity: 'rare' },
-        { id: 'zodiac_virgo', name: 'Virgo Maiden', emoji: '♍', category: 'horoscope', price: 150, rarity: 'uncommon' },
-        { id: 'zodiac_libra', name: 'Libra Scales', emoji: '♎', category: 'horoscope', price: 150, rarity: 'uncommon' },
-        { id: 'zodiac_scorpio', name: 'Scorpio Scorpion', emoji: '♏', category: 'horoscope', price: 200, rarity: 'rare' },
-        { id: 'zodiac_sagittarius', name: 'Sagittarius Archer', emoji: '♐', category: 'horoscope', price: 175, rarity: 'uncommon' },
-        { id: 'zodiac_capricorn', name: 'Capricorn Goat', emoji: '♑', category: 'horoscope', price: 150, rarity: 'uncommon' },
-        { id: 'zodiac_aquarius', name: 'Aquarius Water', emoji: '♒', category: 'horoscope', price: 175, rarity: 'uncommon' },
-        { id: 'zodiac_pisces', name: 'Pisces Fish', emoji: '♓', category: 'horoscope', price: 150, rarity: 'uncommon' },
+        { id: 'zodiac_aries', name: 'Aries Ram', emoji: '♈', category: 'horoscope', price: 5000, rarity: 'mythic' },
+        { id: 'zodiac_taurus', name: 'Taurus Bull', emoji: '♉', category: 'horoscope', price: 5000, rarity: 'mythic' },
+        { id: 'zodiac_gemini', name: 'Gemini Twins', emoji: '♊', category: 'horoscope', price: 5000, rarity: 'mythic' },
+        { id: 'zodiac_cancer', name: 'Cancer Crab', emoji: '♋', category: 'horoscope', price: 5000, rarity: 'mythic' },
+        { id: 'zodiac_leo', name: 'Leo Lion', emoji: '♌', category: 'horoscope', price: 5000, rarity: 'mythic' },
+        { id: 'zodiac_virgo', name: 'Virgo Maiden', emoji: '♍', category: 'horoscope', price: 5000, rarity: 'mythic' },
+        { id: 'zodiac_libra', name: 'Libra Scales', emoji: '♎', category: 'horoscope', price: 5000, rarity: 'mythic' },
+        { id: 'zodiac_scorpio', name: 'Scorpio Scorpion', emoji: '♏', category: 'horoscope', price: 5000, rarity: 'mythic' },
+        { id: 'zodiac_sagittarius', name: 'Sagittarius Archer', emoji: '♐', category: 'horoscope', price: 5000, rarity: 'mythic' },
+        { id: 'zodiac_capricorn', name: 'Capricorn Goat', emoji: '♑', category: 'horoscope', price: 5000, rarity: 'mythic' },
+        { id: 'zodiac_aquarius', name: 'Aquarius Water', emoji: '♒', category: 'horoscope', price: 5000, rarity: 'mythic' },
+        { id: 'zodiac_pisces', name: 'Pisces Fish', emoji: '♓', category: 'horoscope', price: 5000, rarity: 'mythic' },
         // Chinese Zodiac Animals (生肖)
-        { id: 'chinese_rat', name: '鼠 Clever Rat', emoji: '🐀', category: 'horoscope', price: 200, rarity: 'rare' },
-        { id: 'chinese_ox', name: '牛 Strong Ox', emoji: '🐂', category: 'horoscope', price: 200, rarity: 'rare' },
-        { id: 'chinese_tiger', name: '虎 Brave Tiger', emoji: '🐯', category: 'horoscope', price: 300, rarity: 'rare' },
-        { id: 'chinese_rabbit', name: '兔 Lucky Rabbit', emoji: '🐇', category: 'horoscope', price: 250, rarity: 'rare' },
-        { id: 'chinese_dragon', name: '龙 Golden Dragon', emoji: '🐲', category: 'horoscope', price: 800, rarity: 'legendary' },
-        { id: 'chinese_snake', name: '蛇 Wise Snake', emoji: '🐍', category: 'horoscope', price: 200, rarity: 'rare' },
-        { id: 'chinese_horse', name: '马 Swift Horse', emoji: '🐎', category: 'horoscope', price: 250, rarity: 'rare' },
-        { id: 'chinese_goat', name: '羊 Gentle Goat', emoji: '🐐', category: 'horoscope', price: 200, rarity: 'rare' },
-        { id: 'chinese_monkey', name: '猴 Clever Monkey', emoji: '🐵', category: 'horoscope', price: 250, rarity: 'rare' },
-        { id: 'chinese_rooster', name: '鸡 Proud Rooster', emoji: '🐓', category: 'horoscope', price: 200, rarity: 'rare' },
-        { id: 'chinese_dog', name: '狗 Loyal Dog', emoji: '🐕‍🦺', category: 'horoscope', price: 200, rarity: 'rare' },
-        { id: 'chinese_pig', name: '猪 Fortune Pig', emoji: '🐷', category: 'horoscope', price: 250, rarity: 'rare' }
+        { id: 'chinese_rat', name: '鼠 Clever Rat', emoji: '🐀', category: 'horoscope', price: 5000, rarity: 'mythic' },
+        { id: 'chinese_ox', name: '牛 Strong Ox', emoji: '🐂', category: 'horoscope', price: 5000, rarity: 'mythic' },
+        { id: 'chinese_tiger', name: '虎 Brave Tiger', emoji: '🐯', category: 'horoscope', price: 5000, rarity: 'mythic' },
+        { id: 'chinese_rabbit', name: '兔 Lucky Rabbit', emoji: '🐇', category: 'horoscope', price: 5000, rarity: 'mythic' },
+        { id: 'chinese_dragon', name: '龙 Golden Dragon', emoji: '🐲', category: 'horoscope', price: 5000, rarity: 'mythic' },
+        { id: 'chinese_snake', name: '蛇 Wise Snake', emoji: '🐍', category: 'horoscope', price: 5000, rarity: 'mythic' },
+        { id: 'chinese_horse', name: '马 Swift Horse', emoji: '🐎', category: 'horoscope', price: 5000, rarity: 'mythic' },
+        { id: 'chinese_goat', name: '羊 Gentle Goat', emoji: '🐐', category: 'horoscope', price: 5000, rarity: 'mythic' },
+        { id: 'chinese_monkey', name: '猴 Clever Monkey', emoji: '🐵', category: 'horoscope', price: 5000, rarity: 'mythic' },
+        { id: 'chinese_rooster', name: '鸡 Proud Rooster', emoji: '🐓', category: 'horoscope', price: 5000, rarity: 'mythic' },
+        { id: 'chinese_dog', name: '狗 Loyal Dog', emoji: '🐕‍🦺', category: 'horoscope', price: 5000, rarity: 'mythic' },
+        { id: 'chinese_pig', name: '猪 Fortune Pig', emoji: '🐷', category: 'horoscope', price: 5000, rarity: 'mythic' },
+
+        // ✏️ STATIONERY (30 items)
+        { id: 'stat_pencil', name: 'Yellow Pencil', emoji: '✏️', category: 'stationery', price: 15, rarity: 'common' },
+        { id: 'stat_pen_blue', name: 'Blue Ballpoint', emoji: '🖊️', category: 'stationery', price: 20, rarity: 'common' },
+        { id: 'stat_pen_fountain', name: 'Fountain Pen', emoji: '✒️', category: 'stationery', price: 150, rarity: 'uncommon' },
+        { id: 'stat_marker', name: 'Highlighter Set', emoji: '🖍️', category: 'stationery', price: 35, rarity: 'common' },
+        { id: 'stat_eraser', name: 'Pink Eraser', emoji: '🧽', category: 'stationery', price: 10, rarity: 'common' },
+        { id: 'stat_ruler', name: 'Wooden Ruler', emoji: '📏', category: 'stationery', price: 18, rarity: 'common' },
+        { id: 'stat_protractor', name: 'Math Protractor', emoji: '📐', category: 'stationery', price: 22, rarity: 'common' },
+        { id: 'stat_scissors', name: 'Sharp Scissors', emoji: '✂️', category: 'stationery', price: 25, rarity: 'common' },
+        { id: 'stat_glue', name: 'Glue Stick', emoji: '🧴', category: 'stationery', price: 12, rarity: 'common' },
+        { id: 'stat_tape', name: 'Clear Tape', emoji: '🎗️', category: 'stationery', price: 15, rarity: 'common' },
+        { id: 'stat_paperclip', name: 'Rainbow Clips', emoji: '📎', category: 'stationery', price: 8, rarity: 'common' },
+        { id: 'stat_pushpin', name: 'Push Pins', emoji: '📌', category: 'stationery', price: 10, rarity: 'common' },
+        { id: 'stat_stapler', name: 'Red Stapler', emoji: '🔗', category: 'stationery', price: 30, rarity: 'common' },
+        { id: 'stat_notebook', name: 'Spiral Notebook', emoji: '📓', category: 'stationery', price: 25, rarity: 'common' },
+        { id: 'stat_notepad', name: 'Sticky Notes', emoji: '🗒️', category: 'stationery', price: 18, rarity: 'common' },
+        { id: 'stat_folder', name: 'Color Folders', emoji: '🗂️', category: 'stationery', price: 20, rarity: 'common' },
+        { id: 'stat_binder', name: 'Ring Binder', emoji: '📒', category: 'stationery', price: 35, rarity: 'common' },
+        { id: 'stat_clipboard', name: 'Clipboard', emoji: '📋', category: 'stationery', price: 28, rarity: 'common' },
+        { id: 'stat_bookmark', name: 'Fancy Bookmark', emoji: '🔖', category: 'stationery', price: 15, rarity: 'common' },
+        { id: 'stat_calculator', name: 'Calculator', emoji: '🔢', category: 'stationery', price: 45, rarity: 'uncommon' },
+        { id: 'stat_abacus', name: 'Classic Abacus', emoji: '🧮', category: 'stationery', price: 75, rarity: 'uncommon' },
+        { id: 'stat_compass', name: 'Drawing Compass', emoji: '🧭', category: 'stationery', price: 40, rarity: 'common' },
+        { id: 'stat_magnifier', name: 'Magnifying Glass', emoji: '🔍', category: 'stationery', price: 50, rarity: 'uncommon' },
+        { id: 'stat_envelope', name: 'Love Letter', emoji: '💌', category: 'stationery', price: 20, rarity: 'common' },
+        { id: 'stat_stamp', name: 'Ink Stamp', emoji: '📮', category: 'stationery', price: 35, rarity: 'common' },
+        { id: 'stat_pencilcase', name: 'Pencil Case', emoji: '👝', category: 'stationery', price: 40, rarity: 'common' },
+        { id: 'stat_crayons', name: 'Crayon Box', emoji: '🖼️', category: 'stationery', price: 30, rarity: 'common' },
+        { id: 'stat_paintbrush', name: 'Artist Brush', emoji: '🖌️', category: 'stationery', price: 45, rarity: 'uncommon' },
+        { id: 'stat_palette', name: 'Paint Palette', emoji: '🎨', category: 'stationery', price: 55, rarity: 'uncommon' },
+        { id: 'stat_globe', name: 'World Globe', emoji: '🌐', category: 'stationery', price: 200, rarity: 'rare' }
     ],
 
     // Rarity colors and multipliers
@@ -727,6 +760,7 @@ const COLLECTIBLES_DATA = {
         uncommon: { color: '#00b894', label: 'Uncommon' },
         rare: { color: '#0984e3', label: 'Rare' },
         epic: { color: '#6c5ce7', label: 'Epic' },
-        legendary: { color: '#fdcb6e', label: 'Legendary' }
+        legendary: { color: '#fdcb6e', label: 'Legendary' },
+        mythic: { color: '#e67e22', label: 'Mythic' }
     }
 };
