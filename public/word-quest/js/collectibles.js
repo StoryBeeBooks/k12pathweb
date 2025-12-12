@@ -19,7 +19,8 @@ const COLLECTIBLES_DATA = {
         { id: 'fantasy', name: '🏰 Fantasy', icon: '🏰' },
         { id: 'sports', name: '⚽ Sports', icon: '⚽' },
         { id: 'music', name: '🎵 Music', icon: '🎵' },
-        { id: 'nature', name: '🌸 Nature', icon: '🌸' }
+        { id: 'nature', name: '🌸 Nature', icon: '🌸' },
+        { id: 'horoscope', name: '♈ Horoscope', icon: '♈' }
     ],
     
     items: [
@@ -33,7 +34,6 @@ const COLLECTIBLES_DATA = {
         { id: 'zoo_rhino', name: 'Strong Rhino', emoji: '🦏', category: 'zoo', price: 225, rarity: 'rare' },
         { id: 'zoo_hippo', name: 'Hungry Hippo', emoji: '🦛', category: 'zoo', price: 150, rarity: 'uncommon' },
         { id: 'zoo_cheetah', name: 'Fast Cheetah', emoji: '🐆', category: 'zoo', price: 275, rarity: 'rare' },
-        { id: 'zoo_leopard', name: 'Spotted Leopard', emoji: '🐆', category: 'zoo', price: 250, rarity: 'rare' },
         { id: 'zoo_hyena', name: 'Laughing Hyena', emoji: '🦴', category: 'zoo', price: 100, rarity: 'uncommon' },
         
         // Primates
@@ -97,14 +97,14 @@ const COLLECTIBLES_DATA = {
         { id: 'pet_kitten', name: 'Fluffy Kitten', emoji: '🐈', category: 'pets', price: 50, rarity: 'common' },
         { id: 'pet_bunny', name: 'Cute Bunny', emoji: '🐰', category: 'pets', price: 75, rarity: 'common' },
         { id: 'pet_hamster', name: 'Tiny Hamster', emoji: '🐹', category: 'pets', price: 60, rarity: 'common' },
-        { id: 'pet_parrot', name: 'Colorful Parrot', emoji: '🦜', category: 'pets', price: 100, rarity: 'uncommon' },
-        { id: 'pet_turtle', name: 'Wise Turtle', emoji: '🐢', category: 'pets', price: 80, rarity: 'common' },
+        { id: 'pet_guinea_pig', name: 'Guinea Pig', emoji: '🐿️', category: 'pets', price: 100, rarity: 'uncommon' },
+        { id: 'pet_hedgehog', name: 'Hedgehog', emoji: '🦔', category: 'pets', price: 80, rarity: 'common' },
         { id: 'pet_fish', name: 'Tropical Fish', emoji: '🐠', category: 'pets', price: 40, rarity: 'common' },
         { id: 'pet_fox', name: 'Clever Fox', emoji: '🦊', category: 'pets', price: 150, rarity: 'uncommon' },
         { id: 'pet_owl', name: 'Night Owl', emoji: '🦉', category: 'pets', price: 200, rarity: 'rare' },
         { id: 'pet_panda', name: 'Baby Panda', emoji: '🐼', category: 'pets', price: 300, rarity: 'rare' },
         { id: 'pet_unicorn', name: 'Magic Unicorn', emoji: '🦄', category: 'pets', price: 500, rarity: 'epic' },
-        { id: 'pet_dragon', name: 'Baby Dragon', emoji: '🐉', category: 'pets', price: 750, rarity: 'epic' },
+        { id: 'pet_pegasus', name: 'Pegasus', emoji: '🐴', category: 'pets', price: 750, rarity: 'epic' },
         { id: 'pet_phoenix', name: 'Phoenix Bird', emoji: '🔥', category: 'pets', price: 1000, rarity: 'legendary' },
         { id: 'pet_wolf', name: 'Snow Wolf', emoji: '🐺', category: 'pets', price: 250, rarity: 'rare' },
         { id: 'pet_dolphin', name: 'Friendly Dolphin', emoji: '🐬', category: 'pets', price: 350, rarity: 'rare' },
@@ -155,13 +155,13 @@ const COLLECTIBLES_DATA = {
         { id: 'cloth_hat_baseball', name: 'Baseball Cap', emoji: '🧢', category: 'clothing', price: 30, rarity: 'common' },
         { id: 'cloth_cowboy_hat', name: 'Cowboy Hat', emoji: '🤠', category: 'clothing', price: 85, rarity: 'uncommon' },
         { id: 'cloth_top_hat', name: 'Top Hat', emoji: '🎩', category: 'clothing', price: 125, rarity: 'uncommon' },
-        { id: 'cloth_helmet', name: 'Knight Helmet', emoji: '⚔️', category: 'clothing', price: 175, rarity: 'uncommon' },
-        { id: 'cloth_tiara', name: 'Diamond Tiara', emoji: '👸', category: 'clothing', price: 450, rarity: 'epic' },
+        { id: 'cloth_helmet', name: 'Knight Helmet', emoji: '🪖', category: 'clothing', price: 175, rarity: 'uncommon' },
+        { id: 'cloth_tiara', name: 'Diamond Tiara', emoji: '👒', category: 'clothing', price: 450, rarity: 'epic' },
         { id: 'cloth_flip_flops', name: 'Beach Flip Flops', emoji: '🩴', category: 'clothing', price: 25, rarity: 'common' },
         { id: 'cloth_heels', name: 'Sparkly Heels', emoji: '👠', category: 'clothing', price: 110, rarity: 'uncommon' },
         { id: 'cloth_sandals', name: 'Summer Sandals', emoji: '👡', category: 'clothing', price: 40, rarity: 'common' },
         { id: 'cloth_leather_jacket', name: 'Leather Jacket', emoji: '🧥', category: 'clothing', price: 200, rarity: 'rare' },
-        { id: 'cloth_raincoat', name: 'Yellow Raincoat', emoji: '🧥', category: 'clothing', price: 70, rarity: 'common' },
+        { id: 'cloth_raincoat', name: 'Yellow Raincoat', emoji: '☔', category: 'clothing', price: 70, rarity: 'common' },
         { id: 'cloth_kimono', name: 'Silk Kimono', emoji: '👘', category: 'clothing', price: 275, rarity: 'rare' },
         { id: 'cloth_sari', name: 'Beautiful Sari', emoji: '🥻', category: 'clothing', price: 250, rarity: 'rare' },
         { id: 'cloth_tutu', name: 'Ballerina Tutu', emoji: '🩰', category: 'clothing', price: 145, rarity: 'uncommon' },
@@ -177,7 +177,7 @@ const COLLECTIBLES_DATA = {
         { id: 'acc_gem_blue', name: 'Blue Diamond', emoji: '💎', category: 'accessories', price: 300, rarity: 'rare' },
         { id: 'acc_gem_red', name: 'Ruby Gem', emoji: '♦️', category: 'accessories', price: 250, rarity: 'rare' },
         { id: 'acc_trophy', name: 'Gold Trophy', emoji: '🏆', category: 'accessories', price: 400, rarity: 'epic' },
-        { id: 'acc_medal', name: 'Champion Medal', emoji: '🥇', category: 'accessories', price: 200, rarity: 'uncommon' },
+        { id: 'acc_medal', name: 'Champion Medal', emoji: '🏅', category: 'accessories', price: 200, rarity: 'uncommon' },
 
         // 🍕 FOOD & TREATS (50 items)
         { id: 'food_pizza', name: 'Yummy Pizza', emoji: '🍕', category: 'food', price: 15, rarity: 'common' },
@@ -204,7 +204,7 @@ const COLLECTIBLES_DATA = {
         { id: 'food_pudding', name: 'Pudding Cup', emoji: '🍮', category: 'food', price: 28, rarity: 'common' },
         { id: 'food_honey', name: 'Honey Pot', emoji: '🍯', category: 'food', price: 40, rarity: 'common' },
         { id: 'food_popcorn', name: 'Popcorn Bucket', emoji: '🍿', category: 'food', price: 22, rarity: 'common' },
-        { id: 'food_nachos', name: 'Loaded Nachos', emoji: '🧀', category: 'food', price: 48, rarity: 'common' },
+        { id: 'food_nachos', name: 'Loaded Nachos', emoji: '🫔', category: 'food', price: 48, rarity: 'common' },
         { id: 'food_ramen', name: 'Ramen Bowl', emoji: '🍜', category: 'food', price: 55, rarity: 'uncommon' },
         { id: 'food_noodles', name: 'Noodle Box', emoji: '🍝', category: 'food', price: 45, rarity: 'common' },
         { id: 'food_rice', name: 'Rice Bowl', emoji: '🍚', category: 'food', price: 25, rarity: 'common' },
@@ -231,10 +231,9 @@ const COLLECTIBLES_DATA = {
         { id: 'food_avocado', name: 'Avocado Toast', emoji: '🥑', category: 'food', price: 45, rarity: 'common' },
         { id: 'food_carrot', name: 'Carrot Stick', emoji: '🥕', category: 'food', price: 10, rarity: 'common' },
 
-        // 🚀 SPACE ITEMS (10 items)
+        // 🚀 SPACE ITEMS (20 items)
         { id: 'space_star', name: 'Shooting Star', emoji: '⭐', category: 'space', price: 50, rarity: 'common' },
-        { id: 'space_moon', name: 'Mini Moon', emoji: '🌙', category: 'space', price: 100, rarity: 'uncommon' },
-        { id: 'space_planet', name: 'Planet Earth', emoji: '🌍', category: 'space', price: 150, rarity: 'uncommon' },
+        { id: 'space_moon', name: 'Crescent Moon', emoji: '🌙', category: 'space', price: 100, rarity: 'uncommon' },
         { id: 'space_saturn', name: 'Saturn Rings', emoji: '🪐', category: 'space', price: 200, rarity: 'rare' },
         { id: 'space_sun', name: 'Golden Sun', emoji: '☀️', category: 'space', price: 300, rarity: 'rare' },
         { id: 'space_galaxy', name: 'Spiral Galaxy', emoji: '🌌', category: 'space', price: 500, rarity: 'epic' },
@@ -242,6 +241,17 @@ const COLLECTIBLES_DATA = {
         { id: 'space_satellite', name: 'Space Satellite', emoji: '🛰️', category: 'space', price: 175, rarity: 'uncommon' },
         { id: 'space_telescope', name: 'Telescope', emoji: '🔭', category: 'space', price: 125, rarity: 'uncommon' },
         { id: 'space_blackhole', name: 'Black Hole', emoji: '🕳️', category: 'space', price: 1000, rarity: 'legendary' },
+        // Legendary Planets
+        { id: 'space_earth', name: 'Planet Earth', emoji: '🌍', category: 'space', price: 800, rarity: 'legendary' },
+        { id: 'space_full_moon', name: 'Full Moon', emoji: '🌕', category: 'space', price: 600, rarity: 'epic' },
+        { id: 'space_mars', name: 'Red Planet Mars', emoji: '🔴', category: 'space', price: 750, rarity: 'legendary' },
+        { id: 'space_jupiter', name: 'Giant Jupiter', emoji: '🟤', category: 'space', price: 850, rarity: 'legendary' },
+        { id: 'space_venus', name: 'Venus Morning Star', emoji: '🟡', category: 'space', price: 700, rarity: 'epic' },
+        { id: 'space_neptune', name: 'Neptune Blue', emoji: '🔵', category: 'space', price: 900, rarity: 'legendary' },
+        { id: 'space_mercury', name: 'Swift Mercury', emoji: '⚪', category: 'space', price: 650, rarity: 'epic' },
+        { id: 'space_uranus', name: 'Tilted Uranus', emoji: '🩵', category: 'space', price: 750, rarity: 'legendary' },
+        { id: 'space_pluto', name: 'Dwarf Pluto', emoji: '🤎', category: 'space', price: 550, rarity: 'epic' },
+        { id: 'space_milkyway', name: 'Milky Way', emoji: '✨', category: 'space', price: 1200, rarity: 'legendary' },
 
         // 🏰 FANTASY (10 items)
         { id: 'fan_sword', name: 'Magic Sword', emoji: '⚔️', category: 'fantasy', price: 150, rarity: 'uncommon' },
@@ -288,7 +298,7 @@ const COLLECTIBLES_DATA = {
         { id: 'sport_medal_silver', name: 'Silver Medal', emoji: '🥈', category: 'sports', price: 200, rarity: 'uncommon' },
         { id: 'sport_medal_bronze', name: 'Bronze Medal', emoji: '🥉', category: 'sports', price: 150, rarity: 'uncommon' },
 
-        // 🎵 MUSIC (35 items)
+        // 🎵 MUSIC (20 items - cleaned up, no duplicates)
         { id: 'music_guitar', name: 'Electric Guitar', emoji: '🎸', category: 'music', price: 150, rarity: 'uncommon' },
         { id: 'music_piano', name: 'Grand Piano', emoji: '🎹', category: 'music', price: 300, rarity: 'rare' },
         { id: 'music_drums', name: 'Drum Set', emoji: '🥁', category: 'music', price: 200, rarity: 'uncommon' },
@@ -299,38 +309,23 @@ const COLLECTIBLES_DATA = {
         { id: 'music_accordion', name: 'Accordion', emoji: '🪗', category: 'music', price: 165, rarity: 'uncommon' },
         { id: 'music_banjo', name: 'Banjo', emoji: '🪕', category: 'music', price: 145, rarity: 'uncommon' },
         { id: 'music_maracas', name: 'Maracas', emoji: '🪇', category: 'music', price: 55, rarity: 'common' },
-        { id: 'music_flute', name: 'Silver Flute', emoji: '🎶', category: 'music', price: 135, rarity: 'uncommon' },
-        { id: 'music_clarinet', name: 'Clarinet', emoji: '🎵', category: 'music', price: 155, rarity: 'uncommon' },
-        { id: 'music_oboe', name: 'Oboe', emoji: '🎼', category: 'music', price: 185, rarity: 'uncommon' },
-        { id: 'music_trombone', name: 'Trombone', emoji: '🎺', category: 'music', price: 180, rarity: 'uncommon' },
-        { id: 'music_tuba', name: 'Big Tuba', emoji: '🎺', category: 'music', price: 220, rarity: 'rare' },
         { id: 'music_french_horn', name: 'French Horn', emoji: '📯', category: 'music', price: 240, rarity: 'rare' },
-        { id: 'music_harp', name: 'Golden Harp', emoji: '🎶', category: 'music', price: 400, rarity: 'epic' },
-        { id: 'music_cello', name: 'Cello', emoji: '🎻', category: 'music', price: 275, rarity: 'rare' },
-        { id: 'music_bass', name: 'Double Bass', emoji: '🎻', category: 'music', price: 285, rarity: 'rare' },
-        { id: 'music_ukulele', name: 'Ukulele', emoji: '🎸', category: 'music', price: 85, rarity: 'common' },
-        { id: 'music_mandolin', name: 'Mandolin', emoji: '🎸', category: 'music', price: 125, rarity: 'uncommon' },
-        { id: 'music_harmonica', name: 'Harmonica', emoji: '🎵', category: 'music', price: 45, rarity: 'common' },
-        { id: 'music_xylophone', name: 'Xylophone', emoji: '🎶', category: 'music', price: 95, rarity: 'common' },
-        { id: 'music_tambourine', name: 'Tambourine', emoji: '🎵', category: 'music', price: 40, rarity: 'common' },
+        { id: 'music_harp', name: 'Golden Harp', emoji: '🪻', category: 'music', price: 400, rarity: 'epic' },
         { id: 'music_triangle', name: 'Triangle', emoji: '🔺', category: 'music', price: 25, rarity: 'common' },
-        { id: 'music_cymbals', name: 'Cymbals', emoji: '🥁', category: 'music', price: 65, rarity: 'common' },
-        { id: 'music_bongos', name: 'Bongos', emoji: '🥁', category: 'music', price: 75, rarity: 'common' },
-        { id: 'music_conga', name: 'Conga Drums', emoji: '🥁', category: 'music', price: 110, rarity: 'uncommon' },
-        { id: 'music_djembe', name: 'Djembe', emoji: '🥁', category: 'music', price: 90, rarity: 'common' },
-        { id: 'music_steel_drum', name: 'Steel Drum', emoji: '🥁', category: 'music', price: 140, rarity: 'uncommon' },
-        { id: 'music_bagpipes', name: 'Bagpipes', emoji: '🎵', category: 'music', price: 265, rarity: 'rare' },
-        { id: 'music_didgeridoo', name: 'Didgeridoo', emoji: '🎶', category: 'music', price: 175, rarity: 'uncommon' },
-        { id: 'music_synthesizer', name: 'Synthesizer', emoji: '🎹', category: 'music', price: 350, rarity: 'rare' },
         { id: 'music_turntable', name: 'DJ Turntable', emoji: '💿', category: 'music', price: 280, rarity: 'rare' },
         { id: 'music_record', name: 'Vinyl Record', emoji: '📀', category: 'music', price: 60, rarity: 'common' },
+        { id: 'music_notes', name: 'Music Notes', emoji: '🎵', category: 'music', price: 35, rarity: 'common' },
+        { id: 'music_melody', name: 'Melody', emoji: '🎶', category: 'music', price: 40, rarity: 'common' },
+        { id: 'music_score', name: 'Music Score', emoji: '🎼', category: 'music', price: 75, rarity: 'common' },
+        { id: 'music_headphones', name: 'Headphones', emoji: '🎧', category: 'music', price: 120, rarity: 'uncommon' },
+        { id: 'music_speaker', name: 'Speaker', emoji: '🔊', category: 'music', price: 95, rarity: 'common' },
 
         // 🌸 NATURE (5 items)
         { id: 'nature_flower', name: 'Cherry Blossom', emoji: '🌸', category: 'nature', price: 25, rarity: 'common' },
         { id: 'nature_tree', name: 'Bonsai Tree', emoji: '🌳', category: 'nature', price: 100, rarity: 'uncommon' },
         { id: 'nature_rainbow', name: 'Rainbow', emoji: '🌈', category: 'nature', price: 200, rarity: 'rare' },
         { id: 'nature_butterfly', name: 'Butterfly', emoji: '🦋', category: 'nature', price: 75, rarity: 'common' },
-        { id: 'nature_aurora', name: 'Northern Lights', emoji: '🌌', category: 'nature', price: 500, rarity: 'epic' },
+        { id: 'nature_aurora', name: 'Northern Lights', emoji: '🏔️', category: 'nature', price: 500, rarity: 'epic' },
 
         // ==================== NEW ITEMS (140 more) ====================
         
@@ -379,7 +374,7 @@ const COLLECTIBLES_DATA = {
         { id: 'home_flamingo', name: 'Lawn Flamingo', emoji: '🦩', category: 'nature', price: 50, rarity: 'common' },
         { id: 'home_pinwheel', name: 'Pinwheel', emoji: '🎡', category: 'nature', price: 30, rarity: 'common' },
         { id: 'home_lantern', name: 'Paper Lantern', emoji: '🏮', category: 'fantasy', price: 45, rarity: 'common' },
-        { id: 'home_firepit', name: 'Fire Pit', emoji: '🔥', category: 'fantasy', price: 165, rarity: 'uncommon' },
+        { id: 'home_firepit', name: 'Fire Pit', emoji: '🪵', category: 'fantasy', price: 165, rarity: 'uncommon' },
         { id: 'home_telescope_stand', name: 'Telescope Stand', emoji: '🔭', category: 'space', price: 280, rarity: 'rare' },
         { id: 'home_weathervane', name: 'Weather Vane', emoji: '🐓', category: 'fantasy', price: 110, rarity: 'uncommon' },
 
@@ -458,8 +453,8 @@ const COLLECTIBLES_DATA = {
 
         // 🌙 NIGHT & MAGIC (15 items)
         { id: 'night_moon_full', name: 'Full Moon', emoji: '🌕', category: 'space', price: 150, rarity: 'uncommon' },
-        { id: 'night_stars', name: 'Star Cluster', emoji: '✨', category: 'space', price: 100, rarity: 'uncommon' },
-        { id: 'night_firefly', name: 'Fireflies', emoji: '✨', category: 'nature', price: 85, rarity: 'common' },
+        { id: 'night_stars', name: 'Star Cluster', emoji: '🌟', category: 'space', price: 100, rarity: 'uncommon' },
+        { id: 'night_firefly', name: 'Fireflies', emoji: '🪲', category: 'nature', price: 85, rarity: 'common' },
         { id: 'night_owl_wise', name: 'Wise Owl', emoji: '🦉', category: 'zoo', price: 175, rarity: 'uncommon' },
         { id: 'night_bat', name: 'Friendly Bat', emoji: '🦇', category: 'zoo', price: 95, rarity: 'common' },
         { id: 'night_wolf_howl', name: 'Howling Wolf', emoji: '🐺', category: 'zoo', price: 225, rarity: 'rare' },
@@ -547,14 +542,14 @@ const COLLECTIBLES_DATA = {
         { id: 'jewel_hoop_earring', name: 'Gold Hoops', emoji: '⭕', category: 'jewelry', price: 125, rarity: 'uncommon' },
         { id: 'jewel_stud_earring', name: 'Pearl Studs', emoji: '⚪', category: 'jewelry', price: 95, rarity: 'common' },
         { id: 'jewel_bracelet_gold', name: 'Gold Bracelet', emoji: '⭐', category: 'jewelry', price: 185, rarity: 'uncommon' },
-        { id: 'jewel_bracelet_charm', name: 'Charm Bracelet', emoji: '✨', category: 'jewelry', price: 145, rarity: 'uncommon' },
+        { id: 'jewel_bracelet_charm', name: 'Charm Bracelet', emoji: '⚪', category: 'jewelry', price: 145, rarity: 'uncommon' },
         { id: 'jewel_bracelet_bangle', name: 'Silver Bangle', emoji: '⭕', category: 'jewelry', price: 110, rarity: 'uncommon' },
-        { id: 'jewel_anklet', name: 'Ankle Bracelet', emoji: '✨', category: 'jewelry', price: 85, rarity: 'common' },
+        { id: 'jewel_anklet', name: 'Ankle Bracelet', emoji: '〰️', category: 'jewelry', price: 85, rarity: 'common' },
         { id: 'jewel_brooch', name: 'Crystal Brooch', emoji: '💎', category: 'jewelry', price: 165, rarity: 'uncommon' },
         { id: 'jewel_tiara', name: 'Crystal Tiara', emoji: '👑', category: 'jewelry', price: 450, rarity: 'epic' },
         { id: 'jewel_crown_queen', name: 'Queen\'s Crown', emoji: '👑', category: 'jewelry', price: 800, rarity: 'legendary' },
         { id: 'jewel_diadem', name: 'Golden Diadem', emoji: '👑', category: 'jewelry', price: 600, rarity: 'epic' },
-        { id: 'jewel_cufflinks', name: 'Gold Cufflinks', emoji: '✨', category: 'jewelry', price: 135, rarity: 'uncommon' },
+        { id: 'jewel_cufflinks', name: 'Gold Cufflinks', emoji: '🪩', category: 'jewelry', price: 135, rarity: 'uncommon' },
         { id: 'jewel_tie_clip', name: 'Diamond Tie Clip', emoji: '💎', category: 'jewelry', price: 195, rarity: 'uncommon' },
         { id: 'jewel_watch_gold', name: 'Gold Watch', emoji: '⌚', category: 'jewelry', price: 350, rarity: 'rare' },
         { id: 'jewel_watch_diamond', name: 'Diamond Watch', emoji: '⌚', category: 'jewelry', price: 550, rarity: 'epic' },
@@ -616,7 +611,7 @@ const COLLECTIBLES_DATA = {
         { id: 'furn_side_table', name: 'Side Table', emoji: '🪵', category: 'furniture', price: 60, rarity: 'common' },
         { id: 'furn_bookshelf', name: 'Tall Bookshelf', emoji: '📚', category: 'furniture', price: 200, rarity: 'uncommon' },
         { id: 'furn_tv_stand', name: 'TV Stand', emoji: '📺', category: 'furniture', price: 120, rarity: 'common' },
-        { id: 'furn_fireplace', name: 'Stone Fireplace', emoji: '🔥', category: 'furniture', price: 450, rarity: 'rare' },
+        { id: 'furn_fireplace', name: 'Stone Fireplace', emoji: '🧱', category: 'furniture', price: 450, rarity: 'rare' },
         { id: 'furn_rug', name: 'Persian Rug', emoji: '🟫', category: 'furniture', price: 300, rarity: 'rare' },
         
         // Bedroom
@@ -660,7 +655,7 @@ const COLLECTIBLES_DATA = {
         { id: 'furn_swing', name: 'Porch Swing', emoji: '🎋', category: 'furniture', price: 200, rarity: 'uncommon' },
         { id: 'furn_bench', name: 'Garden Bench', emoji: '🪵', category: 'furniture', price: 125, rarity: 'common' },
         { id: 'furn_umbrella', name: 'Patio Umbrella', emoji: '⛱️', category: 'furniture', price: 100, rarity: 'common' },
-        { id: 'furn_fire_pit', name: 'Fire Pit', emoji: '🔥', category: 'furniture', price: 275, rarity: 'uncommon' },
+        { id: 'furn_fire_pit', name: 'Fire Pit', emoji: '🏕️', category: 'furniture', price: 275, rarity: 'uncommon' },
         { id: 'furn_lounge_chair', name: 'Lounge Chair', emoji: '🏖️', category: 'furniture', price: 150, rarity: 'uncommon' },
         { id: 'furn_gazebo', name: 'Garden Gazebo', emoji: '🏛️', category: 'furniture', price: 750, rarity: 'epic' },
         { id: 'furn_fountain', name: 'Stone Fountain', emoji: '⛲', category: 'furniture', price: 600, rarity: 'epic' },
@@ -677,7 +672,7 @@ const COLLECTIBLES_DATA = {
         { id: 'furn_table_lamp', name: 'Table Lamp', emoji: '💡', category: 'furniture', price: 65, rarity: 'common' },
         { id: 'furn_pendant', name: 'Pendant Light', emoji: '💡', category: 'furniture', price: 150, rarity: 'uncommon' },
         { id: 'furn_sconce', name: 'Wall Sconce', emoji: '🕯️', category: 'furniture', price: 85, rarity: 'common' },
-        { id: 'furn_fairy_lights', name: 'Fairy Lights', emoji: '✨', category: 'furniture', price: 55, rarity: 'common' },
+        { id: 'furn_fairy_lights', name: 'Fairy Lights', emoji: '💡', category: 'furniture', price: 55, rarity: 'common' },
         { id: 'furn_neon_sign', name: 'Neon Sign', emoji: '💫', category: 'furniture', price: 200, rarity: 'uncommon' },
         
         // Storage
@@ -695,7 +690,35 @@ const COLLECTIBLES_DATA = {
         { id: 'furn_throne', name: 'Royal Throne', emoji: '👑', category: 'furniture', price: 900, rarity: 'legendary' },
         { id: 'furn_massage_chair', name: 'Massage Chair', emoji: '💆', category: 'furniture', price: 500, rarity: 'epic' },
         { id: 'furn_movie_seat', name: 'Theater Seat', emoji: '🎬', category: 'furniture', price: 400, rarity: 'rare' },
-        { id: 'furn_sauna', name: 'Home Sauna', emoji: '🧖', category: 'furniture', price: 850, rarity: 'legendary' }
+        { id: 'furn_sauna', name: 'Home Sauna', emoji: '🧖', category: 'furniture', price: 850, rarity: 'legendary' },
+
+        // ♈ HOROSCOPE (24 items - 12 Western Zodiac + 12 Chinese Zodiac)
+        // Western Zodiac Signs
+        { id: 'zodiac_aries', name: 'Aries Ram', emoji: '♈', category: 'horoscope', price: 150, rarity: 'uncommon' },
+        { id: 'zodiac_taurus', name: 'Taurus Bull', emoji: '♉', category: 'horoscope', price: 150, rarity: 'uncommon' },
+        { id: 'zodiac_gemini', name: 'Gemini Twins', emoji: '♊', category: 'horoscope', price: 150, rarity: 'uncommon' },
+        { id: 'zodiac_cancer', name: 'Cancer Crab', emoji: '♋', category: 'horoscope', price: 150, rarity: 'uncommon' },
+        { id: 'zodiac_leo', name: 'Leo Lion', emoji: '♌', category: 'horoscope', price: 200, rarity: 'rare' },
+        { id: 'zodiac_virgo', name: 'Virgo Maiden', emoji: '♍', category: 'horoscope', price: 150, rarity: 'uncommon' },
+        { id: 'zodiac_libra', name: 'Libra Scales', emoji: '♎', category: 'horoscope', price: 150, rarity: 'uncommon' },
+        { id: 'zodiac_scorpio', name: 'Scorpio Scorpion', emoji: '♏', category: 'horoscope', price: 200, rarity: 'rare' },
+        { id: 'zodiac_sagittarius', name: 'Sagittarius Archer', emoji: '♐', category: 'horoscope', price: 175, rarity: 'uncommon' },
+        { id: 'zodiac_capricorn', name: 'Capricorn Goat', emoji: '♑', category: 'horoscope', price: 150, rarity: 'uncommon' },
+        { id: 'zodiac_aquarius', name: 'Aquarius Water', emoji: '♒', category: 'horoscope', price: 175, rarity: 'uncommon' },
+        { id: 'zodiac_pisces', name: 'Pisces Fish', emoji: '♓', category: 'horoscope', price: 150, rarity: 'uncommon' },
+        // Chinese Zodiac Animals (生肖)
+        { id: 'chinese_rat', name: '鼠 Clever Rat', emoji: '🐀', category: 'horoscope', price: 200, rarity: 'rare' },
+        { id: 'chinese_ox', name: '牛 Strong Ox', emoji: '🐂', category: 'horoscope', price: 200, rarity: 'rare' },
+        { id: 'chinese_tiger', name: '虎 Brave Tiger', emoji: '🐯', category: 'horoscope', price: 300, rarity: 'rare' },
+        { id: 'chinese_rabbit', name: '兔 Lucky Rabbit', emoji: '🐇', category: 'horoscope', price: 250, rarity: 'rare' },
+        { id: 'chinese_dragon', name: '龙 Golden Dragon', emoji: '🐲', category: 'horoscope', price: 800, rarity: 'legendary' },
+        { id: 'chinese_snake', name: '蛇 Wise Snake', emoji: '🐍', category: 'horoscope', price: 200, rarity: 'rare' },
+        { id: 'chinese_horse', name: '马 Swift Horse', emoji: '🐎', category: 'horoscope', price: 250, rarity: 'rare' },
+        { id: 'chinese_goat', name: '羊 Gentle Goat', emoji: '🐐', category: 'horoscope', price: 200, rarity: 'rare' },
+        { id: 'chinese_monkey', name: '猴 Clever Monkey', emoji: '🐵', category: 'horoscope', price: 250, rarity: 'rare' },
+        { id: 'chinese_rooster', name: '鸡 Proud Rooster', emoji: '🐓', category: 'horoscope', price: 200, rarity: 'rare' },
+        { id: 'chinese_dog', name: '狗 Loyal Dog', emoji: '🐕‍🦺', category: 'horoscope', price: 200, rarity: 'rare' },
+        { id: 'chinese_pig', name: '猪 Fortune Pig', emoji: '🐷', category: 'horoscope', price: 250, rarity: 'rare' }
     ],
 
     // Rarity colors and multipliers
