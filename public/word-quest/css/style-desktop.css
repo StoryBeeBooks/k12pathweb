@@ -1893,59 +1893,110 @@ body {
     padding: var(--space-lg);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-md);
+    gap: var(--space-xl) var(--space-md);
     align-content: start;
 }
 
 .shop-item {
-    background: var(--bg-subtle);
+    background: #fdfcfa;
     border-radius: var(--radius-md);
     padding: var(--space-md);
     text-align: center;
     cursor: pointer;
-    transition: all 0.2s;
-    border: 2px solid transparent;
+    transition: all 0.25s ease;
+    border: 2px solid #e8e4df;
     min-width: 0;
     width: 100%;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 150px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-.shop-item:hover:not(.owned):not(.too-expensive) {
+.shop-item:hover:not(.owned):not(.cant-afford) {
     border-color: var(--primary);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.15);
+    background: #ffffff;
 }
 
 .shop-item.owned {
-    opacity: 0.5;
+    background: #f8fdf8;
+    border-color: var(--success);
     cursor: default;
+    opacity: 0.85;
 }
 
-.shop-item.too-expensive {
-    opacity: 0.6;
+.shop-item.cant-afford {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
-.shop-item-emoji {
-    font-size: 2rem;
-    margin-bottom: var(--space-xs);
+/* Shop item child elements */
+.shop-item .item-emoji {
+    font-size: 2.2rem;
+    margin-bottom: var(--space-sm);
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 
-.shop-item-name {
-    font-size: 0.7rem;
-    color: var(--text-secondary);
-    margin-bottom: var(--space-xs);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+.shop-item .item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-.shop-item-price {
-    font-size: 0.75rem;
+.shop-item .item-name {
+    font-size: 0.8rem;
     font-weight: 600;
-    color: var(--primary);
+    color: var(--text-primary);
+    margin-bottom: 4px;
+    line-height: 1.3;
+    min-height: 2.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.shop-item.owned .shop-item-price {
-    color: var(--success);
+.shop-item .item-rarity {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+}
+
+.shop-item .item-price {
+    margin-top: auto;
+    padding-top: var(--space-sm);
+}
+
+.shop-item .price-tag {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #ffffff;
+    color: #b7950b;
+    border: 1px solid #f4d03f;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    box-shadow: 0 2px 4px rgba(247, 220, 111, 0.3);
+    transition: all 0.2s ease;
+}
+
+.shop-item:hover:not(.owned):not(.cant-afford) .price-tag {
+    background: #fff5f8;
+    transform: scale(1.05);
+}
+
+.shop-item .owned-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background: linear-gradient(135deg, #e8f8f5 0%, #d1f2eb 100%);
+    color: #1e8449;
+    border: 1px solid #58d68d;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.75rem;
 }
 
 /* Overlay */
