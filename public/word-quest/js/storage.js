@@ -206,21 +206,28 @@ const Storage = {
     },
 
     /**
-     * Increment streak (call after completing a session)
+     * Increment streak (call after 100% accuracy quiz)
      */
     incrementStreak() {
         const stats = this.getStats();
-        const today = new Date().toDateString();
+        stats.streak++;
+        stats.lastPlayDate = new Date().toDateString();
         
-        if (stats.lastPlayDate !== today) {
-            stats.streak++;
-            stats.lastPlayDate = today;
-            
-            if (stats.streak > stats.longestStreak) {
-                stats.longestStreak = stats.streak;
-            }
+        if (stats.streak > stats.longestStreak) {
+            stats.longestStreak = stats.streak;
         }
         
+        this.saveStats(stats);
+        return stats.streak;
+    },
+
+    /**
+     * Reset streak to 0 (call when accuracy < 100%)
+     */
+    resetStreak() {
+        const stats = this.getStats();
+        stats.streak = 0;
+        stats.lastPlayDate = new Date().toDateString();
         this.saveStats(stats);
         return stats.streak;
     },

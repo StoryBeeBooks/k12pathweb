@@ -14,6 +14,7 @@ const App = {
     quizScore: 0,
     incorrectWords: [],
     gotItWords: [],
+    quizHasWrongAnswer: false,
 
     /**
      * Initialize the app
@@ -90,6 +91,11 @@ const App = {
         });
 
         document.getElementById('quizBackBtn').addEventListener('click', () => {
+            // If user got any wrong answers during quiz, break the streak
+            if (this.quizHasWrongAnswer) {
+                Storage.resetStreak();
+                this.updateStats();
+            }
             this.goToDashboard();
         });
 
@@ -451,10 +457,11 @@ const App = {
      * Start quiz
      */
     startQuiz() {
-        this.quizWords = [...this.learningWords];
+        this.quizWords = this.shuffleArray([...this.learningWords]);
         this.quizIndex = 0;
         this.quizScore = 0;
         this.incorrectWords = [];
+        this.quizHasWrongAnswer = false;
 
         this.showView('quizScreen');
         this.showQuizQuestion();
@@ -634,6 +641,7 @@ const App = {
      */
     handleIncorrectAnswer(word) {
         this.incorrectWords.push(word);
+        this.quizHasWrongAnswer = true;
     },
 
     /**
@@ -701,6 +709,13 @@ const App = {
         if (xpNote) {
             xpNote.textContent = accuracy < 80 ? 'Score 80%+ to earn XP!' : '';
             xpNote.style.display = accuracy < 80 ? 'block' : 'none';
+        }
+
+        // Update streak: increment on 100% accuracy, reset otherwise
+        if (accuracy === 100) {
+            Storage.incrementStreak();
+        } else {
+            Storage.resetStreak();
         }
 
         const reviewContainer = document.getElementById('wordsReview');
